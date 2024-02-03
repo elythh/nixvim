@@ -22,6 +22,10 @@
 
     ./plug/snippets/luasnip.nix
 
+    ./plug/treesitter/treesitter-textobjects.nix
+    ./plug/treesitter/treesitter-context.nix
+    ./plug/treesitter/treesitter.nix
+
     ./plug/ui/alpha.nix
     ./plug/ui/bufferline.nix
     ./plug/ui/lualine.nix
