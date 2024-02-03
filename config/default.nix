@@ -31,6 +31,7 @@
     ./plug/ui/lualine.nix
     ./plug/ui/noice.nix
     ./plug/ui/telescope.nix
+    ./plug/ui/nvim-notify.nix
 
     ./plug/utils/nvim-autopairs.nix
     ./plug/utils/oil.nix
