@@ -4,7 +4,9 @@
     ./keys.nix
     ./sets.nix
 
-    ./plug/oil.nix
-    ./plug/lualine.nix
+    ./plug/utils/oil.nix
+    ./plug/ui/telescope.nix
+    ./plug/ui/lualine.nix
+    ./plug/git/lazygit.nix
   ];
 }
