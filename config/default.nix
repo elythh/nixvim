@@ -1,7 +1,8 @@
 { inputs, self, pkgs, ... }:
 {
-  # Import all your configuration modules here
   imports = [
+    ./keys.nix
+
     ./plug/oil.nix
     ./plug/lualine.nix
   ];
