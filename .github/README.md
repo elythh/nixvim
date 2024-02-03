@@ -18,9 +18,7 @@ To test your configuration simply run the following command
 nix run .
 ```
 
-If you have pushed this to a public git repository you can run it remotely from
-any machine with `nix` installed. This is one of the stronger advantages in my
-opinion because your configuration is now portable anywhere you need it.
+If you have nix intalled, you can directly run my config from anyhwere
 
 You can try running mine with:
 ```shell
@@ -29,11 +27,11 @@ nix run 'github:elythh/nixvim'
 
 ## Installing into NixOS configuration
 
-Your `nixvim` flake will output a derivation that you can easily include in
-either `home.packages` for `home-manager`, or `environment.systemPackages` for
-`NixOS`. Or whatever happens with darwin?
+This  `nixvim` flake will output a derivation that you can easily include
+in either `home.packages` for `home-manager`, or
+`environment.systemPackages` for `NixOS`. Or whatever happens with darwin?
 
-You can add your `nixvim` configuration as an input to your `NixOS` configuration like:
+You can add my `nixvim` configuration as an input to your `NixOS` configuration like:
 ```nix
 {
  inputs = {
@@ -83,5 +81,5 @@ configuration (`home.packges = with pkgs; [ neovim ]`), but you replace
 ### Bonus lazy method
 
 You can just straight up alias something like `nix run
-'github:siph/nixvim'` to `nvim`.
+'github:elythh/nixvim'` to `nvim`.
 
