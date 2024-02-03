@@ -15,6 +15,11 @@
     ./plug/lsp/lsp.nix
     ./plug/lsp/none-ls.nix
 
+    ./plug/notes/pencil.nix
+    ./plug/notes/twilight.nix
+    ./plug/notes/zen-mod.nix
+    ./plug/notes/markdown-preview.nix
+
     ./plug/snippets/luasnip.nix
 
     ./plug/ui/alpha.nix
