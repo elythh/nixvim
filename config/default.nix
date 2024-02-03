@@ -4,6 +4,7 @@
     ./keys.nix
     ./sets.nix
 
+    ./plug/lsp/lsp.nix
     ./plug/snippets/luasnip.nix
     ./plug/completion/lspkind.nix
     ./plug/completion/cmp.nix
