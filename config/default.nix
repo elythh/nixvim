@@ -32,6 +32,7 @@
     ./plug/ui/lualine.nix
     ./plug/ui/noice.nix
     ./plug/ui/telescope.nix
+    ./plug/ui/telescope-zoxide.nix
     ./plug/ui/nvim-notify.nix
 
     ./plug/utils/nvim-autopairs.nix
