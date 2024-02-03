@@ -28,6 +28,14 @@
         desc = "Find project files";
       };
       "<leader>fr" = {
+        action = "live_grep, {}";
+        desc = "Find text";
+      };
+      "<leader>fR" = {
+        action = "resume, {}";
+        desc = "Resume";
+      };
+      "<leader>fg" = {
         action = "oldfiles, {}";
         desc = "Recent";
       };
@@ -120,24 +128,6 @@
         desc = "Document diagnostics";
       };
     }
-
-    {
-      mode = "n";
-      key = "<leader>st";
-      action = "<cmd>TodoTelescope<cr>";
-      options = {
-        silent = true;
-        desc = "Todo (Telescope)";
-      };
-    }
-    # {
-    #   mode = "n";
-    #   key = "<leader>,";
-    #   action = "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>";
-    #   options = {
-    #     desc = "Switch Buffer";
-    #   };
-    # }
   ];
   extraConfigLua = ''
       require("telescope").setup{
