@@ -4,6 +4,7 @@
     ./keys.nix
     ./sets.nix
 
+    ./plug/completion/cmp.nix
     ./plug/utils/oil.nix
     ./plug/utils/whichkey.nix
     ./plug/colorscheme/colorscheme.nix
