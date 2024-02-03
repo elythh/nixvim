@@ -5,6 +5,7 @@
     ./sets.nix
 
     ./plug/utils/oil.nix
+    ./plug/utils/whichkey.nix
     ./plug/ui/telescope.nix
     ./plug/ui/lualine.nix
     ./plug/git/lazygit.nix
