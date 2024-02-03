@@ -1,10 +1,9 @@
-{ ... }:
 {
   plugins.lualine = {
     enable = true;
     globalstatus = true;
     disabledFiletypes = {
-      statusline = [ "dashboard" "alpha" ];
+      statusline = ["dashboard" "alpha"];
     };
     theme = {
       normal = {
@@ -28,17 +27,22 @@
         };
       };
     };
-    componentSeparators =
-      {
-        left = " ";
-        right = " ";
-      };
+    componentSeparators = {
+      left = " ";
+      right = " ";
+    };
     sections = {
       lualine_a = [
-        { name = "mode"; icon = ""; }
+        {
+          name = "mode";
+          icon = "";
+        }
       ];
       lualine_b = [
-        { name = "branch"; icon = ""; }
+        {
+          name = "branch";
+          icon = "";
+        }
       ];
       lualine_c = [
         {
@@ -58,7 +62,13 @@
             left = "";
             right = "";
           };
-          extraConfig = { icon_only = true; padding = { left = 1; right = 0; }; };
+          extraConfig = {
+            icon_only = true;
+            padding = {
+              left = 1;
+              right = 0;
+            };
+          };
         }
         {
           name = "filename";
@@ -78,7 +88,7 @@
         "progress"
         "location"
       ];
-      lualine_z = [ ''"  " .. os.date("%X") .. " 📎"'' ];
+      lualine_z = [''"  " .. os.date("%X") .. " 📎"''];
     };
   };
 }

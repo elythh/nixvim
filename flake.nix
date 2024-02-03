@@ -1,44 +1,79 @@
 {
-  description = "Neve is a Neovim configuration built with Nixvim, which allows you to use Nix language to manage Neovim plugins/options";
+  description = "Chris' NeoVim configuration";
 
   inputs = {
-    nixvim.url = "github:nix-community/nixvim";
-    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    tree-sitter-nu = {
+      url = "github:nushell/tree-sitter-nu";
+      flake = false;
+    };
+    pre-commit-hooks = {
+      url = "github:cachix/pre-commit-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixvim, flake-utils, ... } @ inputs:
-    let
-      config = import ./config; # import the module directly
-    in
-    flake-utils.lib.eachDefaultSystem (system:
-      let
-        nixvimLib = nixvim.lib.${system};
-        pkgs = import nixpkgs { inherit system; };
+  outputs = {
+    nixpkgs,
+    nixvim,
+    flake-parts,
+    tree-sitter-nu,
+    pre-commit-hooks,
+    ...
+  } @ inputs:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = [
+        "aarch64-linux"
+        "x86_64-linux"
+        "aarch64-darwin"
+        "x86_64-darwin"
+      ];
+
+      perSystem = {
+        system,
+        pkgs,
+        self',
+        lib,
+        ...
+      }: let
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
-          module = config;
-          # You can use `extraSpecialArgs` to pass additional arguments to your module files
-          extraSpecialArgs = {
-            inherit self;
-          };
+          module = ./config;
         };
-      in
-      {
+      in {
         checks = {
-          # Run `nix flake check .` to verify that your config is not broken
-          default = nixvimLib.check.mkTestDerivationFromNvim {
+          default = pkgs.nixvimLib.check.mkTestDerivationFromNvim {
             inherit nvim;
-            name = "nixvim";
+            name = "A nixvim configuration";
+          };
+          pre-commit-check = pre-commit-hooks.lib.${system}.run {
+            src = ./.;
+            hooks = {
+              statix.enable = true;
+              alejandra.enable = true;
+            };
           };
         };
 
-        packages = {
-          # Lets you run `nix run .` to start nixvim
-          default = nvim;
+        formatter = pkgs.alejandra;
+
+        packages = rec {
+          default = full;
+          full = nvim;
         };
 
-        formatter = pkgs.nixpkgs-fmt;
-      });
+        devShells = {
+          default = with pkgs;
+            mkShell {
+              inherit (self'.checks.pre-commit-check) shellHook;
+            };
+        };
+      };
+    };
 }
-
