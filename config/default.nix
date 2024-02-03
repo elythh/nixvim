@@ -11,5 +11,6 @@
     ./plug/ui/telescope.nix
     ./plug/ui/lualine.nix
     ./plug/git/lazygit.nix
+    ./plug/git/gitsigns.nix
   ];
 }
