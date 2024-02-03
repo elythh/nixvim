@@ -11,6 +11,7 @@
     ./plug/completion/cmp.nix
     ./plug/utils/oil.nix
     ./plug/utils/whichkey.nix
+    ./plug/utils/nvim-autopairs.nix
     ./plug/colorscheme/colorscheme.nix
     ./plug/ui/alpha.nix
     ./plug/ui/noice.nix
