@@ -18,15 +18,8 @@
     };
   };
 
-  outputs = {
-    nixpkgs,
-    nixvim,
-    flake-parts,
-    tree-sitter-nu,
-    pre-commit-hooks,
-    ...
-  } @ inputs:
-    flake-parts.lib.mkFlake {inherit inputs;} {
+  outputs = { nixpkgs, nixvim, flake-parts, tree-sitter-nu, pre-commit-hooks, ... } @ inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "aarch64-linux"
         "x86_64-linux"
@@ -34,46 +27,42 @@
         "x86_64-darwin"
       ];
 
-      perSystem = {
-        system,
-        pkgs,
-        self',
-        lib,
-        ...
-      }: let
-        nixvim' = nixvim.legacyPackages.${system};
-        nvim = nixvim'.makeNixvimWithModule {
-          inherit pkgs;
-          module = ./config;
-        };
-      in {
-        checks = {
-          default = pkgs.nixvimLib.check.mkTestDerivationFromNvim {
-            inherit nvim;
-            name = "A nixvim configuration";
+      perSystem = { system, pkgs, self', lib, ... }:
+        let
+          nixvim' = nixvim.legacyPackages.${system};
+          nvim = nixvim'.makeNixvimWithModule {
+            inherit pkgs;
+            module = ./config;
           };
-          pre-commit-check = pre-commit-hooks.lib.${system}.run {
-            src = ./.;
-            hooks = {
-              statix.enable = true;
-              alejandra.enable = true;
+        in
+        {
+          checks = {
+            default = pkgs.nixvimLib.check.mkTestDerivationFromNvim {
+              inherit nvim;
+              name = "A nixvim configuration";
+            };
+            pre-commit-check = pre-commit-hooks.lib.${system}.run {
+              src = ./.;
+              hooks = {
+                statix.enable = true;
+                nixpkgs-fmt.enable = true;
+              };
             };
           };
-        };
 
-        formatter = pkgs.alejandra;
+          formatter = pkgs.nixpkgs-fmt;
 
-        packages = rec {
-          default = full;
-          full = nvim;
-        };
+          packages = rec {
+            default = full;
+            full = nvim;
+          };
 
-        devShells = {
-          default = with pkgs;
-            mkShell {
-              inherit (self'.checks.pre-commit-check) shellHook;
-            };
+          devShells = {
+            default = with pkgs;
+              mkShell {
+                inherit (self'.checks.pre-commit-check) shellHook;
+              };
+          };
         };
-      };
     };
 }
