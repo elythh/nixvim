@@ -36,6 +36,7 @@
     ./plug/ui/telescope-zoxide.nix
     ./plug/ui/nvim-notify.nix
 
+    ./plug/utils/copilot-lua.nix
     ./plug/utils/mini.nix
     ./plug/utils/nvim-autopairs.nix
     ./plug/utils/oil.nix
