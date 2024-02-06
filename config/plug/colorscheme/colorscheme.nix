@@ -1,5 +1,6 @@
 {
   colorschemes = {
+    oxocarbon.enable = true;
     rose-pine = {
       enable = false;
       style = "moon"; #  "main", "moon", "dawn" or raw lua code
@@ -8,7 +9,7 @@
       transparentBackground = true;
     };
     catppuccin = {
-      enable = true;
+      enable = false;
       background = {
         light = "macchiato";
         dark = "mocha";
