@@ -1,6 +1,6 @@
 {
   colorschemes = {
-    oxocarbon.enable = true;
+    oxocarbon.enable = false;
     rose-pine = {
       enable = false;
       style = "moon"; #  "main", "moon", "dawn" or raw lua code
@@ -9,12 +9,12 @@
       transparentBackground = true;
     };
     catppuccin = {
-      enable = false;
+      enable = true;
       background = {
         light = "macchiato";
         dark = "mocha";
       };
-      flavour = "mocha"; # "latte", "mocha", "frappe", "macchiato" or raw lua code
+      flavour = "frappe"; # "latte", "mocha", "frappe", "macchiato" or raw lua code
       disableBold = false;
       disableItalic = false;
       disableUnderline = false;
