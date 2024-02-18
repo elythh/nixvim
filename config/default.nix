@@ -40,6 +40,7 @@
 
     ./plug/utils/copilot-lua.nix
     ./plug/utils/nvim-autopairs.nix
+    ./plug/utils/harpoon.nix
     ./plug/utils/oil.nix
     ./plug/utils/whichkey.nix
     ./plug/utils/hardtime.nix
