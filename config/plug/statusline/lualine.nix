@@ -3,7 +3,7 @@
     enable = true;
     globalstatus = true;
     disabledFiletypes = {
-      statusline = ["dashboard" "alpha"];
+      statusline = [ "dashboard" "alpha" ];
     };
     theme = {
       normal = {
@@ -88,7 +88,7 @@
         "progress"
         "location"
       ];
-      lualine_z = [''"  " .. os.date("%X") .. " 📎"''];
+      lualine_z = [ ''"  " .. os.date("%X") .. " 📎"'' ];
     };
   };
 }
