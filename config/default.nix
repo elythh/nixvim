@@ -42,6 +42,7 @@
     ./plug/utils/nvim-autopairs.nix
     ./plug/utils/harpoon.nix
     ./plug/utils/oil.nix
+    ./plug/utils/illuminate.nix
     ./plug/utils/whichkey.nix
     ./plug/utils/hardtime.nix
   ];
