@@ -43,6 +43,7 @@
     ./plug/utils/harpoon.nix
     ./plug/utils/oil.nix
     ./plug/utils/illuminate.nix
+    ./plug/utils/telescope-gitmoji.nix
     ./plug/utils/whichkey.nix
     ./plug/utils/hardtime.nix
   ];
