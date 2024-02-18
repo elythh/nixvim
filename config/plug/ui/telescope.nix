@@ -110,7 +110,6 @@
     };
   };
   keymaps = [
-
     {
       mode = "n";
       key = "<leader>sd";
@@ -121,12 +120,12 @@
     }
   ];
   extraConfigLua = ''
-      require("telescope").setup{
-          pickers = {
-            colorscheme = {
-              enable_preview = true
-            }
-          }
+    require("telescope").setup{
+      pickers = {
+        colorscheme = {
+          enable_preview = true
+        }
+      }
     }
   '';
 }
