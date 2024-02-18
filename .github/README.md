@@ -21,17 +21,19 @@ nix run .
 If you have nix intalled, you can directly run my config from anyhwere
 
 You can try running mine with:
+
 ```shell
 nix run 'github:elythh/nixvim'
 ```
 
 ## Installing into NixOS configuration
 
-This  `nixvim` flake will output a derivation that you can easily include
+This `nixvim` flake will output a derivation that you can easily include
 in either `home.packages` for `home-manager`, or
 `environment.systemPackages` for `NixOS`. Or whatever happens with darwin?
 
 You can add my `nixvim` configuration as an input to your `NixOS` configuration like:
+
 ```nix
 {
  inputs = {
@@ -43,6 +45,7 @@ You can add my `nixvim` configuration as an input to your `NixOS` configuration 
 ### Direct installation
 
 With the input added you can reference it directly.
+
 ```nix
 { inputs, system, ... }:
 {
@@ -82,4 +85,3 @@ configuration (`home.packges = with pkgs; [ neovim ]`), but you replace
 
 You can just straight up alias something like `nix run
 'github:elythh/nixvim'` to `nvim`.
-
