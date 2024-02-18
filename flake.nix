@@ -30,7 +30,7 @@
       perSystem = { system, pkgs, self', lib, ... }:
         let
           nixvim' = nixvim.legacyPackages.${system};
-          nvim = nixvim'.makeNixvimWithModule {
+          elythvim = nixvim'.makeNixvimWithModule {
             inherit pkgs;
             module = ./config;
           };
@@ -38,7 +38,7 @@
         {
           checks = {
             default = pkgs.nixvimLib.check.mkTestDerivationFromNvim {
-              inherit nvim;
+              inherit elythvim;
               name = "A nixvim configuration";
             };
             pre-commit-check = pre-commit-hooks.lib.${system}.run {
@@ -54,7 +54,7 @@
 
           packages = rec {
             default = full;
-            full = nvim;
+            full = elythvim;
           };
 
           devShells = {
