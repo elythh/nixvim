@@ -8,7 +8,8 @@
     theme = {
       normal = {
         a = {
-          bg = "nil";
+          bg = "#b4befe";
+          fg = "#1c1d21";
         };
         b = {
           bg = "nil";
@@ -28,20 +29,36 @@
       };
     };
     componentSeparators = {
-      left = " ";
+      left = "";
       right = " ";
+    };
+    sectionSeparators = {
+      left = "";
+      right = "";
     };
     sections = {
       lualine_a = [
         {
           name = "mode";
           icon = "";
+          separator = {
+            left = "";
+            right = "";
+          };
         }
       ];
       lualine_b = [
         {
           name = "branch";
           icon = "";
+          separator = {
+            left = "";
+            right = "";
+          };
+          color = {
+            fg = "#1c1d21";
+            bg = "#7d83ac";
+          };
         }
       ];
       lualine_c = [
@@ -85,10 +102,24 @@
         "diff"
       ];
       lualine_y = [
-        "progress"
-        "location"
+        {
+          name = "progress";
+          icon = "";
+          color = {
+            fg = "#1c1d21";
+            bg = "#f2cdcd";
+          };
+        }
       ];
-      lualine_z = [ ''"  " .. os.date("%X") .. " 📎"'' ];
+      lualine_z = [
+        {
+          name = "location";
+          color = {
+            fg = "#1c1d21";
+            bg = "#f2cdcd";
+          };
+        }
+      ];
     };
   };
 }
