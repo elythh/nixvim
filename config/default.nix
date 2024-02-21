@@ -15,6 +15,7 @@
 
     ./plug/lsp/lsp.nix
     ./plug/lsp/conform.nix
+    ./plug/lsp/fidget.nix
     ./plug/lsp/none-ls.nix
 
     ./plug/notes/pencil.nix
