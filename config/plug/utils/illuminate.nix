@@ -1,6 +1,6 @@
 {
   plugins.illuminate = {
-    enable = false;
+    enable = true;
     underCursor = false;
     filetypesDenylist = [
       "Outline"
