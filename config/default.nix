@@ -12,9 +12,10 @@
     ./plug/git/gitsigns.nix
     ./plug/git/lazygit.nix
 
-    ./plug/lsp/lsp.nix
     ./plug/lsp/conform.nix
     ./plug/lsp/fidget.nix
+    ./plug/lsp/lsp.nix
+    ./plug/lsp/lspsaga.nix
     ./plug/lsp/none-ls.nix
 
     ./plug/notes/pencil.nix
