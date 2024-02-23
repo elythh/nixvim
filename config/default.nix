@@ -1,4 +1,3 @@
-{ inputs, self, pkgs, ... }:
 {
   imports = [
     ./keys.nix

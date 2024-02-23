@@ -1,7 +1,4 @@
-{ pkgs, lib, config, ... }:
 {
-  # Thanks for the keybinds primeagen and folke!
-
   config = {
     options = {
       # Enable relative line numbers
@@ -93,7 +90,7 @@
       ];
 
       # More space in the neovim command line for displaying messages
-       cmdheight = 0;
+      cmdheight = 0;
 
       # We don't need to see things like INSERT anymore
       showmode = false;
