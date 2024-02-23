@@ -7,7 +7,7 @@
       enable = true;
       servers = {
         lua-ls = { enable = true; };
-        nixd = { enable = true; };
+        nil_ls = { enable = true; };
         marksman = { enable = true; };
         pyright = { enable = true; };
         gopls = { enable = true; };
