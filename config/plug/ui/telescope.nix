@@ -6,6 +6,14 @@
         enable = true;
       };
     };
+    defaults = {
+      layout_config = {
+        horizontal = {
+          prompt_position = "top";
+        };
+      };
+      sorting_strategy = "ascending";
+    };
     keymaps = {
       "<leader><space>" = {
         action = "find_files, {}";
