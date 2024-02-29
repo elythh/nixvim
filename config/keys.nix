@@ -66,26 +66,6 @@
     # Tabs
     {
       mode = "n";
-      key = "<leader><tab>l";
-      action = "<cmd>tablast<cr>";
-      options = {
-        silent = true;
-        desc = "Last tab";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader><tab>f";
-      action = "<cmd>tabfirst<cr>";
-      options = {
-        silent = true;
-        desc = "First Tab";
-      };
-    }
-
-    {
-      mode = "n";
       key = "<leader><tab><tab>";
       action = "<cmd>tabnew<cr>";
       options = {
@@ -96,31 +76,11 @@
 
     {
       mode = "n";
-      key = "<leader><tab>]";
-      action = "<cmd>tabnext<cr>";
-      options = {
-        silent = true;
-        desc = "Next Tab";
-      };
-    }
-
-    {
-      mode = "n";
       key = "<leader><tab>d";
       action = "<cmd>tabclose<cr>";
       options = {
         silent = true;
         desc = "Close tab";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader><tab>[";
-      action = "<cmd>tabprevious<cr>";
-      options = {
-        silent = true;
-        desc = "Previous Tab";
       };
     }
 
@@ -228,36 +188,6 @@
 
     {
       mode = "n";
-      key = "<leader>qs";
-      action = ":lua require('persistence').load()<cr>";
-      options = {
-        silent = true;
-        desc = "Restore session";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>ql";
-      action = "<cmd>lua require('persistence').load({ last = true })<cr>";
-      options = {
-        silent = true;
-        desc = "Restore last session";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>qd";
-      action = "<cmd>lua require('persistence').stop()<cr>";
-      options = {
-        silent = true;
-        desc = "Don't save current session";
-      };
-    }
-
-    {
-      mode = "n";
       key = "<leader>ul";
       action = ":lua ToggleLineNumber()<cr>";
       options = {
@@ -290,18 +220,14 @@
       mode = "v";
       key = "J";
       action = ":m '>+1<CR>gv=gv";
-      options = {
-        desc = "Use move command when line is highlighted ";
-      };
+      options = { desc = "Use move command when line is highlighted "; };
     }
 
     {
       mode = "v";
       key = "K";
       action = ":m '>-2<CR>gv=gv";
-      options = {
-        desc = "Use move command when line is highlighted ";
-      };
+      options = { desc = "Use move command when line is highlighted "; };
     }
 
     {
@@ -309,7 +235,8 @@
       key = "J";
       action = "mzJ`z";
       options = {
-        desc = "Allow cursor to stay in the same place after appending to current line ";
+        desc =
+          "Allow cursor to stay in the same place after appending to current line ";
       };
     }
 
@@ -335,57 +262,45 @@
       mode = "n";
       key = "n";
       action = "nzzzv";
-      options = {
-        desc = "Allow search terms to stay in the middle ";
-      };
+      options = { desc = "Allow search terms to stay in the middle "; };
     }
 
     {
       mode = "n";
       key = "N";
       action = "Nzzzv";
-      options = {
-        desc = "Allow search terms to stay in the middle ";
-      };
+      options = { desc = "Allow search terms to stay in the middle "; };
     }
 
     # Paste stuff without saving the deleted word into the buffer
     {
       mode = "x";
       key = "<leader>p";
-      action = "\"_dP";
-      options = {
-        desc = "Deletes to void register and paste over";
-      };
+      action = ''"_dP'';
+      options = { desc = "Deletes to void register and paste over"; };
     }
 
     # Copy stuff to system clipboard with <leader> + y or just y to have it just in vim
     {
       mode = [ "n" "v" ];
       key = "<leader>y";
-      action = "\"+y";
-      options = {
-        desc = "Copy to system clipboard";
-      };
+      action = ''"+y'';
+      options = { desc = "Copy to system clipboard"; };
     }
 
     {
       mode = [ "n" "v" ];
       key = "<leader>Y";
-      action = "\"+Y";
-      options = {
-        desc = "Copy to system clipboard";
-      };
+      action = ''"+Y'';
+      options = { desc = "Copy to system clipboard"; };
     }
 
     # Delete to void register
     {
       mode = [ "n" "v" ];
       key = "<leader>D";
-      action = "\"_d";
-      options = {
-        desc = "Delete to void register";
-      };
+      action = ''"_d'';
+      options = { desc = "Delete to void register"; };
     }
 
     # <C-c> instead of pressing esc just because
@@ -397,20 +312,9 @@
 
     {
       mode = "n";
-      key = "-";
-      action = "<CMD>Oil<CR>";
-      options = {
-        desc = "Open oil for current buffer";
-      };
-    }
-
-    {
-      mode = "n";
       key = "<leader>zz";
       action = "<CMD> ZenMode | Pencil<CR>";
-      options = {
-        desc = "Toggle writting mode";
-      };
+      options = { desc = "Toggle writting mode"; };
     }
   ];
   extraConfigLua = ''
