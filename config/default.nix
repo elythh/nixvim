@@ -40,6 +40,7 @@
     ./plug/ui/telescope.nix
 
     ./plug/utils/copilot-lua.nix
+    ./plug/utils/flash.nix
     ./plug/utils/hardtime.nix
     ./plug/utils/harpoon.nix
     ./plug/utils/illuminate.nix
