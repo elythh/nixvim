@@ -5,28 +5,12 @@
     updateInInsert = false;
     sources = {
       code_actions = {
-        eslint_d.enable = true;
         gitsigns.enable = true;
         statix.enable = true;
       };
-      diagnostics = {
-        statix = {
-          enable = true;
-        };
-        luacheck = {
-          enable = true;
-        };
-        flake8 = {
-          enable = true;
-        };
-        eslint_d = {
-          enable = true;
-        };
-      };
+      diagnostics = { statix = { enable = true; }; };
       formatting = {
-        nixpkgs_fmt = {
-          enable = true;
-        };
+        nixpkgs_fmt = { enable = true; };
         prettier = {
           enable = true;
           withArgs = ''
@@ -35,9 +19,7 @@
             }
           '';
         };
-        stylua = {
-          enable = true;
-        };
+        stylua = { enable = true; };
         black = {
           enable = true;
           withArgs = ''
@@ -46,21 +28,16 @@
             }
           '';
         };
-        jq = {
-          enable = true;
-        };
       };
     };
   };
-  keymaps = [
-    {
-      mode = [ "n" "v" ];
-      key = "<leader>cf";
-      action = "<cmd>lua vim.lsp.buf.format()<cr>";
-      options = {
-        silent = true;
-        desc = "Format";
-      };
-    }
-  ];
+  keymaps = [{
+    mode = [ "n" "v" ];
+    key = "<leader>cf";
+    action = "<cmd>lua vim.lsp.buf.format()<cr>";
+    options = {
+      silent = true;
+      desc = "Format";
+    };
+  }];
 }

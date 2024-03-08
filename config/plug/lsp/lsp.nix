@@ -1,11 +1,10 @@
 {
   plugins = {
-    lsp-format = {
-      enable = true;
-    };
+    lsp-format = { enable = true; };
     lsp = {
       enable = true;
       servers = {
+        html = { enable = true; };
         lua-ls = { enable = true; };
         nil_ls = { enable = true; };
         marksman = { enable = true; };
