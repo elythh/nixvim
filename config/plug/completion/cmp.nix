@@ -14,11 +14,8 @@
         snippet = {expand = "luasnip";};
         formatting = {fields = ["kind" "abbr" "menu"];};
         sources = [
-          {
-            name = "nvim_lsp"; # lsp
-          }
+          {name = "nvim_lsp";}
           {name = "emoji";}
-          {name = "copilot";}
           {
             name = "buffer"; # text within current buffer
             option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
