@@ -8,9 +8,9 @@
         gitsigns.enable = true;
         statix.enable = true;
       };
-      diagnostics = { statix = { enable = true; }; };
+      diagnostics = {statix = {enable = true;};};
       formatting = {
-        nixpkgs_fmt = { enable = true; };
+        alejandra = {enable = true;};
         prettier = {
           enable = true;
           withArgs = ''
@@ -19,7 +19,7 @@
             }
           '';
         };
-        stylua = { enable = true; };
+        stylua = {enable = true;};
         black = {
           enable = true;
           withArgs = ''
@@ -31,13 +31,15 @@
       };
     };
   };
-  keymaps = [{
-    mode = [ "n" "v" ];
-    key = "<leader>cf";
-    action = "<cmd>lua vim.lsp.buf.format()<cr>";
-    options = {
-      silent = true;
-      desc = "Format";
-    };
-  }];
+  keymaps = [
+    {
+      mode = ["n" "v"];
+      key = "<leader>cf";
+      action = "<cmd>lua vim.lsp.buf.format()<cr>";
+      options = {
+        silent = true;
+        desc = "Format";
+      };
+    }
+  ];
 }

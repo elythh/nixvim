@@ -1,18 +1,17 @@
 {
   plugins = {
-    lsp-format = { enable = true; };
+    lsp-format = {enable = true;};
     lsp = {
       enable = true;
       servers = {
-        html = { enable = true; };
-        lua-ls = { enable = true; };
-        nil_ls = { enable = true; };
-        marksman = { enable = true; };
-        pyright = { enable = true; };
-        gopls = { enable = true; };
-        terraformls = { enable = true; };
-        yamlls = { enable = true; };
-
+        html = {enable = true;};
+        lua-ls = {enable = true;};
+        nil_ls = {enable = true;};
+        marksman = {enable = true;};
+        pyright = {enable = true;};
+        gopls = {enable = true;};
+        terraformls = {enable = true;};
+        yamlls = {enable = true;};
       };
       keymaps = {
         silent = true;

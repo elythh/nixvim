@@ -5,7 +5,7 @@
       number = true;
       relativenumber = true;
 
-      # Set tabs to 2 spaces 
+      # Set tabs to 2 spaces
       tabstop = 2;
       softtabstop = 2;
       showtabline = 2;
@@ -42,14 +42,14 @@
       updatetime = 50; # faster completion (4000ms default)
 
       # Set completeopt to have a better completion experience
-      completeopt = [ "menuone" "noselect" "noinsert" ]; # mostly just for cmp
+      completeopt = ["menuone" "noselect" "noinsert"]; # mostly just for cmp
 
       # Enable persistent undo history
       swapfile = false;
       backup = false;
       undofile = true;
 
-      # Enable 24-bit colors 
+      # Enable 24-bit colors
       termguicolors = true;
 
       # Enable the sign column to prevent the screen from jumping
@@ -79,13 +79,11 @@
       encoding = "utf-8";
       fileencoding = "utf-8";
 
-
       # More space in the neovim command line for displaying messages
       cmdheight = 0;
 
       # We don't need to see things like INSERT anymore
       showmode = false;
-
     };
   };
 }

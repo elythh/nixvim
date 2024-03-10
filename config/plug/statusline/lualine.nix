@@ -3,7 +3,7 @@
     enable = true;
     globalstatus = true;
     disabledFiletypes = {
-      statusline = [ "dashboard" "alpha" ];
+      statusline = ["dashboard" "alpha"];
     };
     theme = {
       normal = {
