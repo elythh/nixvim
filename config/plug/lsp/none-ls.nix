@@ -1,6 +1,6 @@
 {
   plugins.none-ls = {
-    enable = false;
+    enable = true;
     enableLspFormat = true;
     updateInInsert = false;
     sources = {
@@ -11,6 +11,14 @@
       diagnostics = {statix = {enable = true;};};
       formatting = {
         alejandra = {enable = true;};
+        black = {
+          enable = true;
+          withArgs = ''
+            {
+              extra_args = { "--fast" },
+            }
+          '';
+        };
         prettier = {
           enable = true;
           withArgs = ''
@@ -20,14 +28,7 @@
           '';
         };
         stylua = {enable = true;};
-        black = {
-          enable = true;
-          withArgs = ''
-            {
-              extra_args = { "--fast" },
-            }
-          '';
-        };
+        yamlfmt = {enable = true;};
       };
     };
   };
