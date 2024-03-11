@@ -8,7 +8,10 @@
         gitsigns.enable = true;
         statix.enable = true;
       };
-      diagnostics = {statix = {enable = true;};};
+      diagnostics = {
+        statix = {enable = true;};
+        yamllint = {enable = true;};
+      };
       formatting = {
         alejandra = {enable = true;};
         black = {
