@@ -1,3 +1,7 @@
+<div align="center">
+    <img src="assets/neovim-flake-logo-work.svg" alt="neovim-flake Logo"  width="200">
+</div>
+
 # Nixvim config
 
 My neovim config using nixvim.
@@ -85,3 +89,7 @@ configuration (`home.packges = with pkgs; [ neovim ]`), but you replace
 
 You can just straight up alias something like `nix run
 'github:elythh/nixvim'` to `nvim`.
+
+## Credits
+
+- [yavko](https://github.com/yavko) for the logo
