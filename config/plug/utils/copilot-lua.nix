@@ -1,11 +1,5 @@
 {
-  plugins.copilot-lua = {
+  plugins.copilot-vim = {
     enable = true;
-    suggestion = {
-      enabled = true;
-    };
-    panel = {
-      enabled = true;
-    };
   };
 }
