@@ -3,9 +3,6 @@
     enable = true;
     useDefaultKeymaps = true;
     deleteToTrash = true;
-    viewOptions = {
-      showHidden = true;
-    };
     float = {
       padding = 2;
       maxWidth = 0; # ''math.ceil(vim.o.lines * 0.8 - 4)'';
@@ -24,7 +21,7 @@
       "<C-\\>" = "actions.select_vsplit";
       "<C-enter>" = "actions.select_split"; # this is used to navigate left
       "<C-t>" = "actions.select_tab";
-      "<C-p>" = "actions.preview";
+      "<C-v>" = "actions.preview";
       "<C-c>" = "actions.close";
       "<C-r>" = "actions.refresh";
       "-" = "actions.parent";
@@ -40,8 +37,8 @@
   keymaps = [
     {
       mode = "n";
-      key = "<leader>o";
-      action = ":Oil --float<CR>";
+      key = "-";
+      action = ":Oil<CR>";
       options = {
         desc = "Open parent directory";
         silent = true;
