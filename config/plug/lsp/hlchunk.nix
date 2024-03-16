@@ -11,9 +11,16 @@
     })
   ];
   extraConfigLua = ''
+    local colors = require("prism.themer"):getColors()
     require("hlchunk").setup({
       blank ={
         enable = false,
+      },
+      indent = {
+        enable = true,
+        style = {
+            colors.comment,
+        },
       }
     })
   '';
