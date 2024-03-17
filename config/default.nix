@@ -51,6 +51,7 @@
     ./plug/utils/oil.nix
     ./plug/utils/telescope-gitmoji.nix
     ./plug/utils/undotree.nix
+    ./plug/utils/ufo.nix
     ./plug/utils/whichkey.nix
 
     # Initialize prism last to override highlights
