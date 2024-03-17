@@ -23,8 +23,6 @@
         cmp = true;
         noice = true;
         notify = true;
-        neotree = true;
-        harpoon = true;
         gitsigns = true;
         which_key = true;
         illuminate = {
