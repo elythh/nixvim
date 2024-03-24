@@ -21,7 +21,6 @@
 
     ./plug/notes/markdown-preview.nix
     ./plug/notes/twilight.nix
-    ./plug/notes/zen-mod.nix
 
     ./plug/snippets/luasnip.nix
 
