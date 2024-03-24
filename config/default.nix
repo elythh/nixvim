@@ -20,7 +20,6 @@
     ./plug/lsp/none-ls.nix
 
     ./plug/notes/markdown-preview.nix
-    ./plug/notes/twilight.nix
 
     ./plug/snippets/luasnip.nix
 
