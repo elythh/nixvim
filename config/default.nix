@@ -20,7 +20,6 @@
     ./plug/lsp/none-ls.nix
 
     ./plug/notes/markdown-preview.nix
-    ./plug/notes/pencil.nix
     ./plug/notes/twilight.nix
     ./plug/notes/zen-mod.nix
 
