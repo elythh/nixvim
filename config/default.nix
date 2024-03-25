@@ -49,8 +49,5 @@
     ./plug/utils/undotree.nix
     ./plug/utils/ufo.nix
     ./plug/utils/whichkey.nix
-
-    # Initialize prism last to override highlights
-    ./plug/colorscheme/prism.nix
   ];
 }
