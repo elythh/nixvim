@@ -34,7 +34,6 @@
     ./plug/ui/bufferline.nix
     ./plug/ui/noice.nix
     ./plug/ui/nvim-notify.nix
-    ./plug/ui/telescope-zoxide.nix
     ./plug/ui/telescope.nix
 
     ./plug/utils/dap.nix
