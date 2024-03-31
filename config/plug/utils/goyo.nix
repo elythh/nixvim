@@ -1,1 +1,0 @@
-{plugins.goyo = {enable = true;};}
