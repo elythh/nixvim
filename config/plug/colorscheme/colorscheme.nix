@@ -1,7 +1,10 @@
 {
   colorschemes = {
+    gruvbox = {
+      enable = false;
+    };
     tokyonight = {
-      enable = true;
+      enable = false;
       style = "night";
       transparent = true;
       onHighlights = ''
@@ -39,8 +42,8 @@
     };
     oxocarbon.enable = false;
     rose-pine = {
-      enable = false;
-      style = "moon"; #  "main", "moon", "dawn" or raw lua code
+      enable = true;
+      style = "main"; #  "main", "moon", "dawn" or raw lua code
       disableItalics = false;
       transparentFloat = true;
       transparentBackground = true;

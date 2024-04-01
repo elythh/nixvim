@@ -3,6 +3,7 @@
     ./keys.nix
     ./sets.nix
 
+    ./plug/colorscheme/biscuit.nix
     ./plug/colorscheme/colorscheme.nix
 
     ./plug/completion/cmp.nix
@@ -26,7 +27,7 @@
     ./plug/statusline/lualine.nix
     #./plug/statusline/staline.nix
 
-    ./plug/treesitter/treesitter-context.nix
+    #./plug/treesitter/treesitter-context.nix
     ./plug/treesitter/treesitter-textobjects.nix
     ./plug/treesitter/treesitter.nix
 
