@@ -58,10 +58,7 @@
 
         formatter = pkgs.alejandra;
 
-        packages = rec {
-          default = full;
-          full = nvim;
-        };
+        packages.default = nvim;
 
         devShells = {
           default = with pkgs;
