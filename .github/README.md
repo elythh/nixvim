@@ -53,7 +53,6 @@ If you add a new configuration file, remember to add it to the
   - **[bufferline](../config/plug/ui/bufferline.nix):** VSCode like line for buffers
   - **[noice](../config/plug/ui/noice.nix):** Better nvim UI
   - **[nvim-notify](../config/plug/ui/nvim-notify.nix):** Notification manager
-  - **[staline](../config/plug/ui/nvim-notify.nix):** Notification manager
   - **[telescope](../config/plug/ui/telescope.nix):** Best plugin ever ?
 - **[utils/](../config/plug/utils)**
   - **[CopilotChat](../config/plug/ui/copilot.nix):** Chat with copilot in nvim
