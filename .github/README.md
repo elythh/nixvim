@@ -77,7 +77,7 @@ To test your configuration simply run the following command
 nix run .
 ```
 
-If you have nix intalled, you can directly run my config from anyhwere
+If you have nix installed, you can directly run my config from anywhere
 
 You can try running mine with:
 
