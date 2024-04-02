@@ -379,8 +379,7 @@
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "pre-commit-hooks": "pre-commit-hooks_2",
-        "tree-sitter-nu": "tree-sitter-nu"
+        "pre-commit-hooks": "pre-commit-hooks_2"
       }
     },
     "systems": {
@@ -425,22 +424,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
-        "type": "github"
-      }
-    },
-    "tree-sitter-nu": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1710005242,
-        "narHash": "sha256-P+ixE359fAW7R5UJLwvMsmju7UFmJw5SN+kbMEw7Kz0=",
-        "owner": "nushell",
-        "repo": "tree-sitter-nu",
-        "rev": "c5b7816043992b1cdc1462a889bc74dc08576fa6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nushell",
-        "repo": "tree-sitter-nu",
         "type": "github"
       }
     }

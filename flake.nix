@@ -8,10 +8,6 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    tree-sitter-nu = {
-      url = "github:nushell/tree-sitter-nu";
-      flake = false;
-    };
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +18,6 @@
     nixpkgs,
     nixvim,
     flake-parts,
-    tree-sitter-nu,
     pre-commit-hooks,
     ...
   } @ inputs:
