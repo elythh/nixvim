@@ -10,6 +10,7 @@
     ./plug/completion/copilot-cmp.nix
     ./plug/completion/lspkind.nix
 
+    ./plug/git/gitlinker.nix
     ./plug/git/gitsigns.nix
     ./plug/git/lazygit.nix
     ./plug/git/worktree.nix

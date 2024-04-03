@@ -24,6 +24,7 @@ If you add a new configuration file, remember to add it to the
   - **[lspkind](../config/plug/completion/copilot-cmp.nix):** vscode-like pictograms for neovim lsp completion items
 
 - **[git/](../config/plug/git)**
+  - **[gitlinker](../config/plug/git/gitlinker.nix):** Generate shareable file permalinks
   - **[gitsigns](../config/plug/git/gitsigns.nix):** Git integration for buffers
   - **[lazygit](../config/plug/git/lazygit.nix):** The **best** git TUI, as a neovim plugin
   - **[worktree](../config/plug/git/worktree.nix):** Make using git worktrees easier
