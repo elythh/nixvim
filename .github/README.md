@@ -4,7 +4,7 @@
 
 # Nixvim config
 
-My neovim config using nixvim.
+My Neovim config using nixvim.
 
 <img src="assets/1.png" alt="nvim">
 
@@ -21,7 +21,7 @@ If you add a new configuration file, remember to add it to the
 
   - **[nvim-cmp](../config/plug/completion/cmp.nix):** Completion plugin for nvim + emoji support
   - **[copilot-cmp](../config/plug/completion/copilot-cmp.nix):** Completion support for GitHub copilot
-  - **[lspkind](../config/plug/completion/copilot-cmp.nix):** vscode-like pictograms for neovim lsp completion items
+  - **[lspkind](../config/plug/completion/lspkind.nix):** vscode-like pictograms for neovim lsp completion items
 
 - **[git/](../config/plug/git)**
   - **[gitlinker](../config/plug/git/gitlinker.nix):** Generate shareable file permalinks
@@ -77,7 +77,7 @@ To test your configuration simply run the following command
 nix run .
 ```
 
-If you have nix intalled, you can directly run my config from anyhwere
+If you have nix installed, you can directly run my config from anywhere
 
 You can try running mine with:
 
