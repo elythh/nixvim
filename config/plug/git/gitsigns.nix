@@ -1,9 +1,9 @@
 {
   plugins.gitsigns = {
     enable = true;
-    trouble = true;
-    currentLineBlame = true;
     settings = {
+      trouble = true;
+      currentLineBlame = true;
       signs = {
         add = {
           text = "│";
