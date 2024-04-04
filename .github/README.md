@@ -52,6 +52,7 @@ If you add a new configuration file, remember to add it to the
 - **[ui/](../config/plug/ui)**
   - **[alpha](../config/plug/ui/alpha.nix):** Dashboard
   - **[bufferline](../config/plug/ui/bufferline.nix):** VSCode like line for buffers
+  - **[neoscroll](../config/plug/ui/neoscroll.nix):** Better scrolling experience
   - **[noice](../config/plug/ui/noice.nix):** Better nvim UI
   - **[nvim-notify](../config/plug/ui/nvim-notify.nix):** Notification manager
   - **[telescope](../config/plug/ui/telescope.nix):** Best plugin ever ?

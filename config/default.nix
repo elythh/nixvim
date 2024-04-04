@@ -34,6 +34,7 @@
 
     ./plug/ui/alpha.nix
     ./plug/ui/bufferline.nix
+    ./plug/ui/neoscroll.nix
     ./plug/ui/noice.nix
     ./plug/ui/nvim-notify.nix
     ./plug/ui/telescope.nix
