@@ -9,11 +9,11 @@
         statix.enable = true;
       };
       diagnostics = {
-        statix = {enable = true;};
-        yamllint = {enable = true;};
+        statix.enable = true;
+        yamllint.enable = true;
       };
       formatting = {
-        alejandra = {enable = true;};
+        alejandra.enable = true;
         black = {
           enable = true;
           withArgs = ''
@@ -31,8 +31,8 @@
             }
           '';
         };
-        stylua = {enable = true;};
-        yamlfmt = {enable = true;};
+        stylua.enable = true;
+        yamlfmt.enable = true;
       };
     };
   };
