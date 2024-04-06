@@ -25,9 +25,6 @@ in {
         y = {
           bg = "nil";
         };
-        x = {
-          bg = "nil";
-        };
       };
     };
     sections = {
@@ -50,6 +47,7 @@ in {
             bg = colors.base00;
           };
         }
+        "diff"
       ];
       lualine_c = [
         {
@@ -69,25 +67,19 @@ in {
         }
       ];
       lualine_x = [
-        "diff"
-      ];
-      lualine_y = [
         {
           name = "filetype";
           extraConfig = {
             icon_only = true;
-            colored = false;
-            padding = {
-              left = 1;
-              right = 0;
-            };
           };
         }
+      ];
+      lualine_y = [
         {
           name = "filename";
           extraConfig = {
             symbols = {
-              modified = "  ";
+              modified = "";
               readonly = "";
               unnamed = "";
             };
