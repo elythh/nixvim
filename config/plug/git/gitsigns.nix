@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       trouble = true;
-      currentLineBlame = true;
+      current_line_blame = true;
       signs = {
         add = {
           text = "│";
