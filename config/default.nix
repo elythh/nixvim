@@ -39,7 +39,6 @@
     ./plug/ui/nvim-notify.nix
     ./plug/ui/telescope.nix
 
-    ./plug/utils/dap.nix
     ./plug/utils/copilot.nix
     ./plug/utils/flash.nix
     ./plug/utils/hardtime.nix

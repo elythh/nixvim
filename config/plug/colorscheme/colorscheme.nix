@@ -1,7 +1,12 @@
-{
+let
+  lua = x: {__raw = x;};
+in {
   colorschemes = {
     gruvbox = {
-      enable = false;
+      enable = true;
+      settings = {
+        transparent_mode = true;
+      };
     };
     tokyonight = {
       enable = false;
@@ -42,11 +47,25 @@
     };
     oxocarbon.enable = false;
     rose-pine = {
-      enable = true;
-      style = "main"; #  "main", "moon", "dawn" or raw lua code
+      enable = false;
+      style = "moon"; #  "main", "moon", "dawn" or raw lua code
       disableItalics = false;
-      transparentFloat = true;
+      transparentFloat = false;
       transparentBackground = true;
+      highlightGroups = {
+        TelescopeNormal = {
+          bg = lua "require('rose-pine.palette').base";
+          fg = lua "require('rose-pine.palette').surface";
+        };
+        TelescopeBorder = {
+          bg = lua "require('rose-pine.palette').base";
+          fg = lua "require('rose-pine.palette').surface";
+        };
+        TelescopePreviewTitle = {
+          bg = lua "require('rose-pine.palette').base";
+          fg = lua "require('rose-pine.palette').surface";
+        };
+      };
     };
     catppuccin = {
       enable = false;
