@@ -8,6 +8,11 @@ My Neovim config using nixvim.
 
 <img src="assets/1.png" alt="nvim">
 
+<details>
+    <summary>More!</summary>
+    <img src="assets/2.png" alt="nvim">
+</details>
+
 ## Configuring
 
 To start configuring, just add or modify the nix files in `./config`.
@@ -16,7 +21,7 @@ If you add a new configuration file, remember to add it to the
 
 ### Current plugins
 
-- **[colorscheme/](../config/plug/colorscheme):** Theme configuration
+- **[colorscheme/](../config/plug/colorscheme):** Theme configuration. Current one is [paradise](https://github.com/paradise-theme/paradise)
 - **[completion/](../config/plug/completion)**
 
   - **[nvim-cmp](../config/plug/completion/cmp.nix):** Completion plugin for nvim + emoji support

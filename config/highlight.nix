@@ -2,6 +2,19 @@
   colors = import ../config/colors/${config.theme}.nix {};
 in {
   highlight = {
+    CursorLine = {
+      fg = "none";
+      bg = "none";
+    };
+    CursorLineNr = {
+      fg = "none";
+      bg = "none";
+    };
+    AlphaHeader = {
+      fg = colors.base0E;
+      bg = "none";
+    };
+
     StatusNormal = {
       bg = "none";
       fg = "none";
