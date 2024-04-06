@@ -5,29 +5,6 @@
     disabledFiletypes = {
       statusline = ["dashboard" "alpha"];
     };
-    theme = {
-      normal = {
-        a = {
-          bg = "#b4befe";
-          fg = "#1c1d21";
-        };
-        b = {
-          bg = "nil";
-        };
-        c = {
-          bg = "nil";
-        };
-        z = {
-          bg = "nil";
-        };
-        y = {
-          bg = "nil";
-        };
-        x = {
-          bg = "nil";
-        };
-      };
-    };
     componentSeparators = {
       left = "";
       right = " ";

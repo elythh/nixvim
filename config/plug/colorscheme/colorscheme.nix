@@ -1,9 +1,13 @@
-let
+{config, ...}: let
   lua = x: {__raw = x;};
 in {
   colorschemes = {
-    gruvbox = {
+    base16 = {
       enable = true;
+      colorscheme = import ../../colors/${config.theme}.nix {};
+    };
+    gruvbox = {
+      enable = false;
       settings = {
         transparent_mode = true;
       };

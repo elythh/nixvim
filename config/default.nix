@@ -1,7 +1,12 @@
 {
+  config,
+  lib,
+  ...
+}: {
   imports = [
     ./keys.nix
     ./sets.nix
+    ./highlight.nix
 
     ./plug/colorscheme/biscuit.nix
     ./plug/colorscheme/colorscheme.nix
@@ -50,4 +55,16 @@
     ./plug/utils/ufo.nix
     ./plug/utils/whichkey.nix
   ];
+  options = {
+    theme = lib.mkOption {
+      default = "paradise";
+      type = lib.types.str;
+    };
+  };
+  config = {
+    theme = "paradise";
+    extraConfigLua = ''
+      _G.theme = "${config.theme}"
+    '';
+  };
 }
