@@ -10,6 +10,7 @@ in {
       fg = "none";
       bg = "none";
     };
+
     AlphaHeader = {
       fg = colors.base0E;
       bg = "none";
@@ -24,12 +25,10 @@ in {
       fg = colors.base01;
       bg = colors.base01;
     };
-
     TelescopePromptNormal = {
       fg = "none";
       bg = colors.base01;
     };
-
     TelescopePromptPrefix = {
       fg = colors.base08;
       bg = colors.base01;
@@ -98,6 +97,19 @@ in {
     LineNr = {
       fg = colors.base03;
       bg = "none";
+    };
+
+    NoiceCmdlinePopup = {
+      fg = colors.base04;
+      bg = colors.base01;
+    };
+    NoiceCmdlinePopupBorder = {
+      fg = colors.base01;
+      bg = colors.base01;
+    };
+    NoiceCmdlinePopupBorderSearch = {
+      fg = colors.base01;
+      bg = colors.base01;
     };
   };
 }
