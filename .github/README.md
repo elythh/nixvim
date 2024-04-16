@@ -11,6 +11,7 @@ My Neovim config using nixvim.
 <details>
     <summary>More!</summary>
     <img src="assets/2.png" alt="nvim">
+    <img src="assets/3.png" alt="nvim">
 </details>
 
 ## Configuring
