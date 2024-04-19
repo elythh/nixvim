@@ -1,11 +1,15 @@
-{config, ...}: let
+{
+  config,
+  lib,
+  ...
+}: let
   colors = import ../../colors/${config.theme}.nix {};
 in {
   plugins = {
     bufferline = {
       enable = true;
       separatorStyle = "thick"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
-      highlights = {
+      highlights = lib.mkIf config.colorschemes.base16.enable {
         fill = {
           fg = colors.base00;
           bg = colors.base00;

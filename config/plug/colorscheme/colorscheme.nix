@@ -3,7 +3,7 @@
 in {
   colorschemes = {
     base16 = {
-      enable = true;
+      enable = false;
       setUpBar = false;
       colorscheme = import ../../colors/${config.theme}.nix {};
     };
@@ -54,9 +54,9 @@ in {
     };
     oxocarbon.enable = false;
     rose-pine = {
-      enable = false;
+      enable = true;
       settings = {
-        style = "moon"; #  "main", "moon", "dawn" or raw lua code
+        style = "main"; #  "main", "moon", "dawn" or raw lua code
         transparentBackground = true;
         highlightGroups = {
           TelescopeNormal = {
