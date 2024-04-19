@@ -33,8 +33,14 @@ in {
           name = "mode";
           fmt = "string.lower";
           color = {
-            fg = colors.base04;
-            bg = colors.base00;
+            fg =
+              if config.colorschemes.base16.enable
+              then colors.base04
+              else "none";
+            bg =
+              if config.colorschemes.base16.enable
+              then colors.base00
+              else "none";
           };
         }
       ];
@@ -43,8 +49,14 @@ in {
           name = "branch";
           icon = "";
           color = {
-            fg = colors.base04;
-            bg = colors.base00;
+            fg =
+              if config.colorschemes.base16.enable
+              then colors.base04
+              else "none";
+            bg =
+              if config.colorschemes.base16.enable
+              then colors.base00
+              else "none";
           };
         }
         "diff"
@@ -61,8 +73,14 @@ in {
             };
           };
           color = {
-            fg = colors.base08;
-            bg = colors.base00;
+            fg =
+              if config.colorschemes.base16.enable
+              then colors.base08
+              else "none";
+            bg =
+              if config.colorschemes.base16.enable
+              then colors.base00
+              else "none";
           };
         }
       ];
@@ -85,17 +103,30 @@ in {
             };
           };
           color = {
-            fg = colors.base04;
-            bg = colors.base00;
+            fg =
+              if config.colorschemes.base16.enable
+              then colors.base04
+              else "none";
+            bg =
+              if config.colorschemes.base16.enable
+              then colors.base00
+              else "none";
           };
+          separator.left = "";
         }
       ];
       lualine_z = [
         {
           name = "location";
           color = {
-            fg = colors.base0B;
-            bg = colors.base00;
+            fg =
+              if config.colorschemes.base16.enable
+              then colors.base0B
+              else "none";
+            bg =
+              if config.colorschemes.base16.enable
+              then colors.base00
+              else "none";
           };
         }
       ];
