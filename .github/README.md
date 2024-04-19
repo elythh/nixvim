@@ -28,6 +28,7 @@ If you add a new configuration file, remember to add it to the
   - **[nvim-cmp](../config/plug/completion/cmp.nix):** Completion plugin for nvim + emoji support
   - **[copilot-cmp](../config/plug/completion/copilot-cmp.nix):** Completion support for GitHub copilot
   - **[lspkind](../config/plug/completion/lspkind.nix):** vscode-like pictograms for neovim lsp completion items
+  - **[schemastore.nvim](../config/plug/completion/schemastore.nix):** Schemastore integration
 
 - **[git/](../config/plug/git)**
   - **[gitlinker](../config/plug/git/gitlinker.nix):** Generate shareable file permalinks

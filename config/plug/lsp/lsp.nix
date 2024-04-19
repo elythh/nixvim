@@ -13,7 +13,9 @@
         gopls = {enable = true;};
         terraformls = {enable = true;};
         tsserver = {enable = false;};
-        yamlls = {enable = true;};
+        yamlls = {
+          enable = true;
+        };
       };
       keymaps = {
         silent = true;
