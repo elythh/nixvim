@@ -63,6 +63,7 @@ If you add a new configuration file, remember to add it to the
   - **[nvim-notify](../config/plug/ui/nvim-notify.nix):** Notification manager
   - **[telescope](../config/plug/ui/telescope.nix):** Best plugin ever ?
 - **[utils/](../config/plug/utils)**
+  - **[comment](../config/plug/utils/comment.nix):** Quickly toggle comments
   - **[CopilotChat](../config/plug/utils/copilot.nix):** Chat with copilot in nvim
   - **[dap](../config/plug/utils/dap.nix):** Debug in nvim
   - **[flash](../config/plug/utils/flash.nix):** Navigate in file with a few keystrokes
