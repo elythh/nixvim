@@ -60,7 +60,7 @@
   options = {
     theme = lib.mkOption {
       default = "paradise";
-      type = lib.types.str;
+      type = lib.types.enum ["paradise" "mountain" "tokyonight" "everforest" "everblush" "jellybeans" "aquarium" "gruvbox"];
     };
   };
   config = {
