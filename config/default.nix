@@ -61,7 +61,7 @@
   options = {
     theme = lib.mkOption {
       default = "paradise";
-      type = lib.types.enum ["paradise" "mountain" "tokyonight" "everforest" "everblush" "jellybeans" "aquarium" "gruvbox"];
+      type = lib.types.enum ["paradise" "decay" "mountain" "tokyonight" "everforest" "everblush" "jellybeans" "aquarium" "gruvbox"];
     };
   };
   config = {
