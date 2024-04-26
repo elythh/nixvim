@@ -5,7 +5,7 @@ in {
     enable = true;
     globalstatus = true;
     disabledFiletypes = {
-      statusline = ["dashboard" "alpha"];
+      statusline = ["dashboard" "alpha" "starter"];
     };
     theme = {
       normal = {

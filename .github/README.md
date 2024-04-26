@@ -58,6 +58,7 @@ If you add a new configuration file, remember to add it to the
   - **[treesitter](../config/plug/treesitter/treesitter.nix):** Parser generator tool to build a syntax tree of the current buffer
 - **[ui/](../config/plug/ui)**
   - **[alpha](../config/plug/ui/alpha.nix):** Dashboard
+  - **[btw](../config/plug/ui/btw.nix):** Writes a small message as startup screen
   - **[bufferline](../config/plug/ui/bufferline.nix):** VSCode like line for buffers
   - **[noice](../config/plug/ui/noice.nix):** Better nvim UI
   - **[nvim-notify](../config/plug/ui/nvim-notify.nix):** Notification manager
