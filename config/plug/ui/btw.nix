@@ -14,7 +14,7 @@
 
   extraConfigLua = ''
     require('btw').setup({
-      text = "I use Neovim (BTW)",
+      text = "I use Neovim (and NixOS, BTW)",
     })
   '';
 }
