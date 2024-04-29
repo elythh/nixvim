@@ -74,6 +74,7 @@ If you add a new configuration file, remember to add it to the
   - **[illuminate](../config/plug/utils/illuminate.nix):** Highlight word under the cursor
   - **[nvim-autopairs](../config/plug/utils/nvim-autopairs.nix):** Autopairs in nvim
   - **[oil](../config/plug/utils/oil.nix):** Navigate in your working folder with a buffer
+  - **[track](../config/plug/utils/track.nix):** Yet another Harpoon/Grapple
   - **[ufo](../config/plug/utils/ufo.nix):** Folding plugin
   - **[undotree](../config/plug/utils/undotree.nix):** Undo history visualizer
   - **[whichkey](../config/plug/utils/whichkey.nix):** Popup to display keybindings

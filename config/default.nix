@@ -54,6 +54,7 @@
     ./plug/utils/illuminate.nix
     ./plug/utils/nvim-autopairs.nix
     ./plug/utils/oil.nix
+    ./plug/utils/track.nix
     ./plug/utils/undotree.nix
     ./plug/utils/ufo.nix
     ./plug/utils/whichkey.nix
