@@ -118,9 +118,9 @@ With the input added you can reference it directly.
 { inputs, system, ... }:
 {
   # NixOS
-  environment.systemPackages = [ inputs.nixvim.packages.${system}.default ];
+  environment.systemPackages = [ inputs.nixvim.packages.${pkgs.system}.default ];
   # home-manager
-  home.packages = [ inputs.nixvim.packages.${system}.default ];
+  home.packages = [ inputs.nixvim.packages.${pkgs.system}.default ];
 }
 ```
 
@@ -139,10 +139,9 @@ configuration (`home.packges = with pkgs; [ neovim ]`), but you replace
 ```nix
 {
   pkgs = import inputs.nixpkgs {
-    inherit system;
     overlays = [
       (final: prev: {
-        neovim = inputs.nixvim.packages.${system}.default;
+        neovim = inputs.nixvim.packages.${pkgs.system}.default;
       })
     ];
   }
