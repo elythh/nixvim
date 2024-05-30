@@ -16,7 +16,7 @@ in {
         };
         background = {
           fg = colors.base03;
-          bg = colors.base00;
+          bg = colors.base01;
         };
         bufferSelected = {
           fg = colors.base05;
@@ -29,11 +29,11 @@ in {
         };
         closeButton = {
           fg = colors.base03;
-          bg = colors.base00;
+          bg = colors.base01;
         };
         closeButtonVisible = {
           fg = colors.base03;
-          bg = colors.base00;
+          bg = colors.base01;
         };
         closeButtonSelected = {
           fg = colors.base08;
@@ -41,6 +41,14 @@ in {
         };
 
         indicatorSelected = {
+          fg = colors.base00;
+          bg = colors.base00;
+        };
+        indicatorVisible = {
+          fg = colors.base00;
+          bg = colors.base00;
+        };
+        separator = {
           fg = colors.base00;
           bg = colors.base00;
         };
