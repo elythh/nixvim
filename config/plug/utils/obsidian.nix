@@ -36,30 +36,31 @@
         };
       };
       templates = {
+        subdir = "~/obsidian/templates";
         substitutions = {
-          monday = ''
+          monday.__raw = ''
             function()
-             return os.date("*t").2
+             return os.date("*t").wday == 2
             end
           '';
-          tuesday = ''
+          tuesday.__raw = ''
             function()
-             return os.date("*t").3
+             return os.date("*t").wday == 3
             end
           '';
-          wednesday = ''
+          wednesday.__raw = ''
             function()
-             return os.date("*t").4
+             return os.date("*t").wday == 4
             end
           '';
-          thursday = ''
+          thursday.__raw = ''
             function()
-             return os.date("*t").5
+             return os.date("*t").wday == 5
             end
           '';
-          friday = ''
+          friday.__raw = ''
             function()
-             return os.date("*t").6
+             return os.date("*t").wday == 6
             end
           '';
         };
