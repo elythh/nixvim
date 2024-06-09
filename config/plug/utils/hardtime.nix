@@ -1,6 +1,6 @@
-{
+{lib, ...}: {
   plugins.hardtime = {
-    enable = true;
+    enable = lib.mkDefault false;
     enabled = true;
     disableMouse = true;
     disabledFiletypes = ["Oil"];
