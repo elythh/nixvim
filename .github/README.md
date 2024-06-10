@@ -24,12 +24,10 @@ If you add a new configuration file, remember to add it to the
 
 - **[colorscheme/](../config/plug/colorscheme):** Theme configuration. Current one is [paradise](https://github.com/paradise-theme/paradise)
 - **[completion/](../config/plug/completion)**
-
   - **[nvim-cmp](../config/plug/completion/cmp.nix):** Completion plugin for nvim + emoji support
   - **[copilot-cmp](../config/plug/completion/copilot-cmp.nix):** Completion support for GitHub copilot
   - **[lspkind](../config/plug/completion/lspkind.nix):** vscode-like pictograms for neovim lsp completion items
   - **[schemastore.nvim](../config/plug/completion/schemastore.nix):** Schemastore integration
-
 - **[git/](../config/plug/git)**
   - **[gitlinker](../config/plug/git/gitlinker.nix):** Generate shareable file permalinks
   - **[gitsigns](../config/plug/git/gitsigns.nix):** Git integration for buffers
@@ -44,14 +42,10 @@ If you add a new configuration file, remember to add it to the
   - **[none-ls](../config/plug/lsp/none-ls.nix):** null-ls replacement. Use nvim as LSP
   - **[trouble](../config/plug/lsp/trouble.nix):** Pretty interface for working with LSP
 - **[snippet/](../config/plug/snippet)**
-
   - **[luasnip](../config/plug/snippet/luasnip.nix):** Snippet engine in lua
-
 - **[statusline/](../config/plug/statusline)**
-
   - **[lualine](../config/plug/statusline/lualine.nix):** Status line for neovim
   - **[staline](../config/plug/statusline/staline.nix):** Some soviet guy that died a long time ago
-
 - **[treesitter/](../config/plug/treesitter)**
   - **[treesitter-context](../config/plug/treesitter/treesitter-context.nix):** Show code context
   - **[treesitter-textobject](../config/plug/treesitter/treesitter-textobject.nix):** Allow cool text manupulation thanks to TS
@@ -62,6 +56,7 @@ If you add a new configuration file, remember to add it to the
   - **[bufferline](../config/plug/ui/bufferline.nix):** VSCode like line for buffers
   - **[noice](../config/plug/ui/noice.nix):** Better nvim UI
   - **[nvim-notify](../config/plug/ui/nvim-notify.nix):** Notification manager
+  - **[precognition](../config/plug/ui/precognition.nix):** Show inline navigation hint
   - **[telescope](../config/plug/ui/telescope.nix):** Best plugin ever ?
 - **[utils/](../config/plug/utils)**
   - **[comment](../config/plug/utils/comment.nix):** Quickly toggle comments
