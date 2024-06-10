@@ -43,6 +43,7 @@
     ./plug/ui/bufferline.nix
     ./plug/ui/noice.nix
     ./plug/ui/nvim-notify.nix
+    ./plug/ui/precognition.nix
     ./plug/ui/telescope.nix
 
     ./plug/utils/comment.nix
@@ -63,6 +64,10 @@
     theme = lib.mkOption {
       default = "paradise";
       type = lib.types.enum ["paradise" "decay" "mountain" "tokyonight" "everforest" "everblush" "jellybeans" "aquarium" "gruvbox"];
+    };
+    assistant = lib.mkOption {
+      default = "none";
+      type = lib.types.enum ["copilot" "none"];
     };
   };
   config = {
