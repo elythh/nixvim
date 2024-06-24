@@ -311,13 +311,6 @@
 
     {
       mode = "n";
-      key = "<leader>zz";
-      action = "<CMD> ZenMode | Pencil<CR>";
-      options = {desc = "Toggle writting mode";};
-    }
-
-    {
-      mode = "n";
       key = "<leader>m";
       action = "<CMD> Grapple toggle <CR>";
       options = {desc = "Grapple Toggle tag";};
