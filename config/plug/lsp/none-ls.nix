@@ -10,29 +10,9 @@
       };
       diagnostics = {
         statix.enable = true;
-        yamllint.enable = true;
       };
       formatting = {
         alejandra.enable = true;
-        black = {
-          enable = true;
-          withArgs = ''
-            {
-              extra_args = { "--fast" },
-            }
-          '';
-        };
-        prettier = {
-          enable = true;
-          disableTsServerFormatter = true;
-          withArgs = ''
-            {
-              extra_args = { "--no-semi", "--single-quote" },
-            }
-          '';
-        };
-        stylua.enable = true;
-        yamlfmt.enable = true;
       };
     };
   };
