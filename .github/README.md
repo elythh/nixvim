@@ -67,6 +67,8 @@ If you add a new configuration file, remember to add it to the
   - **[hardtime](../config/plug/utils/hardtime.nix):** Learn vim motions, the hard way
   - **[harpoon](../config/plug/utils/harpoon.nix):** Quickly switch between buffers
   - **[illuminate](../config/plug/utils/illuminate.nix):** Highlight word under the cursor
+  - **[markview](../config/plug/utils/markview.nix):** Yet another markdown previewer for neovim
+  - **[mini](../config/plug/utils/mini.nix):** Cool neovim utilities
   - **[nvim-autopairs](../config/plug/utils/nvim-autopairs.nix):** Autopairs in nvim
   - **[obsidian](../config/plug/utils/obsidian.nix):** Obsidian integration for nvim
   - **[oil](../config/plug/utils/oil.nix):** Navigate in your working folder with a buffer

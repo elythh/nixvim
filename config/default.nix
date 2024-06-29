@@ -54,6 +54,7 @@
     ./plug/utils/grapple.nix
     ./plug/utils/hardtime.nix
     ./plug/utils/illuminate.nix
+    ./plug/utils/markview.nix
     ./plug/utils/mini.nix
     ./plug/utils/nvim-autopairs.nix
     ./plug/utils/obsidian.nix
