@@ -2,8 +2,8 @@
   plugins.mini = {
     enable = true;
     modules = {
-      ai = {};
-      surround = {};
+      ai = { };
+      surround = { };
     };
   };
 }

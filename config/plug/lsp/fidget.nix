@@ -23,7 +23,7 @@
         ''
           function(msg) return msg.lsp_client.name end
         '';
-      ignore = []; # List of LSP servers to ignore
+      ignore = [ ]; # List of LSP servers to ignore
       lsp = {
         progressRingbufSize = 0; # Configure the nvim's LSP progress ring buffer size
       };

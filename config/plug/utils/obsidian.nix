@@ -1,4 +1,4 @@
-{lib, ...}: {
+{ lib, ... }: {
   plugins.obsidian = {
     enable = lib.mkDefault false;
     settings = {

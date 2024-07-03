@@ -1,10 +1,11 @@
+{ config
+, lib
+, ...
+}:
+let
+  colors = import ../config/colors/${config.theme}.nix { };
+in
 {
-  config,
-  lib,
-  ...
-}: let
-  colors = import ../config/colors/${config.theme}.nix {};
-in {
   config = lib.mkIf config.colorschemes.base16.enable {
     highlight = {
       CursorLine = {

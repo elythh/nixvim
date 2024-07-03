@@ -1,4 +1,5 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   nu-grammar = pkgs.tree-sitter.buildGrammar {
     language = "nu";
     version = "0.0.0+rev=358c4f5";
@@ -9,7 +10,8 @@
       hash = "sha256-A0Lpsx0VFRYUWetgX3Bn5osCsLQrZzg90unGg9kTnVg=";
     };
   };
-in {
+in
+{
   filetype.extension.liq = "liquidsoap";
   filetype.extension.nu = "nu";
 

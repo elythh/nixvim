@@ -1,11 +1,13 @@
-{config, ...}: let
-  lua = x: {__raw = x;};
-in {
+{ config, ... }:
+let
+  lua = x: { __raw = x; };
+in
+{
   colorschemes = {
     base16 = {
       enable = true;
       setUpBar = false;
-      colorscheme = import ../../colors/${config.theme}.nix {};
+      colorscheme = import ../../colors/${config.theme}.nix { };
     };
     gruvbox = {
       enable = false;
@@ -111,10 +113,10 @@ in {
               background = true;
             };
             underlines = {
-              errors = ["underline"];
-              hints = ["underline"];
-              information = ["underline"];
-              warnings = ["underline"];
+              errors = [ "underline" ];
+              hints = [ "underline" ];
+              information = [ "underline" ];
+              warnings = [ "underline" ];
             };
           };
         };

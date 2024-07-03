@@ -13,7 +13,7 @@
         yamllint.enable = true;
       };
       formatting = {
-        alejandra.enable = true;
+        nixpkgs_fmt.enable = true;
         black = {
           enable = true;
           withArgs = ''
@@ -38,7 +38,7 @@
   };
   keymaps = [
     {
-      mode = ["n" "v"];
+      mode = [ "n" "v" ];
       key = "<leader>cf";
       action = "<cmd>lua vim.lsp.buf.format()<cr>";
       options = {
