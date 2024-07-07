@@ -6,8 +6,8 @@
       src = pkgs.fetchFromGitHub {
         owner = "cbochs";
         repo = "grapple.nvim";
-        rev = "59d458e378c4884f22b7a68e61c07ed3e41aabf0";
-        hash = "sha256-4k8BE9i8kG4pL7Fj0xw9cG8sjA0u4jzJ40WSV/lBFhY=";
+        rev = "7aedc261b05a6c030397c4bc26416efbe746ebf1";
+        hash = "sha256-apWKHEhXjFdS8xnSX0PoiOMzR+RVuYHFLV9sUl/HhTE=";
       };
     })
   ];
