@@ -6,8 +6,8 @@
       src = pkgs.fetchFromGitHub {
         owner = "tris203";
         repo = "precognition.nvim";
-        rev = "5255b72c52b1159e9757f50389bde65e05e3bfb1";
-        hash = "sha256-AqWYV/59ugKyOWALOCdycWVm0bZ7qb981xnuw/mAVzM=";
+        rev = "2a566f03eb06859298eff837f3a6686dfa5304a5";
+        hash = "sha256-XLcyRB4ow5nPoQ0S29bx0utV9Z/wogg7c3rozYSqlWE=";
       };
     })
   ];
