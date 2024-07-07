@@ -2,7 +2,9 @@
   plugins.none-ls = {
     enable = true;
     enableLspFormat = true;
-    updateInInsert = false;
+    settings = {
+      updateInInsert = false;
+    };
     sources = {
       code_actions = {
         gitsigns.enable = true;
