@@ -6,8 +6,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "nushell";
       repo = "tree-sitter-nu";
-      rev = "2d0dd587dbfc3363d2af4e4141833e718647a67e";
-      hash = "sha256-A0Lpsx0VFRYUWetgX3Bn5osCsLQrZzg90unGg9kTnVg=";
+      rev = "0bb9a602d9bc94b66fab96ce51d46a5a227ab76c";
+      hash = "sha256-A5GiOpITOv3H0wytCv6t43buQ8IzxEXrk3gTlOrO0K0=";
     };
   };
 in
