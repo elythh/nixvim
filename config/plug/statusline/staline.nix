@@ -6,8 +6,8 @@
       src = pkgs.fetchFromGitHub {
         owner = "tamton-aquib";
         repo = "staline.nvim";
-        rev = "a53f869278b8b186a5afd6f21680cd103c381599";
-        hash = "sha256-GDMKzxFDtQk5LL+rMsxTGTyLv69w5NUd+u19noeO5ws=";
+        rev = "d337bc9b343df3328921ef4c3f8ff604102d0201";
+        hash = "sha256-HkuVio/F8HOb6k9N8LkYdQ1vheuyjrqP25RforoWZSk=";
       };
     })
   ];
