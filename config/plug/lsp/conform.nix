@@ -8,7 +8,7 @@
     notifyOnError = true;
     formattersByFt = {
       nix = ["alejandra"];
-      c = ["clang-format"];
+      # c = ["clang-format"];
     };
   };
 }
