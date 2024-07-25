@@ -5,7 +5,7 @@
       enable = true;
       servers = {
         nil-ls = {enable = true;};
-        # clangd = {enable = true;};
+        clangd = {enable = true;};
       };
       keymaps = {
         silent = true;
