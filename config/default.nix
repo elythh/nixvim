@@ -11,7 +11,7 @@
     # ./plug/completion/copilot-cmp.nix
     ./plug/completion/lspkind.nix
     ./plug/completion/schemastore.nix
-    ../plug/utils/neocord.nix
+    ./plug/utils/neocord.nix
 
     ./plug/git/gitlinker.nix
     ./plug/git/gitsigns.nix
