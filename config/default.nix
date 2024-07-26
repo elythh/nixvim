@@ -1,7 +1,4 @@
-{ config
-, lib
-, ...
-}: {
+{lib, ...}: {
   imports = [
     ./autocommands.nix
     ./keys.nix
@@ -67,7 +64,7 @@
   options = {
     assistant = lib.mkOption {
       default = "none";
-      type = lib.types.enum [ "copilot" "none" ];
+      type = lib.types.enum ["copilot" "none"];
     };
   };
   config = {
