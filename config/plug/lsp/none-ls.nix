@@ -18,7 +18,7 @@
         nixpkgs_fmt.enable = true;
         black = {
           enable = true;
-          withArgs = ''
+          settings = ''
             {
               extra_args = { "--fast" },
             }
@@ -27,7 +27,7 @@
         prettier = {
           enable = true;
           disableTsServerFormatter = true;
-          withArgs = ''
+          settings = ''
             {
               extra_args = { "--no-semi", "--single-quote" },
             }
