@@ -5,7 +5,7 @@ in
 {
   colorschemes = {
     base16 = {
-      enable = true;
+      enable = false;
       setUpBar = false;
       colorscheme = import ../../colors/${config.theme}.nix { };
     };
