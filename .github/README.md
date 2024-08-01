@@ -61,7 +61,6 @@ If you add a new configuration file, remember to add it to the
 - **[utils/](../config/plug/utils)**
   - **[comment](../config/plug/utils/comment.nix):** Quickly toggle comments
   - **[CopilotChat](../config/plug/utils/copilot.nix):** Chat with copilot in nvim
-  - **[dap](../config/plug/utils/dap.nix):** Debug in nvim
   - **[flash](../config/plug/utils/flash.nix):** Navigate in file with a few keystrokes
   - **[grapple](../config/plug/utils/grapple.nix):** Quickly switch between buffers (Harpoon replacement)
   - **[hardtime](../config/plug/utils/hardtime.nix):** Learn vim motions, the hard way
