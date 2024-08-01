@@ -69,6 +69,10 @@ in
           fg = colors.base00;
           bg = colors.base00;
         };
+        duplicate = {
+          fg = colors.base03;
+          bg = colors.base01;
+        };
       };
     };
   };
