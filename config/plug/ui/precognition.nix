@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   extraPlugins = with pkgs.vimUtils; [
     (buildVimPlugin {
       pname = "precognition.nvim";

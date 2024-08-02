@@ -15,21 +15,28 @@
   };
 
   outputs =
-    { nixpkgs
-    , nixvim
-    , flake-parts
-    , pre-commit-hooks
-    , ...
-    } @ inputs:
+    {
+      nixpkgs,
+      nixvim,
+      flake-parts,
+      pre-commit-hooks,
+      ...
+    }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [ "aarch64-linux" "x86_64-linux" "aarch64-darwin" "x86_64-darwin" ];
+      systems = [
+        "aarch64-linux"
+        "x86_64-linux"
+        "aarch64-darwin"
+        "x86_64-darwin"
+      ];
 
       perSystem =
-        { system
-        , pkgs
-        , self'
-        , lib
-        , ...
+        {
+          system,
+          pkgs,
+          self',
+          lib,
+          ...
         }:
         let
           nixvim' = nixvim.legacyPackages.${system};

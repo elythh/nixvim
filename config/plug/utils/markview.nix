@@ -1,6 +1,7 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   extraPlugins = with pkgs.vimUtils; [
-    (buildVimPlugin rec{
+    (buildVimPlugin rec {
       pname = "markview.nvim";
       version = "1.0.0";
       src = pkgs.fetchFromGitHub {

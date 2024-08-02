@@ -58,7 +58,7 @@ in
     rose-pine = {
       enable = false;
       settings = {
-        style = "main"; #  "main", "moon", "dawn" or raw lua code
+        style = "main"; # "main", "moon", "dawn" or raw lua code
         styles = {
           bold = false;
           italic = false;

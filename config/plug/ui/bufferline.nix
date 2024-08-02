@@ -1,7 +1,4 @@
-{ config
-, lib
-, ...
-}:
+{ config, lib, ... }:
 let
   colors = import ../../colors/${config.theme}.nix { };
 in
