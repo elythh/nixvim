@@ -48,18 +48,17 @@
               src = ./.;
               hooks = {
                 statix.enable = true;
-                nixpkgs-fmt.enable = true;
+                nixfmt.enable = true;
               };
             };
           };
 
-          formatter = pkgs.nixpkgs-fmt;
+          formatter = pkgs.nixfmt-rfc-style;
 
           packages.default = nvim;
 
           devShells = {
-            default = with pkgs;
-              mkShell { inherit (self'.checks.pre-commit-check) shellHook; };
+            default = with pkgs; mkShell { inherit (self'.checks.pre-commit-check) shellHook; };
           };
         };
     };
