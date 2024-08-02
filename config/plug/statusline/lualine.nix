@@ -7,7 +7,11 @@ in
     enable = true;
     globalstatus = true;
     disabledFiletypes = {
-      statusline = [ "dashboard" "alpha" "starter" ];
+      statusline = [
+        "dashboard"
+        "alpha"
+        "starter"
+      ];
     };
     theme = {
       normal = {
@@ -35,14 +39,8 @@ in
           name = "mode";
           fmt = "string.lower";
           color = {
-            fg =
-              if config.colorschemes.base16.enable
-              then colors.base04
-              else "none";
-            bg =
-              if config.colorschemes.base16.enable
-              then colors.base00
-              else "none";
+            fg = if config.colorschemes.base16.enable then colors.base04 else "none";
+            bg = if config.colorschemes.base16.enable then colors.base00 else "none";
           };
         }
       ];
@@ -51,14 +49,8 @@ in
           name = "branch";
           icon = "";
           color = {
-            fg =
-              if config.colorschemes.base16.enable
-              then colors.base04
-              else "none";
-            bg =
-              if config.colorschemes.base16.enable
-              then colors.base00
-              else "none";
+            fg = if config.colorschemes.base16.enable then colors.base04 else "none";
+            bg = if config.colorschemes.base16.enable then colors.base00 else "none";
           };
         }
         "diff"
@@ -75,14 +67,8 @@ in
             };
           };
           color = {
-            fg =
-              if config.colorschemes.base16.enable
-              then colors.base08
-              else "none";
-            bg =
-              if config.colorschemes.base16.enable
-              then colors.base00
-              else "none";
+            fg = if config.colorschemes.base16.enable then colors.base08 else "none";
+            bg = if config.colorschemes.base16.enable then colors.base00 else "none";
           };
         }
       ];
@@ -105,14 +91,8 @@ in
             };
           };
           color = {
-            fg =
-              if config.colorschemes.base16.enable
-              then colors.base04
-              else "none";
-            bg =
-              if config.colorschemes.base16.enable
-              then colors.base00
-              else "none";
+            fg = if config.colorschemes.base16.enable then colors.base04 else "none";
+            bg = if config.colorschemes.base16.enable then colors.base00 else "none";
           };
           separator.left = "";
         }
@@ -121,14 +101,8 @@ in
         {
           name = "location";
           color = {
-            fg =
-              if config.colorschemes.base16.enable
-              then colors.base0B
-              else "none";
-            bg =
-              if config.colorschemes.base16.enable
-              then colors.base00
-              else "none";
+            fg = if config.colorschemes.base16.enable then colors.base0B else "none";
+            bg = if config.colorschemes.base16.enable then colors.base00 else "none";
           };
         }
       ];

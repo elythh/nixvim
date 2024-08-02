@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   extraPlugins = [
     (pkgs.vimUtils.buildVimPlugin {
       name = "hlchunk";
