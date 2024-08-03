@@ -1,6 +1,6 @@
 {
   plugins.copilot-cmp = {
-    enable = true;
+    enable = false;
   };
   plugins.copilot-lua = {
     enable = true;
