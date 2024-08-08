@@ -1,0 +1,136 @@
+name: update
+on:
+  # Runs every Saturday at noon
+  schedule:
+  - cron: '0 12 * * SAT'
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      lock:
+        type: boolean
+        default: true
+        description: Update flake.lock
+      generate:
+        type: boolean
+        default: true
+        description: Update generated files
+      nixos-24.05:
+        type: boolean
+        description: Also update nixos-24.05
+
+# Allow one concurrent update per branch
+concurrency:
+  group: 'update-${{ github.ref_name }}'
+  cancel-in-progress: true
+
+# Allow running workflows, pushing and creating PRs
+permissions:
+  actions: write
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    name: Update the flake inputs and generate options
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        ssh-key: ${{ secrets.CI_UPDATE_SSH_KEY }}
+
+    # NOTE: If additional "inputs" are added, copy this step
+    - name: Update nixos-24.05
+      if: inputs['nixos-24.05'] || github.event_name == 'schedule'
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        gh workflow run update.yml --ref nixos-24.05
+
+    - name: Install Nix
+      uses: cachix/install-nix-action@v26
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+        github_access_token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Configure git
+      run: |
+        git config user.name 'github-actions[bot]'
+        git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+    - name: Update flake.lock
+      id: flake_lock
+      if: inputs.lock || github.event_name == 'schedule'
+      run: |
+        old=$(git show --no-patch --format=%h)
+        nix flake update --commit-lock-file
+        new=$(git show --no-patch --format=%h)
+        if [ "$old" != "$new" ]; then
+          echo "body<<EOF" >> "$GITHUB_OUTPUT"
+          git show --no-patch --format=%b >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+        fi
+
+    - name: Update generated files
+      id: generate
+      if: inputs.generate || github.event_name == 'schedule'
+      run: |
+        old=$(git show --no-patch --format=%h)
+        nix-build ./update-scripts -A generate
+        ./result/bin/generate --commit
+        new=$(git show --no-patch --format=%h)
+        if [ "$old" != "$new" ]; then
+          body=$(git show --no-patch --format=%b)
+          echo "body<<EOF" >> "$GITHUB_OUTPUT"
+          if [ -n "$body" ]; then
+            # Multi-file changes are listed in the body
+            echo "$body" >> "$GITHUB_OUTPUT"
+          else
+            # Single-file changes are only in the summary,
+            # e.g. "generated: Updated none-ls.nix"
+            git show --no-patch --format=%s | \
+            sed -e 's/^generated:/-/' >> "$GITHUB_OUTPUT"
+          fi
+          echo "EOF" >> "$GITHUB_OUTPUT"
+        fi
+
+    - name: Create Pull Request
+      id: pr
+      uses: peter-evans/create-pull-request@v6
+      with:
+        add-paths: '!**'
+        branch: update/${{ github.ref_name }}
+        delete-branch: true
+        title: |
+          📦[${{ github.ref_name }}] Update flake.lock & generated files
+        body: |
+          ## Flake lockfile
+          ```
+          ${{ steps.flake_lock.outputs.body || 'No changes' }}
+          ```
+
+          ## Generate
+          ${{ steps.generate.outputs.body || 'No changes' }}
+
+    - name: Print summary
+      if: ${{ steps.pr.outputs.pull-request-number }}
+      run: |
+        num="${{ steps.pr.outputs.pull-request-number }}"
+        pr_url="${{ steps.pr.outputs.pull-request-url }}"
+        pr_branch="${{ steps.pr.outputs.pull-request-branch }}"
+        head="${{ steps.pr.outputs.pull-request-head-sha }}"
+        operation="${{ steps.pr.outputs.pull-request-operation }}"
+
+        # stdout
+        echo "${head:0:6} pushed to ${pr_branch}"
+        echo "${pr} was ${operation}."
+
+        # markdown summary
+        echo "## ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+        echo >> $GITHUB_STEP_SUMMARY
+        echo "\`${head:0:6}\` pushed to \`${pr_branch}\`" >> $GITHUB_STEP_SUMMARY
+        echo >> $GITHUB_STEP_SUMMARY
+        echo "[#${num}](${pr_url}) was ${operation}." >> $GITHUB_STEP_SUMMARY
+        echo >> $GITHUB_STEP_SUMMARY
