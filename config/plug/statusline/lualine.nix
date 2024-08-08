@@ -16,8 +16,7 @@ in
     theme = {
       normal = {
         a = {
-          bg = "#b4befe";
-          fg = "#1c1d21";
+          bg = "#nil";
         };
         b = {
           bg = "nil";
@@ -33,15 +32,23 @@ in
         };
       };
     };
+    inactiveSections = {
+      lualine_x = [
+        "filename"
+        "filetype"
+      ];
+    };
     sections = {
       lualine_a = [
         {
           name = "mode";
           fmt = "string.lower";
           color = {
-            fg = if config.colorschemes.base16.enable then colors.base04 else "none";
-            bg = if config.colorschemes.base16.enable then colors.base00 else "none";
+            fg = if config.colorschemes.base16.enable then colors.base04 else "nil";
+            bg = "nil";
           };
+          separator.left = "";
+          separator.right = "";
         }
       ];
       lualine_b = [
@@ -49,11 +56,17 @@ in
           name = "branch";
           icon = "";
           color = {
-            fg = if config.colorschemes.base16.enable then colors.base04 else "none";
-            bg = if config.colorschemes.base16.enable then colors.base00 else "none";
+            fg = if config.colorschemes.base16.enable then colors.base04 else "nil";
+            bg = "nil";
           };
+          separator.left = "";
+          separator.right = "";
         }
-        "diff"
+        {
+          name = "diff";
+          separator.left = "";
+          separator.right = "";
+        }
       ];
       lualine_c = [
         {
@@ -67,43 +80,49 @@ in
             };
           };
           color = {
-            fg = if config.colorschemes.base16.enable then colors.base08 else "none";
-            bg = if config.colorschemes.base16.enable then colors.base00 else "none";
+            fg = if config.colorschemes.base16.enable then colors.base08 else "nil";
+            bg = "nil";
           };
+          separator.left = "";
+          separator.right = "";
         }
       ];
-      lualine_x = [
+      lualine_x = [ "" ];
+      lualine_y = [
         {
           name = "filetype";
           extraConfig = {
             icon_only = true;
           };
+          separator.left = "";
+          separator.right = "";
         }
-      ];
-      lualine_y = [
         {
           name = "filename";
           extraConfig = {
             symbols = {
               modified = "";
-              readonly = "";
+              readonly = "👁️";
               unnamed = "";
             };
           };
           color = {
-            fg = if config.colorschemes.base16.enable then colors.base04 else "none";
-            bg = if config.colorschemes.base16.enable then colors.base00 else "none";
+            fg = if config.colorschemes.base16.enable then colors.base05 else "nil";
+            bg = "nil";
           };
           separator.left = "";
+          separator.right = "";
         }
       ];
       lualine_z = [
         {
           name = "location";
           color = {
-            fg = if config.colorschemes.base16.enable then colors.base0B else "none";
-            bg = if config.colorschemes.base16.enable then colors.base00 else "none";
+            fg = if config.colorschemes.base16.enable then colors.base0B else "nil";
+            bg = "nil";
           };
+          separator.left = "";
+          separator.right = "";
         }
       ];
     };
