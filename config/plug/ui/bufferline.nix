@@ -47,8 +47,8 @@ in
           bg = colors.base00;
         };
         separator = {
-          fg = colors.base00;
-          bg = colors.base00;
+          fg = colors.base01;
+          bg = colors.base01;
         };
         modified = {
           fg = colors.base03;
