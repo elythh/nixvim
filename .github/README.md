@@ -69,6 +69,7 @@ If you add a new configuration file, remember to add it to the
   - **[markview](../config/plug/utils/markview.nix):** Yet another markdown previewer for neovim
   - **[mini](../config/plug/utils/mini.nix):** Cool neovim utilities
   - **[nvim-autopairs](../config/plug/utils/nvim-autopairs.nix):** Autopairs in nvim
+  - **[nvim-colorizer](../config/plug/utils/nvim-colorizer.nix):** Preview colors in neovim
   - **[obsidian](../config/plug/utils/obsidian.nix):** Obsidian integration for nvim
   - **[oil](../config/plug/utils/oil.nix):** Navigate in your working folder with a buffer
   - **[ufo](../config/plug/utils/ufo.nix):** Folding plugin
