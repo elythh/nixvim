@@ -18,7 +18,6 @@ in
         };
         bufferSelected = {
           fg = colors.base05;
-          bg = colors.base00;
           italic = false;
         };
         bufferVisible = {
@@ -35,12 +34,10 @@ in
         };
         closeButtonSelected = {
           fg = colors.base08;
-          bg = colors.base00;
         };
 
         indicatorSelected = {
           fg = colors.base00;
-          bg = colors.base00;
         };
         indicatorVisible = {
           fg = colors.base00;
@@ -60,7 +57,6 @@ in
         };
         modifiedSelected = {
           fg = colors.base0B;
-          bg = colors.base00;
         };
         tabClose = {
           fg = colors.base00;
