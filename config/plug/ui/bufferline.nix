@@ -6,7 +6,7 @@ in
   plugins = {
     bufferline = {
       enable = true;
-      separatorStyle = "thick"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
+      separatorStyle = "thin"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
       highlights = lib.mkIf config.colorschemes.base16.enable {
         fill = {
           fg = "none";
