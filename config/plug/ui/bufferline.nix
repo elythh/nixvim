@@ -6,65 +6,69 @@ in
   plugins = {
     bufferline = {
       enable = true;
-      separatorStyle = "thin"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
-      highlights = lib.mkIf config.colorschemes.base16.enable {
-        fill = {
-          fg = "none";
-          bg = "none";
+      settings = {
+        options = {
+          separator_style = "thin"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
         };
-        background = {
-          fg = colors.base03;
-          bg = colors.base01;
-        };
-        bufferSelected = {
-          fg = colors.base05;
-          italic = false;
-        };
-        bufferVisible = {
-          fg = colors.base03;
-          bg = colors.base00;
-        };
-        closeButton = {
-          fg = colors.base03;
-          bg = colors.base01;
-        };
-        closeButtonVisible = {
-          fg = colors.base03;
-          bg = colors.base01;
-        };
-        closeButtonSelected = {
-          fg = colors.base08;
-        };
+        highlights = lib.mkIf config.colorschemes.base16.enable {
+          fill = {
+            fg = "none";
+            bg = "none";
+          };
+          background = {
+            fg = colors.base03;
+            bg = colors.base01;
+          };
+          buffer_selected = {
+            fg = colors.base05;
+            italic = false;
+          };
+          buffer_visible = {
+            fg = colors.base03;
+            bg = colors.base00;
+          };
+          close_button = {
+            fg = colors.base03;
+            bg = colors.base01;
+          };
+          close_button_visible = {
+            fg = colors.base03;
+            bg = colors.base01;
+          };
+          close_button_selected = {
+            fg = colors.base08;
+          };
 
-        indicatorSelected = {
-          fg = colors.base00;
-        };
-        indicatorVisible = {
-          fg = colors.base00;
-          bg = colors.base00;
-        };
-        separator = {
-          fg = colors.base01;
-          bg = colors.base01;
-        };
-        modified = {
-          fg = colors.base03;
-          bg = colors.base00;
-        };
-        modifiedVisible = {
-          fg = colors.base00;
-          bg = colors.base00;
-        };
-        modifiedSelected = {
-          fg = colors.base0B;
-        };
-        tabClose = {
-          fg = colors.base00;
-          bg = colors.base00;
-        };
-        duplicate = {
-          fg = colors.base03;
-          bg = colors.base01;
+          indicator_selected = {
+            fg = colors.base00;
+          };
+          indicator_visible = {
+            fg = colors.base00;
+            bg = colors.base00;
+          };
+          separator = {
+            fg = colors.base01;
+            bg = colors.base01;
+          };
+          modified = {
+            fg = colors.base03;
+            bg = colors.base00;
+          };
+          modified_visible = {
+            fg = colors.base00;
+            bg = colors.base00;
+          };
+          modified_selected = {
+            fg = colors.base0B;
+          };
+          tab_close = {
+            fg = colors.base00;
+            bg = colors.base00;
+          };
+          duplicate = {
+            fg = colors.base03;
+            bg = colors.base01;
+          };
         };
       };
     };
