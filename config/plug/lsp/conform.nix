@@ -9,7 +9,7 @@
       };
       notify_on_error = true;
 
-      formattersByFt = {
+      formatters_by_ft = {
         liquidsoap = [ "liquidsoap-prettier" ];
         html = [
           [
