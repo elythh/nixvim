@@ -4,6 +4,7 @@
     modules = {
       ai = { };
       surround = { };
+      notify = { };
     };
   };
 }

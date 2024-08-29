@@ -60,7 +60,7 @@ If you add a new configuration file, remember to add it to the
   - **[telescope](../config/plug/ui/telescope.nix):** Best plugin ever ?
 - **[utils/](../config/plug/utils)**
   - **[comment](../config/plug/utils/comment.nix):** Quickly toggle comments
-  - **[comment-box](../config/plug/utils/comment-box.nix):** Comments utilities
+  - **[comment-box](../config/plug/utils/comment-box.nix):** Comments utilitiesdefaul
   - **[CopilotChat](../config/plug/utils/copilot.nix):** Chat with copilot in nvim
   - **[flash](../config/plug/utils/flash.nix):** Navigate in file with a few keystrokes
   - **[grapple](../config/plug/utils/grapple.nix):** Quickly switch between buffers (Harpoon replacement)
@@ -68,7 +68,7 @@ If you add a new configuration file, remember to add it to the
   - **[harpoon](../config/plug/utils/harpoon.nix):** Quickly switch between buffers
   - **[illuminate](../config/plug/utils/illuminate.nix):** Highlight word under the cursor
   - **[markview](../config/plug/utils/markview.nix):** Yet another markdown previewer for neovim
-  - **[mini](../config/plug/utils/mini.nix):** Cool neovim utilities
+  - **[mini](../config/plug/utils/mini.nix):** Cool neovim utilities, currently using ai, notify and surround
   - **[nvim-autopairs](../config/plug/utils/nvim-autopairs.nix):** Autopairs in nvim
   - **[nvim-colorizer](../config/plug/utils/nvim-colorizer.nix):** Preview colors in neovim
   - **[obsidian](../config/plug/utils/obsidian.nix):** Obsidian integration for nvim
