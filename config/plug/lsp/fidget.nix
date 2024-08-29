@@ -1,6 +1,6 @@
 {
   plugins.fidget = {
-    enable = true;
+    enable = false;
     logger = {
       level = "warn"; # “off”, “error”, “warn”, “info”, “debug”, “trace”
       floatPrecision = 1.0e-2; # Limit the number of decimals displayed for floats
