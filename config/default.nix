@@ -8,7 +8,7 @@
 
     ./plug/colorscheme/colorscheme.nix
 
-    ./plug/completion/blink.nix
+    ./plug/completion/avante.nix
     ./plug/completion/cmp.nix
     ./plug/completion/copilot-cmp.nix
     ./plug/completion/codecompanion.nix
