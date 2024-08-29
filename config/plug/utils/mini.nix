@@ -5,6 +5,7 @@
       ai = { };
       surround = { };
       notify = { };
+      trailspace = { };
     };
   };
 }
