@@ -32,11 +32,11 @@
     ./plug/statusline/lualine.nix
     #./plug/statusline/staline.nix
 
-    #./plug/treesitter/treesitter-context.nix
+    ./plug/treesitter/treesitter-context.nix
     ./plug/treesitter/treesitter-textobjects.nix
     ./plug/treesitter/treesitter.nix
 
-    #./plug/ui/alpha.nix
+    ./plug/ui/alpha.nix
     ./plug/ui/btw.nix
     ./plug/ui/bufferline.nix
     ./plug/ui/indent-blankline.nix
@@ -49,7 +49,7 @@
     ./plug/utils/comment.nix
     ./plug/utils/comment-box.nix
     ./plug/utils/copilot.nix
-    #./plug/utils/flash.nix
+    ./plug/utils/flash.nix
     ./plug/utils/grapple.nix
     ./plug/utils/hardtime.nix
     ./plug/utils/illuminate.nix
