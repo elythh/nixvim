@@ -1,4 +1,3 @@
 .direnv
 .pre-commit-config.yaml
-.envrc
 result
