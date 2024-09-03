@@ -18,6 +18,9 @@
         nil-ls = {
           enable = true;
         };
+        nixd = {
+          enable = true;
+        };
         marksman = {
           enable = true;
         };
