@@ -42,6 +42,9 @@
             name = "luasnip"; # snippets
             keywordLength = 3;
           }
+          { name = "rg"; }
+          { name = "nvim_lua"; }
+
         ];
 
         window = {
@@ -69,6 +72,12 @@
     cmp-nvim-lsp = {
       enable = true;
     }; # lsp
+    cmp-nvim-lua = {
+      enable = true;
+    }; # nvim lua
+    cmp-rg = {
+      enable = true;
+    }; # ripgrep cmp
     cmp-buffer = {
       enable = true;
     };
@@ -79,7 +88,7 @@
       enable = true;
     }; # snippets
     cmp-cmdline = {
-      enable = false;
+      enable = true;
     }; # autocomplete for cmdline
   };
   extraConfigLua = ''
