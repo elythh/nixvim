@@ -6,6 +6,9 @@
 
 My Neovim config using nixvim.
 
+> [!NOTE]  
+> The colorscheme in these screenshots is [paradise](https://github.com/paradise-theme/paradise)
+
 <img src="assets/1.png" alt="nvim">
 
 <details>
