@@ -16,7 +16,6 @@
 
   outputs =
     {
-      nixpkgs,
       nixvim,
       flake-parts,
       pre-commit-hooks,
@@ -54,6 +53,13 @@
                 nixfmt = {
                   enable = true;
                   package = pkgs.nixfmt-rfc-style;
+                };
+                deadnix = {
+                  enable = true;
+
+                  settings = {
+                    edit = true;
+                  };
                 };
               };
             };
