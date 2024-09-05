@@ -431,6 +431,22 @@
         desc = "Grapple Select 4";
       };
     }
+    {
+      mode = "n";
+      key = "<Tab>";
+      action = "<CMD>bnext<CR>";
+      options = {
+        desc = "Next buffer";
+      };
+    }
+    {
+      mode = "n";
+      key = "<S-Tab>";
+      action = "<CMD>bprev<CR>";
+      options = {
+        desc = "Previous buffer";
+      };
+    }
   ];
   extraConfigLua = ''
     function ToggleLineNumber()
