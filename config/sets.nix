@@ -1,7 +1,7 @@
 {
   opts = {
     # Enable relative line numbers
-    number = true;
+    number = false;
     relativenumber = true;
 
     # Set tabs to 2 spaces
