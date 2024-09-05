@@ -6,6 +6,8 @@
       surround = { };
       notify = { };
       trailspace = { };
+      tabline = { };
+      icons = { };
     };
   };
 }

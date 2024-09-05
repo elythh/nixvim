@@ -5,7 +5,7 @@ in
 {
   plugins = {
     bufferline = {
-      enable = true;
+      enable = false;
       settings = {
         options = {
           separator_style = "thin"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
@@ -73,7 +73,7 @@ in
       };
     };
   };
-  keymaps = [
+  keymaps = lib.mkIf config.plugins.bufferline.enable [
     {
       mode = "n";
       key = "<Tab>";

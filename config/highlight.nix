@@ -6,6 +6,31 @@ in
   config = lib.mkIf config.colorschemes.base16.enable {
     highlight = with colors; {
 
+      # Mini tabline
+      MiniTablineCurrent = {
+        bg = "none";
+        fg = base05;
+      };
+      MiniTablineVisible = {
+        bg = "none";
+        fg = base03;
+      };
+      MiniTablineHidden = {
+        bg = "none";
+        fg = base03;
+      };
+      MiniTablineModifiedCurrent = {
+        bg = "none";
+        fg = base0A;
+      };
+      MiniTablineModifiedVisible = {
+        bg = "none";
+        fg = base0B;
+      };
+      MiniTablineModifiedHidden = {
+        bg = "none";
+        fg = base0B;
+      };
       # Mini Notify
       MiniNotifyNormal = {
         bg = base00;
