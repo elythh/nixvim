@@ -5,6 +5,11 @@
     # General maps
     {
       mode = "n";
+      key = "<leader>/";
+      action = "<cmd>nohl<CR>";
+    }
+    {
+      mode = "n";
       key = "<leader>f";
       action = "+find/file";
     }

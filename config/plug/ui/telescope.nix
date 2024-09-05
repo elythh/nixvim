@@ -26,12 +26,6 @@
           desc = "Find project files";
         };
       };
-      "<leader>/" = {
-        action = "live_grep";
-        options = {
-          desc = "Grep (root dir)";
-        };
-      };
       "<leader>:" = {
         action = "command_history";
         options = {
