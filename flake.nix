@@ -34,7 +34,6 @@
           system,
           pkgs,
           self',
-          lib,
           ...
         }:
         let
