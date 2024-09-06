@@ -3,7 +3,10 @@
     enable = true;
     settings = {
       input = {
-        relative = "editor";
+        relative = "win";
+      };
+      select = {
+        backend = [ "telescope" ];
       };
     };
   };

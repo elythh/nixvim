@@ -6,9 +6,6 @@
     lsp = {
       enable = true;
       servers = {
-        eslint = {
-          enable = true;
-        };
         html = {
           enable = true;
         };
@@ -32,9 +29,6 @@
         };
         terraformls = {
           enable = true;
-        };
-        tsserver = {
-          enable = false;
         };
         yamlls = {
           enable = true;
