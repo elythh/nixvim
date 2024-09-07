@@ -37,6 +37,7 @@ in
       };
       MiniNotifyBorder = {
         bg = base00;
+        fg = base00;
       };
 
       CursorLine = {
