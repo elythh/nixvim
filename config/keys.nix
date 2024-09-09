@@ -306,31 +306,6 @@
       };
     }
 
-    # Copy stuff to system clipboard with <leader> + y or just y to have it just in vim
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>y";
-      action = ''"+y'';
-      options = {
-        desc = "Copy to system clipboard";
-      };
-    }
-
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>Y";
-      action = ''"+Y'';
-      options = {
-        desc = "Copy to system clipboard";
-      };
-    }
-
     # Delete to void register
     {
       mode = [
