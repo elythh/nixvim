@@ -48,7 +48,6 @@
     ./plug/utils/harpoon.nix
     ./plug/utils/comment.nix
     ./plug/utils/comment-box.nix
-    ./plug/utils/copilot.nix
     ./plug/utils/flash.nix
     ./plug/utils/grapple.nix
     ./plug/utils/hardtime.nix
