@@ -71,15 +71,6 @@
       action = "+code";
     }
 
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>t";
-      action = "+test";
-    }
-
     # Tabs
     {
       mode = "n";

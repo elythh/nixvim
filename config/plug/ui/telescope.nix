@@ -1,8 +1,12 @@
+{ lib, config, ... }:
 {
   plugins.telescope = {
     enable = true;
     extensions = {
       file-browser = {
+        enable = true;
+      };
+      ui-select = {
         enable = true;
       };
       fzf-native = {
@@ -17,6 +21,11 @@
           };
         };
         sorting_strategy = "ascending";
+      };
+      pickers = {
+        colorscheme = {
+          enable_preview = true;
+        };
       };
     };
     keymaps = {
@@ -152,12 +161,6 @@
           desc = "Options";
         };
       };
-      "<leader>sR" = {
-        action = "resume";
-        options = {
-          desc = "Resume";
-        };
-      };
       "<leader>uC" = {
         action = "colorscheme";
         options = {
@@ -166,7 +169,7 @@
       };
     };
   };
-  keymaps = [
+  keymaps = lib.mkIf config.plugins.telescope.enable [
     {
       mode = "n";
       key = "<leader>sd";
@@ -192,13 +195,4 @@
       };
     }
   ];
-  extraConfigLua = ''
-    require("telescope").setup{
-      pickers = {
-        colorscheme = {
-          enable_preview = true
-        }
-      }
-    }
-  '';
 }
