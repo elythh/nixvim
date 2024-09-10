@@ -3,11 +3,12 @@
     enable = true;
     modules = {
       ai = { };
-      surround = { };
-      notify = { };
-      trailspace = { };
-      tabline = { };
       icons = { };
+      notify = { };
+      pairs = { };
+      surround = { };
+      tabline = { };
+      trailspace = { };
     };
   };
 }
