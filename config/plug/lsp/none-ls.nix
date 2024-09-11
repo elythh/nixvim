@@ -35,6 +35,7 @@
         };
         stylua.enable = true;
         yamlfmt.enable = true;
+        hclfmt.enable = true;
       };
     };
   };

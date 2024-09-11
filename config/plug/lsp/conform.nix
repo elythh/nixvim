@@ -60,6 +60,9 @@
           "yamllint"
           "yamlfmt"
         ];
+        terragrunt = [
+          "hclfmt"
+        ];
       };
     };
   };
