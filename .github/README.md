@@ -26,6 +26,9 @@ If you add a new configuration file, remember to add it to the
 
 ### Current plugins
 
+> [!INFO]
+> Some of them my be disabled, this is every plugins defined and configured in the repo.
+
 - **[colorscheme/](../config/plug/colorscheme):** Theme configuration. Current one is [paradise](https://github.com/paradise-theme/paradise)
 - **[completion/](../config/plug/completion)**
   - **[codecompanion](../config/plug/completion/codecompanion.nix):** Zed AI like
@@ -67,7 +70,6 @@ If you add a new configuration file, remember to add it to the
 - **[utils/](../config/plug/utils)**
   - **[comment](../config/plug/utils/comment.nix):** Quickly toggle comments
   - **[comment-box](../config/plug/utils/comment-box.nix):** Comments utilities
-  - **[CopilotChat](../config/plug/utils/copilot.nix):** Chat with copilot in nvim
   - **[flash](../config/plug/utils/flash.nix):** Navigate in file with a few keystrokes
   - **[grapple](../config/plug/utils/grapple.nix):** Quickly switch between buffers (Harpoon replacement)
   - **[hardtime](../config/plug/utils/hardtime.nix):** Learn vim motions, the hard way
