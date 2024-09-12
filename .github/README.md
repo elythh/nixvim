@@ -26,8 +26,11 @@ If you add a new configuration file, remember to add it to the
 
 ### Current plugins
 
-> [!INFO]
+> [!WARNING]
 > Some of them my be disabled, this is every plugins defined and configured in the repo.
+
+<details>
+    <summary>List of plugins</summary>
 
 - **[colorscheme/](../config/plug/colorscheme):** Theme configuration. Current one is [paradise](https://github.com/paradise-theme/paradise)
 - **[completion/](../config/plug/completion)**
@@ -84,6 +87,8 @@ If you add a new configuration file, remember to add it to the
   - **[ufo](../config/plug/utils/ufo.nix):** Folding plugin
   - **[undotree](../config/plug/utils/undotree.nix):** Undo history visualizer
   - **[whichkey](../config/plug/utils/whichkey.nix):** Popup to display keybindings
+
+</details>
 
 ## Testing your new configuration
 
