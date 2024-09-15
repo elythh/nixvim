@@ -20,6 +20,15 @@
         #     end'';
         # };
       };
+      diff = {
+        view = {
+          signs = {
+            add = "│";
+            change = "│";
+            delete = "-";
+          };
+        };
+      };
     };
   };
 }
