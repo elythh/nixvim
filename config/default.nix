@@ -47,6 +47,7 @@
     ./plug/ui/telescope.nix
 
     ./plug/utils/harpoon.nix
+    ./plug/utils/colorizer.nix
     ./plug/utils/comment.nix
     ./plug/utils/comment-box.nix
     ./plug/utils/flash.nix

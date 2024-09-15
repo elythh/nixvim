@@ -41,7 +41,8 @@ If you add a new configuration file, remember to add it to the
   - **[schemastore.nvim](../config/plug/completion/schemastore.nix):** Schemastore integration
 - **[git/](../config/plug/git)**
   - **[gitlinker](../config/plug/git/gitlinker.nix):** Generate shareable file permalinks
-  - **[gitsigns](../config/plug/git/gitsigns.nix):** Git integration for buffers
+  - **[gitblame](../config/plug/git/gitblame.nix):** inline git blame
+  - **[gitsigns](../config/plug/git/gitsigns.nix):** Git integration for buffers (replaced by mini.diff + gitblame)
   - **[lazygit](../config/plug/git/lazygit.nix):** The **best** git TUI, as a neovim plugin
   - **[worktree](../config/plug/git/worktree.nix):** Make using git worktrees easier
 - **[lsp/](../config/plug/lsp)**
@@ -79,7 +80,7 @@ If you add a new configuration file, remember to add it to the
   - **[harpoon](../config/plug/utils/harpoon.nix):** Quickly switch between buffers
   - **[illuminate](../config/plug/utils/illuminate.nix):** Highlight word under the cursor
   - **[markview](../config/plug/utils/markview.nix):** Yet another markdown previewer for neovim
-  - **[mini](../config/plug/utils/mini.nix):** Cool neovim utilities, currently using ai, notify and surround
+  - **[mini](../config/plug/utils/mini.nix):** Cool neovim utilities, currently using ai, notify, surround, diff, tabline, trailspace, icons, indentscope and pairs
   - **[nvim-autopairs](../config/plug/utils/nvim-autopairs.nix):** Autopairs in nvim
   - **[nvim-colorizer](../config/plug/utils/nvim-colorizer.nix):** Preview colors in neovim
   - **[obsidian](../config/plug/utils/obsidian.nix):** Obsidian integration for nvim
