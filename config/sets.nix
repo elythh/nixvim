@@ -69,6 +69,7 @@
 
     # Enable persistent undo history
     swapfile = false;
+    autoread = true;
     backup = false;
     undofile = true;
 
