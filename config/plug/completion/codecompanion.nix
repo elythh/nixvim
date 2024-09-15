@@ -38,7 +38,19 @@ in
   '';
   keymaps = mkIf codecompanion_enable [
     {
-      key = "<leader>cc";
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<leader>a";
+      action = "CodeCompanion";
+      options = {
+        silent = true;
+        desc = "+codecompanion";
+      };
+    }
+    {
+      key = "<leader>ac";
       action = ":CodeCompanionToggle<CR>";
       mode = "n";
       options = {
@@ -47,7 +59,7 @@ in
       };
     }
     {
-      key = "<leader>cf";
+      key = "<leader>af";
       action = ":CodeCompanionActions<CR>";
       mode = "n";
       options = {
