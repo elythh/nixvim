@@ -46,20 +46,20 @@
     #./plug/ui/precognition.nix
     ./plug/ui/telescope.nix
 
-    ./plug/utils/harpoon.nix
     ./plug/utils/colorizer.nix
-    ./plug/utils/comment.nix
     ./plug/utils/comment-box.nix
+    ./plug/utils/comment.nix
     ./plug/utils/flash.nix
     ./plug/utils/grapple.nix
     ./plug/utils/hardtime.nix
+    ./plug/utils/harpoon.nix
     ./plug/utils/illuminate.nix
     ./plug/utils/markview.nix
     ./plug/utils/mini.nix
     ./plug/utils/obsidian.nix
     ./plug/utils/oil.nix
-    ./plug/utils/ufo.nix
     ./plug/utils/spectre.nix
+    ./plug/utils/ufo.nix
     ./plug/utils/undotree.nix
     ./plug/utils/whichkey.nix
     ./plug/utils/yaml-companion.nix
