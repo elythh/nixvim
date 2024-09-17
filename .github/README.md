@@ -85,6 +85,7 @@ If you add a new configuration file, remember to add it to the
   - **[nvim-colorizer](../config/plug/utils/nvim-colorizer.nix):** Preview colors in neovim
   - **[obsidian](../config/plug/utils/obsidian.nix):** Obsidian integration for nvim
   - **[oil](../config/plug/utils/oil.nix):** Navigate in your working folder with a buffer
+  - **[spectre](../config/plug/utils/spectre.nix):** Search and replace
   - **[ufo](../config/plug/utils/ufo.nix):** Folding plugin
   - **[undotree](../config/plug/utils/undotree.nix):** Undo history visualizer
   - **[whichkey](../config/plug/utils/whichkey.nix):** Popup to display keybindings
