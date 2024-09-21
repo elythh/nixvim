@@ -70,6 +70,7 @@ If you add a new configuration file, remember to add it to the
   - **[noice](../config/plug/ui/noice.nix):** Better nvim UI
   - **[nvim-notify](../config/plug/ui/nvim-notify.nix):** Notification manager
   - **[precognition](../config/plug/ui/precognition.nix):** Show inline navigation hint
+  - **[smart-splits](../config/plug/ui/smart-splits.nix):** Better split managment
   - **[telescope](../config/plug/ui/telescope.nix):** Best plugin ever ?
 - **[utils/](../config/plug/utils)**
   - **[comment](../config/plug/utils/comment.nix):** Quickly toggle comments
