@@ -45,7 +45,7 @@ in
     layout = [
       {
         type = "terminal";
-        command = "${lib.getExe thissifine}";
+        command = "${lib.getExe thissifine} && sleep 1";
         width = 46;
         height = 25;
         opts = {
