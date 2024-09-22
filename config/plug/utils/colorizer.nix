@@ -1,5 +1,5 @@
 {
   plugins.nvim-colorizer = {
-    enable = true;
+    enable = false;
   };
 }
