@@ -1,8 +1,21 @@
+{ lib, config, ... }:
 {
   plugins.mini = {
     enable = true;
     modules = {
       ai = { };
+      files = {
+        content = {
+          filter.__raw = ''
+            function(entry)
+              return entry.name ~= '.git' and entry.name ~= '.direnv' and entry.name ~= '.envrc' and entry.name ~= '.gitlab' and entry.name ~= '.github'
+            end'';
+        };
+        windows = {
+          preview = true;
+          width_preview = 100;
+        };
+      };
       icons = { };
       notify = { };
       pairs = { };
@@ -36,4 +49,15 @@
       };
     };
   };
+  keymaps = lib.mkIf (config.plugins.mini.enable && lib.hasAttr "files" config.plugins.mini.modules) [
+    {
+      mode = "n";
+      key = "-";
+      action = ":lua MiniFiles.open()<CR>";
+      options = {
+        desc = "Open file explorer";
+        silent = true;
+      };
+    }
+  ];
 }

@@ -1,6 +1,7 @@
+{ lib, config, ... }:
 {
   plugins.oil = {
-    enable = true;
+    enable = false;
     settings = {
       useDefaultKeymaps = true;
       deleteToTrash = true;
@@ -36,7 +37,7 @@
       };
     };
   };
-  keymaps = [
+  keymaps = lib.mkIf config.plugins.oil.enable [
     {
       mode = "n";
       key = "-";
