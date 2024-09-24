@@ -54,7 +54,16 @@
     {
       mode = "n";
       key = "-";
-      action = ":lua MiniFiles.open()<CR>";
+      action = ":lua  MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>";
+      options = {
+        desc = "Open file explorer cwd";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "_";
+      action = ":lua  MiniFiles.open()<CR>";
       options = {
         desc = "Open file explorer";
         silent = true;
