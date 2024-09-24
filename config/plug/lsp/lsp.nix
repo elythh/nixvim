@@ -111,5 +111,6 @@
     require('lspconfig.ui.windows').default_options = {
       border = _border
     }
+    require("lspconfig").yamlls.setup(require("schema-companion").setup_client({ }))
   '';
 }
