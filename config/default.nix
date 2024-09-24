@@ -13,6 +13,7 @@
     ./plug/completion/copilot-cmp.nix
     ./plug/completion/lspkind.nix
     ./plug/completion/schemastore.nix
+    ./plug/completion/schema-companion.nix
 
     ./plug/git/gitblame.nix
     ./plug/git/gitlinker.nix
