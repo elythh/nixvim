@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   plugins.none-ls = {
     enable = true;
@@ -15,7 +16,10 @@
         yamllint.enable = true;
       };
       formatting = {
-        nixpkgs_fmt.enable = true;
+        nixfmt = {
+          enable = true;
+          package = pkgs.nixfmt-rfc-style;
+        };
         black = {
           enable = true;
           settings = ''
