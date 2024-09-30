@@ -400,7 +400,7 @@
     {
       mode = "n";
       key = "<Tab>";
-      action = "<CMD>bnext<CR>";
+      action = "<CMD>Telescope buffers sort_mru=true sort_lastused=true initial_mode=normal<CR>";
       options = {
         desc = "Next buffer";
       };

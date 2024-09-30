@@ -21,7 +21,7 @@
       notify = { };
       pairs = { };
       surround = { };
-      tabline = { };
+      # tabline = { };
       trailspace = { };
       hipatterns = {
         highlighters = {

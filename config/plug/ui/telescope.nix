@@ -30,6 +30,17 @@
           enable_preview = true;
         };
       };
+      mappings = {
+        # This is not working, use Alt + the key instead 🤷
+        n = {
+          "d" = {
+            __raw = "require('telescope.actions').delete_buffer";
+          };
+          "q" = {
+            __raw = "require('telescope.actions').close";
+          };
+        };
+      };
     };
     keymaps = {
       "<leader><space>" = {
