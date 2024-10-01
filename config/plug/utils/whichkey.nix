@@ -1,5 +1,5 @@
 {
   plugins.which-key = {
-    enable = true;
+    enable = false;
   };
 }

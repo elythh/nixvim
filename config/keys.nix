@@ -7,23 +7,34 @@
       mode = "n";
       key = "<leader>/";
       action = "<cmd>nohl<CR>";
+      options = {
+        desc = "Clear search";
+      };
     }
     {
       mode = "n";
       key = "<leader>f";
       action = "+find/file";
+      options = {
+        desc = "+file/file";
+      };
     }
-
     {
       mode = "n";
       key = "<leader>s";
       action = "+search";
+      options = {
+        desc = "+search";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>q";
       action = "+quit/session";
+      options = {
+        desc = "+quit/session";
+      };
     }
 
     {
@@ -33,33 +44,36 @@
       ];
       key = "<leader>g";
       action = "+git";
+      options = {
+        desc = "+git";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>u";
       action = "+ui";
+      options = {
+        desc = "+ui";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>w";
       action = "+windows";
+      options = {
+        desc = "+windows";
+      };
     }
 
     {
       mode = "n";
       key = "<leader><Tab>";
       action = "+tab";
-    }
-
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>d";
-      action = "+debug";
+      options = {
+        desc = "+tab";
+      };
     }
 
     {
@@ -69,6 +83,9 @@
       ];
       key = "<leader>c";
       action = "+code";
+      options = {
+        desc = "+code";
+      };
     }
 
     # Tabs
