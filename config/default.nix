@@ -27,6 +27,8 @@
     ./plug/lsp/none-ls.nix
     ./plug/lsp/trouble.nix
 
+    ./plug/mini
+
     ./plug/snippets/luasnip.nix
 
     ./plug/statusline/lualine.nix
@@ -56,7 +58,6 @@
     ./plug/utils/harpoon.nix
     ./plug/utils/illuminate.nix
     ./plug/utils/markview.nix
-    ./plug/utils/mini.nix
     ./plug/utils/obsidian.nix
     ./plug/utils/oil.nix
     ./plug/utils/spectre.nix
