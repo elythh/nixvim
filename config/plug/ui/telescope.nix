@@ -61,19 +61,19 @@
           desc = "+buffer";
         };
       };
-      "<leader>ff" = {
-        action = "find_files";
-        options = {
-          desc = "Find project files";
-        };
-      };
+      # "<leader>ff" = {
+      #   action = "find_files";
+      #   options = {
+      #     desc = "Find project files";
+      #   };
+      # };
       "<leader>fr" = {
         action = "live_grep";
         options = {
           desc = "Find text";
         };
       };
-      "<leader>fR" = {
+      "<leader>fe" = {
         action = "resume";
         options = {
           desc = "Resume";
@@ -194,19 +194,23 @@
     }
     {
       mode = "n";
-      key = "<leader>fe";
-      action = "<cmd>Telescope file_browser<cr>";
-      options = {
-        desc = "File browser";
-      };
+      key = "<leader>ff";
+      action.__raw = ''
+        function()
+            require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h") })
+          end
+      '';
+      options.desc = "Search file cwd";
     }
     {
       mode = "n";
-      key = "<leader>fE";
-      action = "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>";
-      options = {
-        desc = "File browser";
-      };
+      key = "<leader>fR";
+      action.__raw = ''
+        function()
+           require("telescope.builtin").live_grep({ cwd = vim.fn.expand("%:p:h") })
+          end
+      '';
+      options.desc = "Grep cwd";
     }
   ];
 }
