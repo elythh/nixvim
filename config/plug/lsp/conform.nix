@@ -11,12 +11,6 @@
         nix = ["alejandra"];
         c = ["clang-format"];
       };
-
-      formatters = {
-        clang-format = {
-          prepend_args = "-style={SortIncludes: Never}";
-        };
-      };
     };
   };
 }
