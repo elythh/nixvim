@@ -80,6 +80,7 @@
         "jellybeans"
         "aquarium"
         "gruvbox"
+        "oxocarbon"
       ];
     };
     assistant = lib.mkOption {
