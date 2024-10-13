@@ -92,31 +92,31 @@ in
       };
 
       # Completion
-      CmpItemAbbrMatch = {
-        fg = base05;
-        bg = "none";
-      };
-      CmpItemAbbrMatchFuzzy = {
-        fg = base05;
-        bg = "none";
-      };
-      CmpItemAbbr = {
-        fg = base03;
-        bg = "none";
-      };
-      CmpItemKind = {
-        fg = base0E;
-        bg = "none";
-      };
-      CmpItemMenu = {
-        fg = base0E;
-        bg = "none";
-      };
-      CmpItemKindSnippet = {
-        fg = base0E;
-        bg = "none";
-      };
-
+      # CmpItemAbbrMatch = {
+      #   fg = base05;
+      #   bg = "none";
+      # };
+      # CmpItemAbbrMatchFuzzy = {
+      #   fg = base05;
+      #   bg = "none";
+      # };
+      # CmpItemAbbr = {
+      #   fg = base03;
+      #   bg = "none";
+      # };
+      # CmpItemKind = {
+      #   fg = base0E;
+      #   bg = "none";
+      # };
+      # CmpItemMenu = {
+      #   fg = base0E;
+      #   bg = "none";
+      # };
+      # CmpItemKindSnippet = {
+      #   fg = base0E;
+      #   bg = "none";
+      # };
+      #
       VertSplit = {
         fg = base01;
         bg = "none";
