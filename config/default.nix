@@ -49,6 +49,7 @@
     ./plug/ui/smart-splits.nix
     ./plug/ui/telescope.nix
 
+    ./plug/utils/auto-session.nix
     ./plug/utils/colorizer.nix
     ./plug/utils/comment-box.nix
     ./plug/utils/comment.nix

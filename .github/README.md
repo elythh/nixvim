@@ -73,6 +73,7 @@ If you add a new configuration file, remember to add it to the
   - **[smart-splits](../config/plug/ui/smart-splits.nix):** Better split managment
   - **[telescope](../config/plug/ui/telescope.nix):** Best plugin ever ?
 - **[utils/](../config/plug/utils)**
+  - **[auto-session](../config/plug/utils/auto-session.nix):** Session managment
   - **[comment](../config/plug/utils/comment.nix):** Quickly toggle comments
   - **[comment-box](../config/plug/utils/comment-box.nix):** Comments utilities
   - **[flash](../config/plug/utils/flash.nix):** Navigate in file with a few keystrokes
