@@ -62,6 +62,7 @@
     ./plug/utils/obsidian.nix
     ./plug/utils/oil.nix
     ./plug/utils/spectre.nix
+    ./plug/utils/trunk.nix
     ./plug/utils/ufo.nix
     ./plug/utils/undotree.nix
     ./plug/utils/whichkey.nix
