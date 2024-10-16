@@ -38,7 +38,14 @@
           '';
         };
         stylua.enable = true;
-        yamlfmt.enable = true;
+        yamlfmt = {
+          enable = true;
+          settings = ''
+            {
+              extra_args = { "--preserve-quote" },
+            }
+          '';
+        };
         hclfmt.enable = true;
       };
     };
