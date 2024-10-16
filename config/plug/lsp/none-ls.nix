@@ -33,18 +33,13 @@
           disableTsServerFormatter = true;
           settings = ''
             {
-              extra_args = { "--no-semi", "--single-quote" },
+              extra_args = { "--no-semi" },
             }
           '';
         };
         stylua.enable = true;
         yamlfmt = {
           enable = true;
-          settings = ''
-            {
-              extra_args = { "--preserve-quote" },
-            }
-          '';
         };
         hclfmt.enable = true;
       };
