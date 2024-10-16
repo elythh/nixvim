@@ -33,7 +33,7 @@
           disableTsServerFormatter = true;
           settings = ''
             {
-              extra_args = { "--no-semi", "--single-quote" },
+              extra_args = { "--no-semi" },
             }
           '';
         };
