@@ -416,7 +416,7 @@
     }
     {
       mode = "n";
-      key = "<Tab>";
+      key = "<C-Tab>";
       action = "<CMD>Telescope buffers sort_mru=true sort_lastused=true initial_mode=normal<CR>";
       options = {
         desc = "Next buffer";
