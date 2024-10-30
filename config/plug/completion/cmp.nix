@@ -17,7 +17,7 @@ in
 {
   plugins = {
     cmp = {
-      enable = true;
+      enable = false;
       autoEnableSources = true;
 
       settings = {
@@ -133,7 +133,7 @@ in
     # luasnip.enable = true;
 
     lspkind = {
-      enable = true;
+      enable = false;
 
       cmp = {
         enable = true;

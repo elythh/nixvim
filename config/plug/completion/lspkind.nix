@@ -1,6 +1,6 @@
 {
   plugins.lspkind = {
-    enable = true;
+    enable = false;
     symbolMap = {
       Copilot = "";
     };
