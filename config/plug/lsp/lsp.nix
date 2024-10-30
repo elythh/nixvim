@@ -18,6 +18,14 @@
         # };
         nixd = {
           enable = true;
+          extraOptions = {
+            nixos = {
+              expr = "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.aurelionite.options";
+            };
+            home_manager = {
+              expr = "(builtins.getFlake \"/etc/nixos\").homeConfigurations.aurelionite.options";
+            };
+          };
         };
         marksman = {
           enable = true;
