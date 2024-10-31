@@ -1,64 +1,66 @@
 {
   plugins.noice = {
     enable = true;
-    notify = {
-      enabled = false;
-      view = "notify";
-    };
-    messages = {
-      enabled = true;
-      view = "mini";
-    };
-    lsp = {
-      message = {
+    settings = {
+      notify = {
         enabled = false;
+        view = "notify";
       };
-      progress = {
-        enabled = false;
+      messages = {
+        enabled = true;
         view = "mini";
       };
-    };
-    popupmenu = {
-      enabled = true;
-      backend = "nui";
-    };
-    cmdline = {
-      format = {
-        filter = {
-          pattern = [
-            ":%s*%%s*s:%s*"
-            ":%s*%%s*s!%s*"
-            ":%s*%%s*s/%s*"
-            "%s*s:%s*"
-            ":%s*s!%s*"
-            ":%s*s/%s*"
-          ];
-          icon = "";
-          lang = "regex";
+      lsp = {
+        message = {
+          enabled = false;
         };
-        replace = {
-          pattern = [
-            ":%s*%%s*s:%w*:%s*"
-            ":%s*%%s*s!%w*!%s*"
-            ":%s*%%s*s/%w*/%s*"
-            "%s*s:%w*:%s*"
-            ":%s*s!%w*!%s*"
-            ":%s*s/%w*/%s*"
-          ];
-          icon = "󱞪";
-          lang = "regex";
+        progress = {
+          enabled = false;
+          view = "mini";
         };
-        range = {
-          pattern = [
-            ":%s*%%s*s:%w*:%w*:%s*"
-            ":%s*%%s*s!%w*!%w*!%s*"
-            ":%s*%%s*s/%w*/%w*/%s*"
-            "%s*s:%w*:%w*:%s*"
-            ":%s*s!%w*!%w*!%s*"
-            ":%s*s/%w*/%w*/%s*"
-          ];
-          icon = "";
-          lang = "regex";
+      };
+      popupmenu = {
+        enabled = true;
+        backend = "nui";
+      };
+      cmdline = {
+        format = {
+          filter = {
+            pattern = [
+              ":%s*%%s*s:%s*"
+              ":%s*%%s*s!%s*"
+              ":%s*%%s*s/%s*"
+              "%s*s:%s*"
+              ":%s*s!%s*"
+              ":%s*s/%s*"
+            ];
+            icon = "";
+            lang = "regex";
+          };
+          replace = {
+            pattern = [
+              ":%s*%%s*s:%w*:%s*"
+              ":%s*%%s*s!%w*!%s*"
+              ":%s*%%s*s/%w*/%s*"
+              "%s*s:%w*:%s*"
+              ":%s*s!%w*!%s*"
+              ":%s*s/%w*/%s*"
+            ];
+            icon = "󱞪";
+            lang = "regex";
+          };
+          range = {
+            pattern = [
+              ":%s*%%s*s:%w*:%w*:%s*"
+              ":%s*%%s*s!%w*!%w*!%s*"
+              ":%s*%%s*s/%w*/%w*/%s*"
+              "%s*s:%w*:%w*:%s*"
+              ":%s*s!%w*!%w*!%s*"
+              ":%s*s/%w*/%w*/%s*"
+            ];
+            icon = "";
+            lang = "regex";
+          };
         };
       };
     };
