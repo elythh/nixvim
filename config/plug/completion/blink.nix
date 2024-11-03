@@ -1,6 +1,6 @@
 {
   plugins.blink-cmp = {
-    enable = true;
+    enable = false;
     settings = {
       accept = {
         auto_brackets = {

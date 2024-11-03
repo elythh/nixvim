@@ -17,7 +17,7 @@ in
 {
   plugins = {
     cmp = {
-      enable = false;
+      enable = true;
       autoEnableSources = true;
 
       settings = {
@@ -121,19 +121,14 @@ in
             priority = 100;
           }
         ];
-
-        window = {
-          completion.__raw = ''cmp.config.window.bordered()'';
-          documentation.__raw = ''cmp.config.window.bordered()'';
-        };
       };
     };
 
-    # friendly-snippets.enable = true;
-    # luasnip.enable = true;
+    friendly-snippets.enable = true;
+    luasnip.enable = true;
 
     lspkind = {
-      enable = false;
+      enable = true;
 
       cmp = {
         enable = true;
