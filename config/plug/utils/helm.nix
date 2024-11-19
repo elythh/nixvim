@@ -1,0 +1,5 @@
+{
+  plugins.helm = {
+    enable = true;
+  };
+}

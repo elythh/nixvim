@@ -57,6 +57,7 @@
     ./plug/utils/grapple.nix
     ./plug/utils/hardtime.nix
     ./plug/utils/harpoon.nix
+    ./plug/utils/helm.nix
     ./plug/utils/illuminate.nix
     ./plug/utils/markview.nix
     ./plug/utils/obsidian.nix
