@@ -45,6 +45,5 @@
       ];
       command = "startinsert | 1";
     }
-
   ];
 }

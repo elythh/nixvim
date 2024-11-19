@@ -17,7 +17,6 @@
     ./plug/git/gitblame.nix
     ./plug/git/gitlinker.nix
     ./plug/git/gitsigns.nix
-    ./plug/git/lazygit.nix
 
     ./plug/lsp/conform.nix
     ./plug/lsp/lsp.nix
@@ -26,6 +25,8 @@
     ./plug/lsp/trouble.nix
 
     ./plug/mini
+
+    ./plug/snacks/default.nix
 
     ./plug/snippets/luasnip.nix
 

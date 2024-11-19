@@ -96,7 +96,7 @@ in
               "󰍉 Find File"
               "Operator"
             )
-            (mkButton "g" "<CMD>LazyGit<CR>" " Open LazyGit" "Constant")
+            (mkButton "g" ":lua Snacks.lazygit.open()<CR>" " Open LazyGit" "Constant")
             (mkButton "q" "<CMD>qa<CR>" "󰚑 Quit Neovim" "String")
           ];
       }

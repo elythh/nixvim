@@ -52,6 +52,8 @@ If you add a new configuration file, remember to add it to the
   - **[lspsaga](../config/plug/lsp/lspsaga.nix):** Cool LSP features
   - **[none-ls](../config/plug/lsp/none-ls.nix):** null-ls replacement. Use nvim as LSP
   - **[trouble](../config/plug/lsp/trouble.nix):** Pretty interface for working with LSP
+- **[snacks](../config/plug/snacks)**
+  - set of utilities
 - **[snippet/](../config/plug/snippet)**
   - **[luasnip](../config/plug/snippet/luasnip.nix):** Snippet engine in lua
 - **[statusline/](../config/plug/statusline)**
