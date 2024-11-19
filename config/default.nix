@@ -18,10 +18,8 @@
     ./plug/git/gitlinker.nix
     ./plug/git/gitsigns.nix
     ./plug/git/lazygit.nix
-    ./plug/git/worktree.nix
 
     ./plug/lsp/conform.nix
-    ./plug/lsp/fidget.nix
     ./plug/lsp/lsp.nix
     ./plug/lsp/lspsaga.nix
     ./plug/lsp/none-ls.nix
@@ -49,19 +47,13 @@
     ./plug/ui/smart-splits.nix
     ./plug/ui/telescope.nix
 
-    ./plug/utils/auto-session.nix
     ./plug/utils/colorizer.nix
     ./plug/utils/comment-box.nix
     ./plug/utils/comment.nix
-    ./plug/utils/flash.nix
-    ./plug/utils/grapple.nix
-    ./plug/utils/hardtime.nix
-    ./plug/utils/harpoon.nix
     ./plug/utils/helm.nix
     ./plug/utils/illuminate.nix
     ./plug/utils/markview.nix
     ./plug/utils/obsidian.nix
-    ./plug/utils/oil.nix
     ./plug/utils/spectre.nix
     ./plug/utils/trunk.nix
     ./plug/utils/ufo.nix

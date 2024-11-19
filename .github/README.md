@@ -27,7 +27,7 @@ If you add a new configuration file, remember to add it to the
 ### Current plugins
 
 > [!WARNING]
-> Some of them my be disabled, this is every plugins defined and configured in the repo.
+> Some of them might be disabled, this is every plugins defined and configured in the repo.
 
 <details>
     <summary>List of plugins</summary>
@@ -47,7 +47,6 @@ If you add a new configuration file, remember to add it to the
   - **[worktree](../config/plug/git/worktree.nix):** Make using git worktrees easier
 - **[lsp/](../config/plug/lsp)**
   - **[conform](../config/plug/lsp/conform.nix):** Formatter plugin
-  - **[fidget](../config/plug/lsp/fidget.nix):** LSP progress notifications
   - **[hlchunk](../config/plug/lsp/hlchunk.nix):** Highlight useful things like current chunk or indent lines
   - **[lsp](../config/plug/lsp/lsp.nix):** LSP configs
   - **[lspsaga](../config/plug/lsp/lspsaga.nix):** Cool LSP features
@@ -64,7 +63,6 @@ If you add a new configuration file, remember to add it to the
   - **[treesitter](../config/plug/treesitter/treesitter.nix):** Parser generator tool to build a syntax tree of the current buffer
 - **[ui/](../config/plug/ui)**
   - **[alpha](../config/plug/ui/alpha.nix):** Dashboard
-  - **[btw](../config/plug/ui/btw.nix):** Writes a small message as startup screen
   - **[bufferline](../config/plug/ui/bufferline.nix):** VSCode like line for buffers -> replaced by mini.tabline
   - **[dressing](../config/plug/ui/dressing.nix):** Better vim ui interfaces
   - **[noice](../config/plug/ui/noice.nix):** Better nvim UI
@@ -73,13 +71,8 @@ If you add a new configuration file, remember to add it to the
   - **[smart-splits](../config/plug/ui/smart-splits.nix):** Better split managment
   - **[telescope](../config/plug/ui/telescope.nix):** Best plugin ever ?
 - **[utils/](../config/plug/utils)**
-  - **[auto-session](../config/plug/utils/auto-session.nix):** Session managment
   - **[comment](../config/plug/utils/comment.nix):** Quickly toggle comments
   - **[comment-box](../config/plug/utils/comment-box.nix):** Comments utilities
-  - **[flash](../config/plug/utils/flash.nix):** Navigate in file with a few keystrokes
-  - **[grapple](../config/plug/utils/grapple.nix):** Quickly switch between buffers (Harpoon replacement)
-  - **[hardtime](../config/plug/utils/hardtime.nix):** Learn vim motions, the hard way
-  - **[harpoon](../config/plug/utils/harpoon.nix):** Quickly switch between buffers
   - **[illuminate](../config/plug/utils/illuminate.nix):** Highlight word under the cursor
   - **[markview](../config/plug/utils/markview.nix):** Yet another markdown previewer for neovim
   - **[mini](../config/plug/utils/mini.nix):** Cool neovim utilities, currently using ai, notify, surround, diff, tabline, trailspace, icons, indentscope and pairs
