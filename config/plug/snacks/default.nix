@@ -4,6 +4,7 @@
   };
 
   imports = [
+    ./dashboard.nix
     ./git.nix
     ./lazygit.nix
     ./notifier.nix

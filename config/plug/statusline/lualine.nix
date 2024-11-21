@@ -32,6 +32,7 @@ in
             "dashboard"
             "alpha"
             "starter"
+            "snacks_dashboard"
           ];
         };
       };
