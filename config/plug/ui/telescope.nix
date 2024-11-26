@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 {
   plugins.telescope = {
     enable = true;
@@ -18,6 +23,20 @@
     };
     settings = {
       defaults = {
+        vimgrep_arguments = [
+          "${pkgs.ripgrep}/bin/rg"
+          "-L"
+          "--color=never"
+          "--no-heading"
+          "--with-filename"
+          "--line-number"
+          "--column"
+          "--smart-case"
+          "--fixed-strings"
+        ];
+        selection_caret = "  ";
+        entry_prefix = "  ";
+        layout_strategy = "flex";
         layout_config = {
           horizontal = {
             prompt_position = "top";

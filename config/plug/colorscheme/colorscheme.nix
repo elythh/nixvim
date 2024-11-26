@@ -1,10 +1,13 @@
 { config, ... }:
+let
+  colors = import ../../colors/${config.theme}.nix;
+in
 {
   colorschemes = {
     base16 = {
       enable = true;
       setUpBar = false;
-      colorscheme = import ../../colors/${config.theme}.nix { };
+      colorscheme = colors;
       settings = {
         cmp = true;
         illuminate = true;

@@ -87,7 +87,7 @@
     termguicolors = true;
 
     # Enable the sign column to prevent the screen from jumping
-    # signcolumn = "yes";
+    signcolumn = "yes";
 
     # Enable cursor line highlight
     cursorline = true; # Highlight the line where the cursor is located
