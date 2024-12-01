@@ -37,30 +37,23 @@
     ./plug/treesitter/treesitter-textobjects.nix
     ./plug/treesitter/treesitter.nix
 
-    ./plug/ui/alpha.nix
-    # ./plug/ui/btw.nix
     ./plug/ui/bufferline.nix
     ./plug/ui/dressing.nix
     ./plug/ui/indent-blankline.nix
     ./plug/ui/noice.nix
     ./plug/ui/nvim-notify.nix
-    #./plug/ui/precognition.nix
     ./plug/ui/smart-splits.nix
     ./plug/ui/telescope.nix
 
-    ./plug/utils/colorizer.nix
     ./plug/utils/comment-box.nix
     ./plug/utils/comment.nix
     ./plug/utils/helm.nix
-    ./plug/utils/illuminate.nix
     ./plug/utils/markview.nix
     ./plug/utils/obsidian.nix
     ./plug/utils/spectre.nix
     ./plug/utils/trunk.nix
     ./plug/utils/ufo.nix
     ./plug/utils/undotree.nix
-    ./plug/utils/whichkey.nix
-    ./plug/utils/yaml-companion.nix
   ];
   options = {
     theme = lib.mkOption {

@@ -11,6 +11,9 @@
       preview = true;
       width_preview = 100;
     };
+    mappings =
+      {
+      };
   };
   keymaps = lib.mkIf (config.plugins.mini.enable && lib.hasAttr "files" config.plugins.mini.modules) [
     {
