@@ -43,11 +43,8 @@ If you add a new configuration file, remember to add it to the
   - **[gitlinker](../config/plug/git/gitlinker.nix):** Generate shareable file permalinks
   - **[gitblame](../config/plug/git/gitblame.nix):** inline git blame
   - **[gitsigns](../config/plug/git/gitsigns.nix):** Git integration for buffers (replaced by mini.diff + gitblame)
-  - **[lazygit](../config/plug/git/lazygit.nix):** The **best** git TUI, as a neovim plugin
-  - **[worktree](../config/plug/git/worktree.nix):** Make using git worktrees easier
 - **[lsp/](../config/plug/lsp)**
   - **[conform](../config/plug/lsp/conform.nix):** Formatter plugin
-  - **[hlchunk](../config/plug/lsp/hlchunk.nix):** Highlight useful things like current chunk or indent lines
   - **[lsp](../config/plug/lsp/lsp.nix):** LSP configs
   - **[lspsaga](../config/plug/lsp/lspsaga.nix):** Cool LSP features
   - **[none-ls](../config/plug/lsp/none-ls.nix):** null-ls replacement. Use nvim as LSP
@@ -58,34 +55,28 @@ If you add a new configuration file, remember to add it to the
   - **[luasnip](../config/plug/snippet/luasnip.nix):** Snippet engine in lua
 - **[statusline/](../config/plug/statusline)**
   - **[lualine](../config/plug/statusline/lualine.nix):** Status line for neovim
-  - **[staline](../config/plug/statusline/staline.nix):** Some soviet guy that died a long time ago
 - **[treesitter/](../config/plug/treesitter)**
   - **[treesitter-context](../config/plug/treesitter/treesitter-context.nix):** Show code context
   - **[treesitter-textobject](../config/plug/treesitter/treesitter-textobject.nix):** Allow cool text manipulation thanks to TS
   - **[treesitter](../config/plug/treesitter/treesitter.nix):** Parser generator tool to build a syntax tree of the current buffer
 - **[ui/](../config/plug/ui)**
-  - **[alpha](../config/plug/ui/alpha.nix):** Dashboard
   - **[bufferline](../config/plug/ui/bufferline.nix):** VSCode like line for buffers -> replaced by mini.tabline
   - **[dressing](../config/plug/ui/dressing.nix):** Better vim ui interfaces
   - **[noice](../config/plug/ui/noice.nix):** Better nvim UI
   - **[nvim-notify](../config/plug/ui/nvim-notify.nix):** Notification manager
-  - **[precognition](../config/plug/ui/precognition.nix):** Show inline navigation hint
   - **[smart-splits](../config/plug/ui/smart-splits.nix):** Better split managment
   - **[telescope](../config/plug/ui/telescope.nix):** Best plugin ever ?
 - **[utils/](../config/plug/utils)**
   - **[comment](../config/plug/utils/comment.nix):** Quickly toggle comments
   - **[comment-box](../config/plug/utils/comment-box.nix):** Comments utilities
-  - **[illuminate](../config/plug/utils/illuminate.nix):** Highlight word under the cursor
   - **[markview](../config/plug/utils/markview.nix):** Yet another markdown previewer for neovim
   - **[mini](../config/plug/utils/mini.nix):** Cool neovim utilities, currently using ai, notify, surround, diff, tabline, trailspace, icons, indentscope and pairs
-  - **[nvim-autopairs](../config/plug/utils/nvim-autopairs.nix):** Autopairs in nvim
   - **[nvim-colorizer](../config/plug/utils/nvim-colorizer.nix):** Preview colors in neovim
   - **[obsidian](../config/plug/utils/obsidian.nix):** Obsidian integration for nvim
   - **[oil](../config/plug/utils/oil.nix):** Navigate in your working folder with a buffer
   - **[spectre](../config/plug/utils/spectre.nix):** Search and replace
   - **[ufo](../config/plug/utils/ufo.nix):** Folding plugin
   - **[undotree](../config/plug/utils/undotree.nix):** Undo history visualizer
-  - **[whichkey](../config/plug/utils/whichkey.nix):** Popup to display keybindings
 
 </details>
 
