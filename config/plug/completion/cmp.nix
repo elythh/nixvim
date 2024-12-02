@@ -19,7 +19,6 @@ in
     cmp = {
       enable = true;
       autoEnableSources = true;
-
       settings = {
         mapping = {
           "<C-d>" = # Lua
@@ -57,6 +56,13 @@ in
             priority = 1000;
             option = {
               inherit get_bufnrs;
+            };
+          }
+          {
+            name = "gitlab";
+            priority = 1000;
+            option = {
+              hosts = [ "https://gitlab.dnm.radiofrance.fr" ];
             };
           }
           {
