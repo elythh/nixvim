@@ -27,7 +27,7 @@
             };
           };
         };
-        marksman = {
+        markdown_oxide = {
           enable = true;
         };
         pyright = {
