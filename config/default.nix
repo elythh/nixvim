@@ -74,6 +74,7 @@
         "oxocarbon"
         "paradise"
         "tokyonight"
+        "yoru"
       ];
     };
     assistant = lib.mkOption {
