@@ -1,4 +1,7 @@
 { config, lib, ... }:
+let
+  colors = import ../../colors/${config.theme}.nix { };
+in
 {
   plugins.mini.modules.files = {
     content = {
@@ -80,4 +83,17 @@
       '';
     }
   ];
+  highlight =
+    lib.mkIf (config.plugins.mini.enable && lib.hasAttr "files" config.plugins.mini.modules)
+      {
+        MiniFilesNormal = with colors; {
+          bg = base01;
+        };
+        MiniFilesBorder = with colors; {
+          bg = base01;
+          fg = base01;
+        };
+
+      };
+
 }
