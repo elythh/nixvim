@@ -5,6 +5,11 @@
     # General maps
     {
       mode = "n";
+      key = "<C-c>";
+      action = "<cmd>ciw<CR>";
+    }
+    {
+      mode = "n";
       key = "<leader>/";
       action = "<cmd>nohl<CR>";
       options = {
