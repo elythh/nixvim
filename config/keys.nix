@@ -6,7 +6,7 @@
     {
       mode = "n";
       key = "<C-c>";
-      action = "<cmd>ciw<CR>";
+      action = "ciw";
     }
     {
       mode = "n";
