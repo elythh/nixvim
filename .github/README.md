@@ -35,7 +35,6 @@ If you add a new configuration file, remember to add it to the
 - **[colorscheme/](../config/plug/colorscheme):** Theme configuration. Current one is [paradise](https://github.com/paradise-theme/paradise)
 - **[completion/](../config/plug/completion)**
   - **[avante](../config/plug/completion/avante.nix):** Cursor AI at home
-  - **[codecompanion](../config/plug/completion/codecompanion.nix):** Zed AI like
   - **[copilot-cmp](../config/plug/completion/copilot-cmp.nix):** Completion support for GitHub copilot
   - **[lspkind](../config/plug/completion/lspkind.nix):** vscode-like pictograms for neovim lsp completion items
   - **[nvim-cmp](../config/plug/completion/cmp.nix):** Completion plugin for nvim + emoji support
