@@ -103,26 +103,26 @@ in
     with colors;
     lib.mkIf (config.plugins.mini.enable && lib.hasAttr "clue" config.plugins.mini.modules) {
       MiniClueDescSingle = {
-        bg = base00;
+        bg = base01;
       };
       MiniClueDescGroup = {
-        bg = base00;
+        bg = base01;
         fg = base0E;
       };
       MiniClueNextKey = {
-        bg = base00;
+        bg = base01;
         fg = base0D;
       };
       MiniClueNextKeyWithPostkeys = {
-        bg = base00;
+        bg = base01;
         fg = base0F;
       };
       MiniClueSeparator = {
-        bg = base00;
+        bg = base01;
         fg = base0E;
       };
       MiniClueBorder = {
-        bg = base00;
+        bg = base01;
         fg = base0E;
       };
     };
