@@ -61,7 +61,7 @@
           "yamlfmt"
         ];
         terragrunt = [
-          "hclfmt"
+          "hcl"
         ];
       };
     };
