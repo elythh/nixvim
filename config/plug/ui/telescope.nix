@@ -61,14 +61,6 @@
         desc = "List undo history";
       };
     })
-    (lib.mkIf config.plugins.telescope.extensions.manix.enable {
-      mode = "n";
-      key = "<leader>fM";
-      action = "<cmd>Telescope manix<CR>";
-      options = {
-        desc = "Search manix";
-      };
-    })
     (lib.mkIf config.plugins.telescope.extensions.live-grep-args.enable {
       mode = "n";
       key = "<leader>fw";
@@ -103,8 +95,6 @@
       };
 
       live-grep-args.enable = true;
-
-      manix.enable = true;
 
       ui-select = {
         enable = true;
