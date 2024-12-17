@@ -25,7 +25,7 @@
 
     ./plug/mini
 
-    ./plug/snacks/default.nix
+    ./plug/snacks
 
     ./plug/snippets/luasnip.nix
 
