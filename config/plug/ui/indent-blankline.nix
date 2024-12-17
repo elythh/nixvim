@@ -1,5 +1,6 @@
+{ lib, ... }:
 {
   plugins.indent-blankline = {
-    enable = true;
+    enable = lib.mkDefault true;
   };
 }
