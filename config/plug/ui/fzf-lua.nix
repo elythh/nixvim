@@ -2,13 +2,21 @@
   plugins = {
     fzf-lua = {
       enable = true;
+      profile = "telescope";
+      settings = {
+        keymap = {
+          fzf = {
+            "ctrl-q" = "select-all+accept";
+          };
+        };
+      };
       keymaps = {
         "<leader>f'" = {
           action = "marks";
           options.desc = "View marks";
         };
         "<leader>f/" = {
-          action = "current_buffer_fuzzy_find";
+          action = "grep_curbuf";
           options.desc = "Fuzzy find in current buffer";
         };
         "<leader>f<CR>" = {
@@ -92,52 +100,6 @@
           options.desc = "View git stashes";
         };
       };
-      # keymaps = {
-      #   "<leader>/" = {
-      #     action = "live_grep";
-      #     options.desc = "Live Grep";
-      #   };
-      #   "<leader><leader>" = {
-      #     action = "files";
-      #     options.desc = "Find files";
-      #   };
-      #   "<leader>," = {
-      #     action = "buffers";
-      #     options.desc = "Switch Buffer";
-      #     settings = {
-      #       sort_mru = true;
-      #       sort_lastused = true;
-      #     };
-      #   };
-      #   "<leader>gc" = {
-      #     action = "git_commits";
-      #     options.desc = "Git Commits";
-      #   };
-      #   "<leader>gs" = {
-      #     action = "git_status";
-      #     options.desc = "Git Status";
-      #   };
-      #   "<leader>s\"" = {
-      #     action = "registers";
-      #     options.desc = "Registers";
-      #   };
-      #   "<leader>sd" = {
-      #     action = "diagnostics_document";
-      #     options.desc = "Document Diagnostics";
-      #   };
-      #   "<leader>sD" = {
-      #     action = "diagnostics_workspace";
-      #     options.desc = "Workspace Diagnostics";
-      #   };
-      #   "<leader>sh" = {
-      #     action = "help_tags";
-      #     options.desc = "Help Pages";
-      #   };
-      #   "<leader>sk" = {
-      #     action = "keymaps";
-      #     options.desc = "Key Maps";
-      #   };
-      # };
     };
   };
 }
