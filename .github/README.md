@@ -62,10 +62,11 @@ If you add a new configuration file, remember to add it to the
 - **[ui/](../config/plug/ui)**
   - **[bufferline](../config/plug/ui/bufferline.nix):** VSCode like line for buffers -> replaced by mini.tabline
   - **[dressing](../config/plug/ui/dressing.nix):** Better vim ui interfaces
+  - **[fzf-lua](../config/plug/ui/fzf-lua.nix):** fzf-lua is my new best friend
   - **[noice](../config/plug/ui/noice.nix):** Better nvim UI
   - **[nvim-notify](../config/plug/ui/nvim-notify.nix):** Notification manager
   - **[smart-splits](../config/plug/ui/smart-splits.nix):** Better split managment
-  - **[telescope](../config/plug/ui/telescope.nix):** Best plugin ever ?
+  - **[telescope](../config/plug/ui/telescope.nix):** Best plugin ever ? Nevermind
 - **[utils/](../config/plug/utils)**
   - **[comment](../config/plug/utils/comment.nix):** Quickly toggle comments
   - **[comment-box](../config/plug/utils/comment-box.nix):** Comments utilities

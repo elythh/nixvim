@@ -38,6 +38,7 @@
 
     ./plug/ui/bufferline.nix
     ./plug/ui/dressing.nix
+    ./plug/ui/fzf-lua.nix
     ./plug/ui/indent-blankline.nix
     ./plug/ui/noice.nix
     ./plug/ui/nvim-notify.nix
