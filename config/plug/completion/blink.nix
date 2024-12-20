@@ -52,6 +52,9 @@
           trigger = {
             show_in_snippet = false;
           };
+          documentation = {
+            auto_show = true;
+          };
         };
 
         opts = {
