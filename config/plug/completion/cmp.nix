@@ -1,4 +1,4 @@
-_:
+{ config, lib, ... }:
 let
   get_bufnrs.__raw = ''
     function()
@@ -17,7 +17,7 @@ in
 {
   plugins = {
     cmp = {
-      enable = true;
+      enable = false;
       autoEnableSources = true;
       settings = {
         mapping = {
@@ -157,7 +157,7 @@ in
       };
     };
   };
-  keymaps = [
+  keymaps = lib.mkIf config.plugins.cmp.enable [
     {
       mode = [
         "i"
