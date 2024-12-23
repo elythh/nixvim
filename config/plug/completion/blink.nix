@@ -1,31 +1,29 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  inputs,
+  system,
+  ...
+}:
 {
   extraPlugins = with pkgs.vimPlugins; [
     blink-cmp-copilot
   ];
 
   plugins = {
+    cmp-emoji.enable = true;
+    cmp-git.enable = true;
+    cmp-spell.enable = true;
     blink-cmp = {
       enable = true;
+      package = inputs.blink-cmp.packages.${system}.default;
+      luaConfig.pre = # lua
+        ''
+          require('blink.compat').setup({debug = true, impersonate_nvim_cmp = true})
+        '';
+
       settings = {
-        accept = {
-          auto_brackets = {
-            enabled = true;
-          };
-        };
-        windows.documentation = {
-          auto_show = true;
-        };
-        highlight = {
-          use_nvim_cmp_as_default = true;
-        };
         keymap = {
           preset = "super-tab";
-        };
-        trigger = {
-          signature_help = {
-            enabled = true;
-          };
         };
         signature = {
           enabled = true;
@@ -37,15 +35,32 @@
             "path"
             "luasnip"
             "buffer"
-            "treesitter"
+            # "treesitter"
             "copilot"
+            "emoji"
+            "spell"
+            "git"
           ];
-          "lsp" = { };
-          "treesitter" = { };
-          "path" = { };
-          "snippets" = { };
-          "buffer" = { };
-          "copilot" = { };
+          providers = {
+            emoji = {
+              name = "emoji";
+              module = "blink.compat.source";
+            };
+            copilot = {
+              name = "copilot";
+              module = "blink-cmp-copilot";
+            };
+            git = {
+              name = "git";
+              module = "blink.compat.source";
+              score_offset = 0;
+            };
+            spell = {
+              name = "spell";
+              module = "blink.compat.source";
+              score_offset = 0;
+            };
+          };
         };
 
         completion = {
@@ -55,24 +70,43 @@
           documentation = {
             auto_show = true;
           };
-        };
-
-        opts = {
-          snippets = {
-            expand.__raw = ''
-              function(snippet) require('luasnip').lsp_expand(snippet) end
-            '';
-            active.__raw = ''
-              function(filter)
-                if filter and filter.direction then
-                  return require('luasnip').jumpable(filter.direction)
-                end
-                return require('luasnip').in_snippet()
-              end
-            '';
-            jump.__raw = ''
-              function(direction) require('luasnip').jump(direction) end
-            '';
+          accept = {
+            auto_brackets = {
+              enabled = true;
+            };
+          };
+          menu = {
+            draw = {
+              gap = 2;
+              treesitter = [
+                "lsp"
+                "copilot"
+              ];
+              columns = [
+                {
+                  __unkeyed-1 = "label";
+                  __unkeyed-2 = "label_description";
+                  gap = 1;
+                }
+                {
+                  __unkeyed-1 = "kind_icon";
+                  __unkeyed-2 = "kind";
+                  gap = 1;
+                }
+              ];
+              components = {
+                label = {
+                  width = {
+                    fill = true;
+                  };
+                };
+                "kind_icon" = {
+                  width = {
+                    fill = true;
+                  };
+                };
+              };
+            };
           };
         };
       };
