@@ -13,6 +13,12 @@
     cmp-emoji.enable = true;
     cmp-git.enable = true;
     cmp-spell.enable = true;
+    cmp-calc.enable = true;
+    cmp-treesitter.enable = true;
+    lsp.capabilities = # Lua
+      ''
+        capabilities = vim.tbl_deep_extend('force', capabilities, require('blink.cmp').get_lsp_capabilities())
+      '';
     blink-cmp = {
       enable = true;
       package = inputs.blink-cmp.packages.${system}.default;
@@ -31,15 +37,17 @@
 
         sources = {
           default = [
-            "lsp"
-            "path"
-            "luasnip"
             "buffer"
-            # "treesitter"
+            "calc"
             "copilot"
             "emoji"
-            "spell"
             "git"
+            "lsp"
+            "luasnip"
+            "path"
+            "snippets"
+            "spell"
+            #"treesitter"
           ];
           providers = {
             emoji = {
@@ -53,59 +61,91 @@
             git = {
               name = "git";
               module = "blink.compat.source";
-              score_offset = 0;
             };
             spell = {
               name = "spell";
               module = "blink.compat.source";
-              score_offset = 0;
+            };
+            calc = {
+              name = "calc";
+              module = "blink.compat.source";
             };
           };
         };
 
+        appearance = {
+          use_nvim_cmp_as_default = false;
+          nerd_font_variant = "mono";
+          kind_icons = {
+            Text = "󰉿";
+            Method = "";
+            Function = "󰊕";
+            Constructor = "󰒓";
+
+            Field = "󰜢";
+            Variable = "󰆦";
+            Property = "󰖷";
+
+            Class = "󱡠";
+            Interface = "󱡠";
+            Struct = "󱡠";
+            Module = "󰅩";
+
+            Unit = "󰪚";
+            Value = "󰦨";
+            Enum = "󰦨";
+            EnumMember = "󰦨";
+
+            Keyword = "󰻾";
+            Constant = "󰏿";
+
+            Snippet = "󱄽";
+            Color = "󰏘";
+            File = "󰈔";
+            Reference = "󰬲";
+            Folder = "󰉋";
+            Event = "󱐋";
+            Operator = "󰪚";
+            TypeParameter = "󰬛";
+            Error = "󰏭";
+            Warning = "󰏯";
+            Information = "󰏮";
+            Hint = "󰏭";
+
+            Emoji = "🤶";
+          };
+        };
         completion = {
-          trigger = {
-            show_in_snippet = false;
-          };
-          documentation = {
-            auto_show = true;
-          };
-          accept = {
-            auto_brackets = {
-              enabled = true;
-            };
-          };
           menu = {
+            border = "none";
             draw = {
-              gap = 2;
-              treesitter = [
-                "lsp"
-                "copilot"
-              ];
+              gap = 1;
+              treesitter = [ "lsp" ];
               columns = [
                 {
                   __unkeyed-1 = "label";
-                  __unkeyed-2 = "label_description";
-                  gap = 1;
                 }
                 {
                   __unkeyed-1 = "kind_icon";
                   __unkeyed-2 = "kind";
                   gap = 1;
                 }
+                { __unkeyed-1 = "source_name"; }
               ];
-              components = {
-                label = {
-                  width = {
-                    fill = true;
-                  };
-                };
-                "kind_icon" = {
-                  width = {
-                    fill = true;
-                  };
-                };
-              };
+            };
+          };
+          trigger = {
+            show_in_snippet = false;
+          };
+          documentation = {
+            auto_show = true;
+            window = {
+              border = "rounded";
+            };
+          };
+          accept = {
+            auto_brackets = {
+              enabled = true;
             };
           };
         };
