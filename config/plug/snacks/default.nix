@@ -4,6 +4,7 @@
   };
 
   imports = [
+    ./animate.nix
     ./dashboard.nix
     ./git.nix
     ./lazygit.nix
