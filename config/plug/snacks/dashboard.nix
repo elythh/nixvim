@@ -84,7 +84,7 @@ in
         sections = [
           {
             section = "terminal";
-            cmd = "${lib.getExe thissifine}; sleep .5";
+            cmd = "${lib.getExe thissifine}; sleep .4";
             height = 25;
             padding = 1;
           }
