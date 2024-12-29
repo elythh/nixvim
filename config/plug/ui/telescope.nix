@@ -74,46 +74,46 @@
   plugins.telescope = {
     enable = false;
 
-    extensions = {
-      file-browser = {
-        enable = true;
-        settings = {
-          hidden = true;
-        };
-      };
-
-      frecency = {
-        # FIXME: super slow loading
-        # enable = true;
-        settings = {
-          auto_validate = false;
-        };
-      };
-
-      fzf-native = {
-        enable = true;
-      };
-
-      live-grep-args.enable = true;
-
-      ui-select = {
-        enable = true;
-        settings = {
-          __unkeyed.__raw = ''require("telescope.themes").get_dropdown{}'';
-        };
-      };
-
-      undo = {
-        enable = true;
-        settings = {
-          side_by_side = true;
-          layout_strategy = "vertical";
-          layout_config = {
-            preview_height = 0.8;
-          };
-        };
-      };
-    };
+    # extensions = {
+    #   file-browser = {
+    #     enable = true;
+    #     settings = {
+    #       hidden = true;
+    #     };
+    #   };
+    #
+    #   frecency = {
+    #     # FIXME: super slow loading
+    #     # enable = true;
+    #     settings = {
+    #       auto_validate = false;
+    #     };
+    #   };
+    #
+    #   fzf-native = {
+    #     enable = true;
+    #   };
+    #
+    #   live-grep-args.enable = true;
+    #
+    #   ui-select = {
+    #     enable = true;
+    #     settings = {
+    #       __unkeyed.__raw = ''require("telescope.themes").get_dropdown{}'';
+    #     };
+    #   };
+    #
+    #   undo = {
+    #     enable = true;
+    #     settings = {
+    #       side_by_side = true;
+    #       layout_strategy = "vertical";
+    #       layout_config = {
+    #         preview_height = 0.8;
+    #       };
+    #     };
+    #   };
+    # };
 
     keymaps = {
       "<leader>f'" = {

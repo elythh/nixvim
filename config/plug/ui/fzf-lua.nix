@@ -9,6 +9,13 @@
             "ctrl-q" = "select-all+accept";
           };
         };
+        actions = {
+          files = {
+            "ctrl-t".__raw = ''
+              require("trouble.sources.fzf").actions.open
+            '';
+          };
+        };
       };
       keymaps = {
         "<leader>f'" = {
