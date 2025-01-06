@@ -52,6 +52,7 @@
     ./plug/utils/helm.nix
     ./plug/utils/markview.nix
     ./plug/utils/obsidian.nix
+    ./plug/utils/showkeys.nix
     ./plug/utils/spectre.nix
     ./plug/utils/trunk.nix
     ./plug/utils/ufo.nix
