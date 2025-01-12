@@ -1,12 +1,11 @@
 {
   pkgs,
-  inputs,
-  system,
   ...
 }:
 {
   extraPlugins = with pkgs.vimPlugins; [
     blink-cmp-copilot
+    blink-ripgrep-nvim
   ];
 
   plugins = {
@@ -21,7 +20,6 @@
       '';
     blink-cmp = {
       enable = true;
-      package = inputs.blink-cmp.packages.${system}.default;
       luaConfig.pre = # lua
         ''
           require('blink.compat').setup({debug = true, impersonate_nvim_cmp = true})
@@ -41,9 +39,9 @@
             "calc"
             "copilot"
             "emoji"
+            "ripgrep"
             "git"
             "lsp"
-            "luasnip"
             "path"
             "snippets"
             "spell"
@@ -65,6 +63,11 @@
             spell = {
               name = "spell";
               module = "blink.compat.source";
+            };
+            ripgrep = {
+              name = "Ripgrep";
+              module = "blink-ripgrep";
+              score_offset = 1;
             };
             calc = {
               name = "calc";
