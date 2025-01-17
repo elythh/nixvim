@@ -77,6 +77,7 @@
         "ocean"
         "oxocarbon"
         "paradise"
+        "test"
         "tokyonight"
         "yoru"
       ];
