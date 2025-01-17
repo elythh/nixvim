@@ -1,4 +1,6 @@
+{ pkgs, ... }:
 {
+  extraPackages = with pkgs; [ shfmt ];
   plugins.conform-nvim = {
     enable = true;
     settings = {
@@ -62,6 +64,12 @@
         ];
         terragrunt = [
           "hcl"
+        ];
+        bash = [
+          "shfmt"
+        ];
+        sh = [
+          "shfmt"
         ];
       };
     };
