@@ -2,6 +2,7 @@
 
   plugins.avante = {
     enable = false;
+    lazyLoad.settings.event = [ "BufEnter" ];
     settings = {
       claude = {
         endpoint = "https://api.anthropic.com";
