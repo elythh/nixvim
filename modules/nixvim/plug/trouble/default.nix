@@ -1,7 +1,14 @@
-{ lib, config, ... }:
+{
+  self,
+  system,
+  lib,
+  config,
+  ...
+}:
 {
   plugins.trouble = {
     enable = true;
+    package = self.packages.${system}.trouble-nvim;
   };
   keymaps = lib.mkIf config.plugins.trouble.enable [
     {

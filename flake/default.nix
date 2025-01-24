@@ -9,7 +9,7 @@
     ./devshell.nix
     ./git-hooks.nix
     ./nixvim.nix
-    # ./pkgs-by-name.nix
+    ./pkgs-by-name.nix
   ];
 
   perSystem =

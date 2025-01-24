@@ -383,7 +383,25 @@
         "git-hooks-nix": "git-hooks-nix",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
-        "pkgs-by-name-for-flake-parts": "pkgs-by-name-for-flake-parts"
+        "pkgs-by-name-for-flake-parts": "pkgs-by-name-for-flake-parts",
+        "snacks-nvim": "snacks-nvim",
+        "trouble-nvim": "trouble-nvim"
+      }
+    },
+    "snacks-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1737698491,
+        "narHash": "sha256-wSXExGUg0RYu7yu+KCDWIYVVQl9lSEWRL5HR4MtEx5s=",
+        "owner": "folke",
+        "repo": "snacks.nvim",
+        "rev": "b96bd540f785c725289f9f15f0147b1b2dac5a35",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "snacks.nvim",
+        "type": "github"
       }
     },
     "systems": {
@@ -419,6 +437,22 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "trouble-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1736958690,
+        "narHash": "sha256-Z2STeDZ8uhfyfH1TqSbRdWPYdPMxOb9s8/hLS76Fm5E=",
+        "owner": "folke",
+        "repo": "trouble.nvim",
+        "rev": "50481f414bd3c1a40122c1d759d7e424d5fafe84",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "trouble.nvim",
         "type": "github"
       }
     }

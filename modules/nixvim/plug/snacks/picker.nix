@@ -10,7 +10,6 @@
   plugins.snacks = {
     settings = {
       picker = {
-        __raw = ''{}'';
         actions.__raw = ''require("trouble.sources.snacks").actions'';
         win = {
           input = {

@@ -10,6 +10,14 @@
     };
     git-hooks-nix.url = "github:cachix/git-hooks.nix";
     pkgs-by-name-for-flake-parts.url = "github:drupol/pkgs-by-name-for-flake-parts";
+    snacks-nvim = {
+      url = "github:folke/snacks.nvim";
+      flake = false;
+    };
+    trouble-nvim = {
+      url = "github:folke/trouble.nvim";
+      flake = false;
+    };
   };
 
   outputs =
