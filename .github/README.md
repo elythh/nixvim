@@ -20,9 +20,8 @@ My Neovim config using nixvim.
 
 ## Configuring
 
-To start configuring, just add or modify the nix files in `./config`.
-If you add a new configuration file, remember to add it to the
-[`config/default.nix`](../config/default.nix) file
+To start configuring, just add or modify the nix files in `./modules/nixvim`.
+Every folder in the `plug` directory will be imported automatically.
 
 ### Current plugins
 
@@ -32,52 +31,51 @@ If you add a new configuration file, remember to add it to the
 <details>
     <summary>List of plugins</summary>
 
-- **[colorscheme/](../config/plug/colorscheme):** Theme configuration. Current one is [paradise](https://github.com/paradise-theme/paradise)
-- **[completion/](../config/plug/completion)**
-  - **[avante](../config/plug/completion/avante.nix):** Cursor AI at home
-  - **[copilot-cmp](../config/plug/completion/copilot-cmp.nix):** Completion support for GitHub copilot
-  - **[lspkind](../config/plug/completion/lspkind.nix):** vscode-like pictograms for neovim lsp completion items
-  - **[nvim-cmp](../config/plug/completion/cmp.nix):** Completion plugin for nvim + emoji support
-  - **[schemastore.nvim](../config/plug/completion/schemastore.nix):** Schemastore integration
-- **[git/](../config/plug/git)**
-  - **[gitlinker](../config/plug/git/gitlinker.nix):** Generate shareable file permalinks
-  - **[gitblame](../config/plug/git/gitblame.nix):** inline git blame
-  - **[gitsigns](../config/plug/git/gitsigns.nix):** Git integration for buffers (replaced by mini.diff + gitblame)
-- **[lsp/](../config/plug/lsp)**
-  - **[conform](../config/plug/lsp/conform.nix):** Formatter plugin
-  - **[lsp](../config/plug/lsp/lsp.nix):** LSP configs
-  - **[lspsaga](../config/plug/lsp/lspsaga.nix):** Cool LSP features
-  - **[none-ls](../config/plug/lsp/none-ls.nix):** null-ls replacement. Use nvim as LSP
-  - **[trouble](../config/plug/lsp/trouble.nix):** Pretty interface for working with LSP
-- **[snacks](../config/plug/snacks)**
+- **[colorscheme/](../modules/nixvim/plug/colorscheme):** Theme configuration. Current one is [paradise](https://github.com/paradise-theme/paradise)
+- completion
+  - **[avante](../modules/nixvim/plug/avante/default.nix):** Cursor AI at home
+  - **[copilot-cmp](../modules/nixvim/plug/copilot-cmp/default.nix):** Completion support for GitHub copilot
+  - **[lspkind](../modules/nixvim/plug/lspkind/default.nix):** vscode-like pictograms for neovim lsp completion items
+  - **[nvim-cmp](../modules/nixvim/plug/cmp/default.nix):** Completion plugin for nvim + emoji support
+  - **[schemastore.nvim](../modules/nixvim/plug/schemastore/default.nix):** Schemastore integration
+- git
+  - **[gitlinker](../modules/nixvim/plug/gitlinker/default.nix):** Generate shareable file permalinks
+  - **[gitblame](../modules/nixvim/plug/gitblame/default.nix):** inline git blame
+  - **[gitsigns](../modules/nixvim/plug/gitsigns/default.nix):** Git integration for buffers (replaced by mini.diff + gitblame)
+- lsp
+  - **[conform](../modules/nixvim/plug/conform/default.nix):** Formatter plugin
+  - **[lint](../modules/nixvim/plug/lint/default.nix):** Configure linting using LSP.
+  - **[lsp](../modules/nixvim/plug/lsp/default.nix):** LSP configs
+  - **[lspsaga](../modules/nixvim/plug/lspsaga/default.nix):** Cool LSP features
+  - **[none-ls](../modules/nixvim/plug/none-ls/default.nix):** null-ls replacement. Use nvim as LSP
+  - **[trouble](../modules/nixvim/plug/trouble/default.nix):** Pretty interface for working with LSP
+- **[snacks](../modules/nixvim/plug/snacks)**
   - set of utilities
-- **[snippet/](../config/plug/snippet)**
-  - **[luasnip](../config/plug/snippet/luasnip.nix):** Snippet engine in lua
-- **[statusline/](../config/plug/statusline)**
-  - **[lualine](../config/plug/statusline/lualine.nix):** Status line for neovim
-- **[treesitter/](../config/plug/treesitter)**
-  - **[treesitter-context](../config/plug/treesitter/treesitter-context.nix):** Show code context
-  - **[treesitter-textobject](../config/plug/treesitter/treesitter-textobject.nix):** Allow cool text manipulation thanks to TS
-  - **[treesitter](../config/plug/treesitter/treesitter.nix):** Parser generator tool to build a syntax tree of the current buffer
-- **[ui/](../config/plug/ui)**
-  - **[bufferline](../config/plug/ui/bufferline.nix):** VSCode like line for buffers -> replaced by mini.tabline
-  - **[dressing](../config/plug/ui/dressing.nix):** Better vim ui interfaces
-  - **[fzf-lua](../config/plug/ui/fzf-lua.nix):** fzf-lua is my new best friend
-  - **[noice](../config/plug/ui/noice.nix):** Better nvim UI
-  - **[nvim-notify](../config/plug/ui/nvim-notify.nix):** Notification manager
-  - **[smart-splits](../config/plug/ui/smart-splits.nix):** Better split managment
-  - **[telescope](../config/plug/ui/telescope.nix):** Best plugin ever ? Nevermind
-- **[utils/](../config/plug/utils)**
-  - **[comment](../config/plug/utils/comment.nix):** Quickly toggle comments
-  - **[comment-box](../config/plug/utils/comment-box.nix):** Comments utilities
-  - **[markview](../config/plug/utils/markview.nix):** Yet another markdown previewer for neovim
-  - **[mini](../config/plug/utils/mini.nix):** Cool neovim utilities, currently using ai, notify, surround, diff, tabline, trailspace, icons, indentscope and pairs
-  - **[nvim-colorizer](../config/plug/utils/nvim-colorizer.nix):** Preview colors in neovim
-  - **[obsidian](../config/plug/utils/obsidian.nix):** Obsidian integration for nvim
-  - **[oil](../config/plug/utils/oil.nix):** Navigate in your working folder with a buffer
-  - **[spectre](../config/plug/utils/spectre.nix):** Search and replace
-  - **[ufo](../config/plug/utils/ufo.nix):** Folding plugin
-  - **[undotree](../config/plug/utils/undotree.nix):** Undo history visualizer
+- snippet
+  - **[luasnip](../modules/nixvim/plug/luasnip/default.nix):** Snippet engine in lua
+- statusline
+  - **[lualine](../modules/nixvim/plug/lualine/default.nix):** Status line for neovim
+- treesitter
+  - **[treesitter-context](../modules/nixvim/plug/treesitter-context/default.nix):** Show code context
+  - **[treesitter-textobjects](../modules/nixvim/plug/treesitter-textobjects/default.nix):** Allow cool text manipulation thanks to TS
+  - **[treesitter](../modules/nixvim/plug/treesitter/default.nix):** Parser generator tool to build a syntax tree of the current buffer
+- ui
+  - **[bufferline](../modules/nixvim/plug/bufferline/default.nix):** VSCode like line for buffers -> replaced by mini.tabline
+  - **[dressing](../modules/nixvim/plug/dressing/default.nix):** Better vim ui interfaces
+  - **[fzf-lua](../modules/nixvim/plug/fzf-lua/default.nix):** fzf-lua is my new best friend
+  - **[noice](../modules/nixvim/plug/noice/default.nix):** Better nvim UI
+  - **[nvim-notify](../modules/nixvim/plug/nvim-notify/default.nix):** Notification manager
+  - **[smart-splits](../modules/nixvim/plug/smart-splits/default.nix):** Better split managment
+  - **[telescope](../modules/nixvim/plug/telescope/default.nix):** Best plugin ever ? Nevermind
+- utils
+  - **[comment](../modules/nixvim/plug/comment/default.nix):** Quickly toggle comments
+  - **[comment-box](../modules/nixvim/plug/comment-box/default.nix):** Comments utilities
+  - **[markview](../modules/nixvim/plug/markview/default.nix):** Yet another markdown previewer for neovim
+  - **[mini](../modules/nixvim/plug/mini/default.nix):** Cool neovim utilities, currently using ai, notify, surround, diff, tabline, trailspace, icons, indentscope and pairs
+  - **[obsidian](../modules/nixvim/plug/obsidian/default.nix):** Obsidian integration for nvim
+  - **[spectre](../modules/nixvim/plug/spectre/default.nix):** Search and replace
+  - **[ufo](../modules/nixvim/plug/ufo/default.nix):** Folding plugin
+  - **[undotree](../modules/nixvim/plug/undotree/default.nix):** Undo history visualizer
 
 </details>
 
@@ -165,21 +163,57 @@ Example for overwriting the theme
 ```nix
 {
   inputs,
+  config,
   lib,
   ...
-}: let
-  nixvim' = inputs.nixvim.packages."x86_64-linux".default;
-  nvim = nixvim'.extend {
-    config.theme = lib.mkForce "jellybeans";
+}:
+let
+  enable-avante-module = {
+    plugins.avante = {
+      enable = lib.mkForce true;
+    };
   };
-in {
-  home.packages = [
-    nvim
-  ];
+  set-custom-theme-module = {
+    theme = lib.mkForce "${config.theme}";
+    colorschemes.base16 = {
+      colorscheme = lib.mkForce {
+        inherit (config.lib.stylix.colors.withHashtag)
+          base00
+          base01
+          base02
+          base03
+          base04
+          base05
+          base06
+          base07
+          base08
+          base09
+          base0A
+          base0B
+          base0C
+          base0D
+          base0E
+          base0F
+          ;
+      };
+    };
+  };
+  inherit (inputs.nixvim.nixvimConfigurations."x86_64-linux") nixvim;
+  nixvimExtended = nixvim.extendModules {
+    modules = [
+      enable-avante-module
+      set-custom-theme-module
+    ];
+  };
+  elythvim = nixvimExtended.config.build.package;
+in
+{
+  home.packages = [ elythvim ];
 }
 ```
 
 ## Credits
 
+- [khaneliman](https://github.com/khaneliman) for repo structure and some plugins configurations
 - [yavko](https://github.com/yavko) for the logo
 - [nixvim](https://github.com/nix-community/nixvim) and all their maintainers/contributors
