@@ -148,7 +148,7 @@
           };
           accept = {
             auto_brackets = {
-              enabled = true;
+              enabled = false;
             };
           };
         };
