@@ -9,6 +9,7 @@
     ./git.nix
     ./lazygit.nix
     ./notifier.nix
+    ./picker.nix
     ./rename.nix
   ];
 }
