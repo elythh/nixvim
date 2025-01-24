@@ -20,6 +20,7 @@
     ./plug/git/gitsigns.nix
 
     ./plug/lsp/conform.nix
+    ./plug/lsp/lint.nix
     ./plug/lsp/lsp.nix
     ./plug/lsp/lspsaga.nix
     ./plug/lsp/none-ls.nix
