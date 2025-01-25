@@ -74,6 +74,7 @@ Every folder in the `plug` directory will be imported automatically.
   - **[mini](../modules/nixvim/plug/mini/default.nix):** Cool neovim utilities, currently using ai, notify, surround, diff, tabline, trailspace, icons, indentscope and pairs
   - **[obsidian](../modules/nixvim/plug/obsidian/default.nix):** Obsidian integration for nvim
   - **[spectre](../modules/nixvim/plug/spectre/default.nix):** Search and replace
+  - **[typr](../modules/nixvim/plug/typr/default.nix):** Typing practice
   - **[ufo](../modules/nixvim/plug/ufo/default.nix):** Folding plugin
   - **[undotree](../modules/nixvim/plug/undotree/default.nix):** Undo history visualizer
 

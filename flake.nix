@@ -19,6 +19,14 @@
       url = "github:folke/trouble.nvim";
       flake = false;
     };
+    typr-nvim = {
+      url = "github:nvzone/typr";
+      flake = false;
+    };
+    volt-nvim = {
+      url = "github:nvzone/volt";
+      flake = false;
+    };
   };
 
   outputs =
