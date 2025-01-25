@@ -168,11 +168,6 @@ Example for overwriting the theme
   ...
 }:
 let
-  enable-avante-module = {
-    plugins.avante = {
-      enable = lib.mkForce true;
-    };
-  };
   set-custom-theme-module = {
     theme = lib.mkForce "${config.theme}";
     colorschemes.base16 = {
@@ -201,7 +196,6 @@ let
   inherit (inputs.nixvim.nixvimConfigurations."x86_64-linux") nixvim;
   nixvimExtended = nixvim.extendModules {
     modules = [
-      enable-avante-module
       set-custom-theme-module
     ];
   };
