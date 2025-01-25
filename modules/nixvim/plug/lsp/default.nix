@@ -23,6 +23,7 @@
           settings =
             let
               flake = ''(builtins.getFlake "github:elythh/flake)""'';
+              flakeNixvim = ''(builtins.getFlake "github:elythh/nixvim)""'';
             in
             {
               nixpkgs = {
@@ -33,7 +34,7 @@
               };
               options = {
                 nixos.expr = ''${flake}.nixosConfigurations.grovetender.options'';
-                nixvim.expr = ''${flake}.packages.${pkgs.system}.nvim.options'';
+                nixvim.expr = ''${flakeNixvim}.packages.${pkgs.system}.default.options'';
               };
             };
         };
