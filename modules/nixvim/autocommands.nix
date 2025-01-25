@@ -19,6 +19,11 @@
       pattern = "TelescopePrompt";
       command = "inoremap <buffer><silent> <ESC> <ESC>:close!<CR>";
     }
+    {
+      event = [ "FileType" ];
+      pattern = "snacks_picker_input";
+      command = "inoremap <buffer><silent> <ESC> <ESC>:close!<CR>";
+    }
 
     # Enable spellcheck for some filetypes
     {
