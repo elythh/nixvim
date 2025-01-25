@@ -1,25 +1,26 @@
-name: Validate Nix Flake
-
-on:
-  workflow_dispatch:
-  push:
-    branches: [main]
-
+name: Check
+on: [pull_request, workflow_dispatch]
 jobs:
-  check-flake:
-    runs-on: ubuntu-latest
-
+  checks:
+    name: Check expressions on ${{ matrix.arch }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        arch: [x86_64-linux, aarch64-darwin]
+    if: github.ref == 'refs/heads/main'
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        fetch-depth: 1
-
-    - name: Install Nix
-      uses: DeterminateSystems/nix-installer-action@main
-      with:
-        logger: pretty
-
-    - name: Check Flake
-      run: nix flake check --accept-flake-config
+      - uses: actions/checkout@v4
+      - name: Check Nix flake inputs
+        uses: DeterminateSystems/flake-checker-action@v9
+      - uses: cachix/install-nix-action@v30
+        with:
+          install_url: https://nixos.org/nix/install
+          extra_nix_config: |
+            auto-optimise-store = true
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+            experimental-features = nix-command flakes
+            system = ${{ matrix.arch }}
+      - name: run flake check
+        run: nix flake check --system ${{ matrix.arch }}
