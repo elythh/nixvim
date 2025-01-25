@@ -292,7 +292,7 @@ in
       TSTextReference = {
         fg = base0D;
       };
-      TSEnvirontment = {
+      TSEnvironment = {
         fg = base0E;
       };
       TSEnvironmentName = {

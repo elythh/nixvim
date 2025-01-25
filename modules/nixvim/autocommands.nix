@@ -35,7 +35,7 @@
       ];
       command = "setlocal spell spelllang=en,fr";
     }
-    # Hilight yank text
+    # Highlight yank text
     {
       event = "TextYankPost";
       pattern = "*";
