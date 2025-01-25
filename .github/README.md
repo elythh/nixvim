@@ -65,7 +65,7 @@ Every folder in the `plug` directory will be imported automatically.
   - **[fzf-lua](../modules/nixvim/plug/fzf-lua/default.nix):** fzf-lua is my new best friend
   - **[noice](../modules/nixvim/plug/noice/default.nix):** Better nvim UI
   - **[nvim-notify](../modules/nixvim/plug/nvim-notify/default.nix):** Notification manager
-  - **[smart-splits](../modules/nixvim/plug/smart-splits/default.nix):** Better split managment
+  - **[smart-splits](../modules/nixvim/plug/smart-splits/default.nix):** Better split management
   - **[telescope](../modules/nixvim/plug/telescope/default.nix):** Best plugin ever ? Nevermind
 - utils
   - **[comment](../modules/nixvim/plug/comment/default.nix):** Quickly toggle comments
@@ -134,7 +134,7 @@ Another method is to overlay your custom build over `neovim` from `nixpkgs`.
 
 This method is less straight-forward but allows you to install `neovim` like
 you normally would. With this method you would just install `neovim` in your
-configuration (`home.packges = with pkgs; [ neovim ]`), but you replace
+configuration (`home.packages = with pkgs; [ neovim ]`), but you replace
 `neovim` in `pkgs` with your derivation from `nixvim`.
 
 ```nix
