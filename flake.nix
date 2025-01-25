@@ -27,6 +27,10 @@
       url = "github:nvzone/volt";
       flake = false;
     };
+    showkeys-nvim = {
+      url = "github:nvzone/showkeys";
+      flake = false;
+    };
   };
 
   outputs =

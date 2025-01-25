@@ -400,11 +400,28 @@
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
         "pkgs-by-name-for-flake-parts": "pkgs-by-name-for-flake-parts",
+        "showkeys-nvim": "showkeys-nvim",
         "snacks-nvim": "snacks-nvim",
         "treefmt-nix": "treefmt-nix_2",
         "trouble-nvim": "trouble-nvim",
         "typr-nvim": "typr-nvim",
         "volt-nvim": "volt-nvim"
+      }
+    },
+    "showkeys-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1737685263,
+        "narHash": "sha256-0ZONzsCWJzzCYnZpr/O8t9Rmkc4A5+i7X7bkjEk5xmc=",
+        "owner": "nvzone",
+        "repo": "showkeys",
+        "rev": "8daf5abb5fece0c9e1fa2c5679aaf226a80f5c38",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvzone",
+        "repo": "showkeys",
+        "type": "github"
       }
     },
     "snacks-nvim": {
