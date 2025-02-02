@@ -7,93 +7,39 @@ in
     bufferline = {
       enable = true;
       settings = {
-        options = {
-          separator_style = "thin"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
-        };
-        highlights = lib.mkIf config.colorschemes.base16.enable {
-          fill = {
-            fg = "none";
-            bg = "none";
-          };
-          background = {
-            fg = "none";
-            bg = "none";
-          };
-          buffer = {
-            fg = "none";
-            bg = "none";
-          };
-          buffer_selected = {
-            fg = colors.base05;
-            bg = colors.base01;
-            italic = false;
-          };
-          buffer_visible = {
-            fg = colors.base05;
-            bg = "none";
-          };
-          close_button = {
-            fg = "none";
-            bg = "none";
-          };
-          close_button_visible = {
-            fg = colors.base03;
-            bg = "none";
-          };
-          close_button_selected = {
-            fg = colors.base08;
-            bg = colors.base01;
-          };
-          indicator_selected = {
-            fg = colors.base0E;
-            bg = colors.base01;
-          };
-          indicator_visible = {
-            fg = colors.base0E;
-            bg = "none";
-          };
-          separator = {
-            fg = colors.base00;
-            bg = colors.base00;
-          };
-          separator_selected = {
-            fg = colors.base00;
-            bg = colors.base00;
-          };
-          separator_visible = {
-            fg = colors.base00;
-            bg = colors.base00;
-          };
-          modified = {
-            fg = colors.base03;
-            bg = colors.base00;
-          };
-          modified_visible = {
-            fg = colors.base00;
-            bg = colors.base00;
-          };
-          modified_selected = {
-            fg = colors.base0B;
-            bg = colors.base01;
-          };
-          tab_close = {
-            fg = colors.base00;
-            bg = colors.base00;
-          };
-          duplicate = {
-            bg = "none";
-            italic = false;
-          };
-          duplicate_visible = {
-            bg = "none";
-            italic = false;
-          };
-          duplicate_selected = {
-            fg = "none";
-            bg = colors.base01;
-            italic = false;
-          };
-        };
+        options.__raw = ''
+          {
+            indicator = {
+              style = "none",
+            },
+            style = "none",
+            mode = "buffers",
+            numbers = "none",
+            close_command = "bdelete! %d",
+            right_mouse_command = "bdelete! %d",
+            left_mouse_command = "buffer %d",
+            middle_mouse_command = "bdelete! %d",
+            buffer_close_icon = "x",
+            modified_icon = "",
+            close_icon = "X",
+            left_trunc_marker = "",
+            right_trunc_marker = "",
+            max_name_length = 14,
+            max_prefix_length = 15,
+            truncate_names = false,
+            tab_size = 15,
+            diagnostics = false,
+            show_buffer_icons = false,
+            show_buffer_close_icons = true,
+            show_close_icon = true,
+            show_tab_indicators = false,
+            show_duplicate_prefix = true,
+            persist_buffer_sort = true,
+            separator_style = "none",
+            always_show_bufferline = true,
+            -- enforce_regular_tabs = true,
+          }
+        '';
       };
     };
   };
@@ -152,14 +98,14 @@ in
       };
     }
 
-    # {
-    #   mode = "n";
-    #   key = "<leader>`";
-    #   action = "<cmd>e #<cr>";
-    #   options = {
-    #     desc = "Switch to Other Buffer";
-    #   };
-    # }
+    {
+      mode = "n";
+      key = "<leader>`";
+      action = "<cmd>e #<cr>";
+      options = {
+        desc = "Switch to Other Buffer";
+      };
+    }
 
     {
       mode = "n";
@@ -206,4 +152,70 @@ in
       };
     }
   ];
+  highlight = with colors; {
+    BufferLineBackground = {
+      bg = base01;
+    };
+    BufferLineBuffer = { };
+    BufferLineBufferSelected = {
+      bg = base0C;
+      fg = base00;
+    };
+    BufferLineBufferVisible = {
+      bg = base01;
+    };
+    BufferLineCloseButton = {
+      bg = base01;
+    };
+    BufferLinecloseButtonSelected = {
+      bg = base0C;
+      fg = base00;
+    };
+    BufferLineCloseButtonVisible = {
+      bg = base01;
+    };
+    BufferLineDuplicate = {
+      bg = base01;
+    };
+    BufferLineDuplicateSelected = {
+      bg = base0C;
+      fg = base00;
+    };
+    BufferLineDuplicateVisible = {
+      bg = base01;
+    };
+    BufferLineFill = {
+      bg = base00;
+    };
+    BufferLineIndicatorSelected = {
+      bg = base0C;
+    };
+    BufferLineIndicator = {
+      bg = base01;
+    };
+    BufferLineIndicatorVisible = {
+      bg = base01;
+    };
+    BufferLineModified = { };
+    BufferLineModifiedSelected = {
+      bg = base0C;
+    };
+    BufferLineModifiedVisible = {
+      bg = base01;
+    };
+    BufferLineOffsetSeparator = { };
+    BufferLinePick = { };
+    BufferLinePickSelected = {
+      bg = base0C;
+    };
+    BufferLinePickVisible = { };
+    BufferLineSeparator = {
+      bg = base01;
+      fg = base01;
+    };
+    BufferLineSeparatorSelected = {
+      bg = base0C;
+    };
+    BufferLineSeparatorVisible = { };
+  };
 }
