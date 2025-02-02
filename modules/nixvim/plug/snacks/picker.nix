@@ -4,6 +4,9 @@
   pkgs,
   ...
 }:
+let
+  colors = import ../colorscheme/colors/${config.theme}.nix { };
+in
 {
   extraPackages = with pkgs; [ fd ];
 
@@ -17,14 +20,78 @@
         win = {
           input = {
             keys = {
-              "ctrl-t".__raw = ''
+              "ctrl-y".__raw = ''
                 "trouble_open",
                 mode = { "n", "i" },
               '';
             };
           };
         };
+        layouts.default.__raw = ''
+          {
+            reverse = true,
+            layout = {
+              box = "horizontal",
+              backdrop = true,
+              width = 0.8,
+              height = 0.9,
+              border = "none",
+              {
+                box = "vertical",
+                { win = "list", title = " Results ", title_pos = "center", border = "rounded" },
+                { win = "input", height = 1, border = "rounded", title = "{title} {live} {flags}", title_pos = "center" },
+              },
+              {
+                win = "preview",
+                title = "{preview:Preview}",
+                width = 0.45,
+                border = "rounded",
+                title_pos = "center",
+              },
+            },
+          }
+        '';
       };
+    };
+  };
+
+  highlight = with colors; {
+    SnacksPickerListBorder = {
+      bg = base00;
+      fg = base00;
+    };
+    SnacksPickerListTitle = {
+      bg = base0D;
+      fg = base01;
+    };
+
+    SnacksPickerPreview = {
+      bg = base00;
+    };
+    SnacksPickerPreviewBorder = {
+      bg = base00;
+      fg = base00;
+    };
+    SnacksPickerPreviewTitle = {
+      bg = base0E;
+      fg = base00;
+    };
+
+    SnacksPickerInput = {
+      bg = base01;
+      fg = base05;
+    };
+    SnacksPickerSearch = {
+      bg = base01;
+      fg = base08;
+    };
+    SnacksPickerInputBorder = {
+      bg = base01;
+      fg = base01;
+    };
+    SnacksPickerInputTitle = {
+      bg = base08;
+      fg = base01;
     };
   };
 
@@ -233,6 +300,14 @@
             action = ''<cmd>lua Snacks.picker.spell_suggest()<cr>'';
             options = {
               desc = "Find spelling suggestions";
+            };
+          }
+          {
+            mode = "n";
+            key = "<leader>fH";
+            action = ''<cmd>lua Snacks.picker.highlights()<cr>'';
+            options = {
+              desc = "Find highlights";
             };
           }
           {
