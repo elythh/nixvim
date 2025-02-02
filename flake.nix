@@ -31,6 +31,10 @@
       url = "github:nvzone/showkeys";
       flake = false;
     };
+    avante-nvim = {
+      url = "github:yetone/avante.nvim";
+      flake = false;
+    };
   };
 
   outputs =
