@@ -17,6 +17,7 @@ vimUtils.buildVimPlugin {
     "snacks.notifier"
     "snacks.picker.actions"
     "snacks.picker.config.highlights"
+    "snacks.picker.core.list"
     "snacks.picker.util.db"
     "snacks.terminal"
     "snacks.win"

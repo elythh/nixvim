@@ -11,6 +11,9 @@
     settings = {
       picker = {
         actions.__raw = ''require("trouble.sources.snacks").actions'';
+        matcher = {
+          frecency = true;
+        };
         win = {
           input = {
             keys = {
@@ -155,6 +158,14 @@
           {
             mode = "n";
             key = "<leader>ff";
+            action = ''<cmd>lua Snacks.picker.files()<cr>'';
+            options = {
+              desc = "Find files";
+            };
+          }
+          {
+            mode = "n";
+            key = "<leader><space>";
             action = ''<cmd>lua Snacks.picker.files()<cr>'';
             options = {
               desc = "Find files";

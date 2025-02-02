@@ -1,7 +1,7 @@
 {
   plugins = {
     fzf-lua = {
-      enable = true;
+      enable = false;
       profile = "telescope";
       settings = {
         keymap = {
