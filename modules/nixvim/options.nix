@@ -18,6 +18,7 @@
         "ocean"
         "oxocarbon"
         "paradise"
+        "radium"
         "test"
         "tokyonight"
         "yoru"
