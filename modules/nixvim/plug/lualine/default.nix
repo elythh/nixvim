@@ -91,28 +91,7 @@ in
           }
         ];
         lualine_x = [ "" ];
-        lualine_y = [
-          {
-            __unkeyed = "filetype";
-            icon_only = true;
-            separator.left = "";
-            separator.right = "";
-          }
-          {
-            __unkeyed = "filename";
-            symbols = {
-              modified = "";
-              readonly = "👁️";
-              unnamed = "";
-            };
-            color = {
-              fg = colors.base05;
-              bg = "nil";
-            };
-            separator.left = "";
-            separator.right = "";
-          }
-        ];
+        lualine_y = [ "" ];
         lualine_z = [
           {
             __unkeyed = "location";
