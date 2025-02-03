@@ -295,6 +295,10 @@ in
       TSVariableBuiltin = {
         fg = base0D;
       };
+      EndOfBuffer = {
+        bg = base00;
+        fg = base00;
+      };
     };
   };
 }
