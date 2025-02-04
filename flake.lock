@@ -444,11 +444,11 @@
     "snacks-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1738449663,
-        "narHash": "sha256-wY0S4BhXqCQuRir88X/7eVk1QvaIO2GMTbDM/j1hJpk=",
+        "lastModified": 1738703992,
+        "narHash": "sha256-xixli5W9GLFPUV02Stj52TjDOxnZ+v5v6eepbDaXblg=",
         "owner": "folke",
         "repo": "snacks.nvim",
-        "rev": "c2310c6d1ecb4d5fad701ed0aeb92adc2f0db385",
+        "rev": "5e3af693bd5a29db3c5a9307fb86ded78670fc29",
         "type": "github"
       },
       "original": {

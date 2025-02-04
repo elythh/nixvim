@@ -1,7 +1,11 @@
 {
+  config,
   pkgs,
   ...
 }:
+let
+  colors = import ../colorscheme/colors/${config.theme}.nix { };
+in
 {
   extraPlugins = with pkgs.vimPlugins; [
     blink-cmp-copilot
@@ -143,7 +147,7 @@
           documentation = {
             auto_show = true;
             window = {
-              border = "rounded";
+              border = "single";
             };
           };
           accept = {
@@ -153,6 +157,28 @@
           };
         };
       };
+    };
+  };
+  highlight = with colors; {
+    BlinkCmpMenu = {
+      bg = base01;
+      fg = base05;
+    };
+    BlinkCmpMenuSelection = {
+      bg = base0C;
+      fg = base00;
+    };
+    BlinkCmpDoc = {
+      bg = base01;
+      fg = base05;
+    };
+    BlinkCmpDocSeparator = {
+      bg = base01;
+      fg = base0C;
+    };
+    BlinkCmpDocBorder = {
+      bg = base01;
+      fg = base01;
     };
   };
 }
