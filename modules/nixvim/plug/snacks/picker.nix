@@ -19,12 +19,14 @@ in
         };
         win = {
           input = {
-            keys = {
-              "ctrl-y".__raw = ''
-                "trouble_open",
-                mode = { "n", "i" },
-              '';
-            };
+            keys.__raw = ''
+              {
+                ["<c-t>"] = {
+                  "trouble_open",
+                  mode = { "n", "i" },
+                },
+              }
+            '';
           };
         };
         layouts.default.__raw = ''
