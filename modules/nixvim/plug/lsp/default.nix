@@ -52,6 +52,12 @@
         };
         yamlls = {
           enable = true;
+          settings = {
+            schemaStore = {
+              enable = false;
+              url = "";
+            };
+          };
         };
       };
       keymaps = {
