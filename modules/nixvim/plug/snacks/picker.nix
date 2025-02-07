@@ -57,48 +57,50 @@ in
     };
   };
 
-  highlight = with colors; {
-    SnacksPickerListBorder = {
-      bg = base00;
-      fg = base00;
-    };
-    SnacksPickerListTitle = {
-      bg = base0D;
-      fg = base01;
-    };
+  highlight =
+    with colors;
+    (lib.mkIf (config.plugins.snacks.enable && lib.hasAttr "picker" config.plugins.snacks.settings)) {
+      SnacksPickerListBorder = {
+        bg = base00;
+        fg = base00;
+      };
+      SnacksPickerListTitle = {
+        bg = base0D;
+        fg = base01;
+      };
 
-    SnacksPickerPreview = {
-      bg = base00;
-    };
-    SnacksPickerPreviewBorder = {
-      bg = base00;
-      fg = base00;
-    };
-    SnacksPickerPreviewTitle = {
-      bg = base0E;
-      fg = base00;
-    };
+      SnacksPickerPreview = {
+        bg = base00;
+      };
+      SnacksPickerPreviewBorder = {
+        bg = base00;
+        fg = base00;
+      };
+      SnacksPickerPreviewTitle = {
+        bg = base0E;
+        fg = base00;
+      };
 
-    SnacksPickerInput = {
-      bg = base01;
-      fg = base05;
+      SnacksPickerInput = {
+        bg = base01;
+        fg = base05;
+      };
+      SnacksPickerSearch = {
+        bg = base01;
+        fg = base08;
+      };
+      SnacksPickerInputBorder = {
+        bg = base01;
+        fg = base01;
+      };
+      SnacksPickerInputTitle = {
+        bg = base08;
+        fg = base01;
+      };
     };
-    SnacksPickerSearch = {
-      bg = base01;
-      fg = base08;
-    };
-    SnacksPickerInputBorder = {
-      bg = base01;
-      fg = base01;
-    };
-    SnacksPickerInputTitle = {
-      bg = base08;
-      fg = base01;
-    };
-  };
 
   keymaps =
-    lib.mkIf (config.plugins.snacks.enable && lib.hasAttr "picker" config.plugins.snacks.settings)
+    (lib.mkIf (config.plugins.snacks.enable && lib.hasAttr "picker" config.plugins.snacks.settings))
       (
         [
           {
