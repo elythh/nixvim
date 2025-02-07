@@ -9,6 +9,7 @@
     ./animate.nix
     ./dashboard.nix
     ./git.nix
+    ./indent.nix
     ./lazygit.nix
     ./notifier.nix
     ./picker.nix
