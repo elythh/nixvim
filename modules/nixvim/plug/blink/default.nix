@@ -18,12 +18,9 @@ in
     cmp-spell.enable = true;
     cmp-calc.enable = true;
     cmp-treesitter.enable = true;
-    lsp.capabilities = # Lua
-      ''
-        capabilities = vim.tbl_deep_extend('force', capabilities, require('blink.cmp').get_lsp_capabilities())
-      '';
     blink-cmp = {
       enable = true;
+      setupLspCapabilities = true;
       luaConfig.pre = # lua
         ''
           require('blink.compat').setup({debug = true, impersonate_nvim_cmp = true})
