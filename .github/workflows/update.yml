@@ -1,34 +1,22 @@
-name: Bump Flake Inputs
+---
+name: Update flakes
 on:
+  repository_dispatch:
   workflow_dispatch:
   schedule:
-  - cron: '0 0 * * 0'
-
+    - cron: "0 0 * * *"
 jobs:
-  update-lockfile:
+  createPullRequest:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        fetch-depth: 1
-
-    - name: Install Nix
-      uses: DeterminateSystems/nix-installer-action@main
-      with:
-        logger: pretty
-
-    - name: Update Lockfile
-      uses: DeterminateSystems/update-flake-lock@main
-      id: update
-      with:
-        pr-title: ':package:(flake): bump'
-        commit-msg: ':package:(flake): bump'
-        token: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Merge Changes
-      run: gh pr merge ${{ steps.update.outputs.pull-request-number }} --squash --delete-branch
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
+      - name: Install Nix
+        uses: cachix/install-nix-action@v30
+        with:
+          extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+      - name: Update flake.lock
+        uses: DeterminateSystems/update-flake-lock@v24
+        with:
+          pr-labels: |
+            merge-queue
