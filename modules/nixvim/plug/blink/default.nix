@@ -13,18 +13,16 @@ in
   ];
 
   plugins = {
-    cmp-emoji.enable = true;
-    cmp-git.enable = true;
-    cmp-spell.enable = true;
-    cmp-calc.enable = true;
-    cmp-treesitter.enable = true;
+    blink-cmp-copilot.enable = !config.plugins.blink-copilot.enable;
+    blink-cmp-dictionary.enable = true;
+    blink-cmp-git.enable = true;
+    blink-cmp-spell.enable = true;
+    blink-copilot.enable = true;
+    blink-emoji.enable = true;
+    blink-ripgrep.enable = true;
     blink-cmp = {
       enable = true;
       setupLspCapabilities = true;
-      luaConfig.pre = # lua
-        ''
-          require('blink.compat').setup({debug = true, impersonate_nvim_cmp = true})
-        '';
 
       settings = {
         keymap = {
@@ -37,48 +35,69 @@ in
         sources = {
           default = [
             "buffer"
-            "calc"
-            "copilot"
-            "emoji"
-            "ripgrep"
-            "git"
             "lsp"
             "path"
             "snippets"
+            # Community
+            "copilot"
+            "dictionary"
+            "emoji"
+            "git"
             "spell"
-            #"treesitter"
+            "ripgrep"
           ];
           providers = {
-            emoji = {
-              name = "emoji";
-              module = "blink.compat.source";
-            };
-            copilot = {
-              name = "copilot";
-              module = "blink-cmp-copilot";
-            };
-            git = {
-              name = "git";
-              module = "blink.compat.source";
-            };
-            spell = {
-              name = "spell";
-              module = "blink.compat.source";
-            };
             ripgrep = {
               name = "Ripgrep";
               module = "blink-ripgrep";
               score_offset = 1;
             };
-            calc = {
-              name = "calc";
-              module = "blink.compat.source";
+            dictionary = {
+              name = "Dict";
+              module = "blink-cmp-dictionary";
+              min_keyword_length = 3;
+            };
+            emoji = {
+              name = "Emoji";
+              module = "blink-emoji";
+              score_offset = 1;
+            };
+            copilot = {
+              name = "copilot";
+              module = "blink-copilot";
+              async = true;
+              score_offset = 100;
+            };
+            lsp.score_offset = 4;
+            spell = {
+              name = "Spell";
+              module = "blink-cmp-spell";
+              score_offset = 1;
+            };
+            git = {
+              name = "Git";
+              module = "blink-cmp-git";
+              enabled = true;
+              score_offset = 100;
+              should_show_items.__raw = ''
+                function()
+                  return vim.o.filetype == 'gitcommit' or vim.o.filetype == 'markdown'
+                end
+              '';
+              opts = {
+                git_centers = {
+                  github = {
+                    issue = {
+                      on_error.__raw = "function(_,_) return true end";
+                    };
+                  };
+                };
+              };
             };
           };
         };
 
         appearance = {
-          use_nvim_cmp_as_default = false;
           nerd_font_variant = "mono";
           kind_icons = {
             Text = "󰉿";
