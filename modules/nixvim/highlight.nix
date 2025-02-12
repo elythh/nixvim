@@ -1,9 +1,9 @@
-{ config, lib, ... }:
+{ config, ... }:
 let
   colors = import ./plug/colorscheme/colors/${config.theme}.nix { };
 in
 {
-  config = lib.mkIf config.colorschemes.base16.enable {
+  config = {
     theme = "paradise";
 
     highlight = with colors; {
