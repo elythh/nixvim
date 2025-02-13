@@ -1,0 +1,5 @@
+{
+  config = {
+    globals.mapleader = " ";
+  };
+}
