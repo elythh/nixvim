@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "catppuccin-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1739360416,
+        "narHash": "sha256-xMwMBtnmmKRSiFSsEVp+2wZhr0lvOW2r0KayffMlUX0=",
+        "owner": "catppuccin",
+        "repo": "nvim",
+        "rev": "0b2437bcc12b4021614dc41fcea9d0f136d94063",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "nvim",
+        "type": "github"
+      }
+    },
     "devshell": {
       "inputs": {
         "nixpkgs": [
@@ -275,6 +291,7 @@
     },
     "root": {
       "inputs": {
+        "catppuccin-nvim": "catppuccin-nvim",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "snacks-nvim": "snacks-nvim"
