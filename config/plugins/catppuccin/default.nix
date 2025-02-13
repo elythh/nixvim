@@ -1,5 +1,10 @@
+{ pkgs, inputs, ... }:
 {
   colorschemes.catppuccin = {
+    package = pkgs.callPackage ../../../packages/catppuccin-nvim {
+      inherit inputs;
+    };
+
     settings = {
       default_integrations = true;
       dim_inactive = {

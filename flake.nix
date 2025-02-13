@@ -10,6 +10,10 @@
       url = "github:folke/snacks.nvim";
       flake = false;
     };
+    catppuccin-nvim = {
+      url = "github:catppuccin/nvim";
+      flake = false;
+    };
   };
 
   outputs =
