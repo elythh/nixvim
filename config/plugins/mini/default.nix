@@ -1,6 +1,9 @@
 {
   plugins.mini = {
     enable = true;
+    mockDevIcons = true;
+    modules.icons = { };
+
     modules.clue = {
       window = {
         delay = 500;

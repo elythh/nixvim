@@ -7,6 +7,7 @@
     };
   };
   imports = [
+    ./indent.nix
     ./lazygit.nix
     ./notifier.nix
     ./picker.nix
