@@ -8,7 +8,7 @@
   };
   imports = [
     ./lazygit.nix
-    ./notify.nix
+    ./notifier.nix
     ./picker.nix
   ];
 

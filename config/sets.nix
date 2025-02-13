@@ -2,6 +2,14 @@
   config = {
     colorscheme = "catppuccin";
     colorschemes.catppuccin.enable = true;
+    performance = {
+      byteCompileLua = {
+        enable = true;
+        nvimRuntime = true;
+        configs = true;
+        plugins = true;
+      };
+    };
 
     opts = {
       # Enable relative line numbers

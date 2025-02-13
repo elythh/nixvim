@@ -52,7 +52,7 @@
           nixvimModule = {
             inherit system;
             module = import ./config;
-            extraSpecialArgs = { };
+            extraSpecialArgs = { inherit inputs; };
           };
         in
         {
