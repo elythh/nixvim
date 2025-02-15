@@ -6,6 +6,7 @@
   };
 
   imports = [
+    ./ai.nix
     ./clue.nix
     ./diff.nix
     ./files.nix
