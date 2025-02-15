@@ -275,6 +275,30 @@
     }
     {
       mode = "n";
+      key = "<leader>gl";
+      action = ''<cmd>lua Snacks.picker.git_log()<cr>'';
+      options = {
+        desc = "Git log";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gf";
+      action = ''<cmd>lua Snacks.picker.git_log_file()<cr>'';
+      options = {
+        desc = "Git log file";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gL";
+      action = ''<cmd>lua Snacks.picker.git_log_line()<cr>'';
+      options = {
+        desc = "Git log line";
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>gs";
       action = ''<cmd>lua Snacks.picker.git_status()<cr>'';
       options = {
