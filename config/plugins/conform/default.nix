@@ -22,16 +22,12 @@
         python = [ "black" ];
         lua = [ "stylua" ];
         nix = [ "nixfmt" ];
-        markdown = [
-          [
-            "prettierd"
-            "prettier"
-          ]
-        ];
-        yaml = [
-          "yamllint"
-          "yamlfmt"
-        ];
+        markdown = [ "prettier" ];
+        yaml = {
+          __unkeyed-1 = "yamllint";
+          __unkeyed-2 = "yamlfmt";
+          stop_after_first = false;
+        };
         terragrunt = [
           "hcl"
         ];
