@@ -23,11 +23,7 @@
         lua = [ "stylua" ];
         nix = [ "nixfmt" ];
         markdown = [ "prettier" ];
-        yaml = {
-          __unkeyed-1 = "yamllint";
-          __unkeyed-2 = "yamlfmt";
-          stop_after_first = false;
-        };
+        yaml = [ "yamlfmt" ];
         terragrunt = [
           "hcl"
         ];
