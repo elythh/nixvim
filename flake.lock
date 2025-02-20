@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "catppuccin-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1739360416,
-        "narHash": "sha256-xMwMBtnmmKRSiFSsEVp+2wZhr0lvOW2r0KayffMlUX0=",
-        "owner": "catppuccin",
-        "repo": "nvim",
-        "rev": "0b2437bcc12b4021614dc41fcea9d0f136d94063",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "nvim",
-        "type": "github"
-      }
-    },
     "devshell": {
       "inputs": {
         "nixpkgs": [
@@ -210,11 +194,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1739451785,
-        "narHash": "sha256-3ebRdThRic9bHMuNi2IAA/ek9b32bsy8F5R4SvGTIog=",
+        "lastModified": 1739863612,
+        "narHash": "sha256-UbtgxplOhFcyjBcNbTVO8+HUHAl/WXFDOb6LvqShiZo=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "1128e89fd5e11bb25aedbfc287733c6502202ea9",
+        "rev": "632f04521e847173c54fa72973ec6c39a371211c",
         "type": "github"
       },
       "original": {
@@ -253,11 +237,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1739627497,
-        "narHash": "sha256-LqwCCtADkHniSmP5ufoiXNY4GRttwvW/EOTVpgVh0LY=",
+        "lastModified": 1739902813,
+        "narHash": "sha256-BgOQcKKz7VNvSHIbBllHisv32HvF3W3ALF9sdnC++V8=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "d3a25cb97f8e8c4b77949b1e9fcf26b7ded42fbc",
+        "rev": "0ab9947137cd034ec64eb5cd9ede94e53af21f50",
         "type": "github"
       },
       "original": {
@@ -291,7 +275,6 @@
     },
     "root": {
       "inputs": {
-        "catppuccin-nvim": "catppuccin-nvim",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "snacks-nvim": "snacks-nvim"
@@ -300,11 +283,11 @@
     "snacks-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1739630736,
-        "narHash": "sha256-CO6ny6tuxZ4LndJLgavYXYwieng2jIkTc3U2hcgOjBw=",
+        "lastModified": 1740049083,
+        "narHash": "sha256-JB85ep6QUNeEzsyhPg/PuJXmoR2XzG23n2lbEjUP0PM=",
         "owner": "folke",
         "repo": "snacks.nvim",
-        "rev": "66ad6f1d091198243f613ea3bcb10a9aa47649ed",
+        "rev": "a4e2c3e4fc54af78c7d351fe84399305119f59fa",
         "type": "github"
       },
       "original": {
