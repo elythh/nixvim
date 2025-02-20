@@ -1,7 +1,8 @@
 {
   config = {
-    colorscheme = "catppuccin";
-    colorschemes.catppuccin.enable = true;
+    colorscheme = "rose-pine";
+    colorschemes.rose-pine.enable = true;
+    colorschemes.rose-pine.settings.styles.transparency = true;
     performance = {
       byteCompileLua = {
         enable = true;
