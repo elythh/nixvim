@@ -10,7 +10,10 @@
           only_current = true;
           char = {
             arrow = "─";
+            corner_top = "╭";
+            corner_bottom = "╰";
           };
+          hl = "SnacksIndentScope";
         };
       };
     };
