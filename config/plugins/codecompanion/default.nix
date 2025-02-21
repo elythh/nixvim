@@ -15,4 +15,15 @@
       };
     };
   };
+  plugins.render-markdown = {
+    enable = true;
+    lazyLoad.settings = {
+      ft = [ "codecompanion" ];
+    };
+    settings = {
+      file_types = [
+        "codecompanion"
+      ];
+    };
+  };
 }
