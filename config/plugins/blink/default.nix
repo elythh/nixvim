@@ -9,6 +9,10 @@
     blink-ripgrep-nvim
   ];
 
+  extraPackages = with pkgs; [
+    gh
+  ];
+
   plugins = {
     blink-cmp-copilot.enable = !config.plugins.blink-copilot.enable;
     blink-cmp-dictionary.enable = true;
