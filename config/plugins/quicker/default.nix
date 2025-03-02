@@ -1,0 +1,6 @@
+{
+
+  plugins.quicker = {
+    enable = true;
+  };
+}

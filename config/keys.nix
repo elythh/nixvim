@@ -74,6 +74,28 @@
         };
       }
 
+      # Quickfix
+      {
+        mode = [
+          "n"
+        ];
+        key = "[q";
+        action = "<CMD>cnext<CR>";
+        options = {
+          desc = "Next quickfix item";
+        };
+      }
+      {
+        mode = [
+          "n"
+        ];
+        key = "]q";
+        action = "<CMD>cprev<CR>";
+        options = {
+          desc = "Previous quickfix item";
+        };
+      }
+
     ];
   };
 }
