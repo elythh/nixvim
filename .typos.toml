@@ -1,5 +1,0 @@
-[default]
-extend-ignore-identifiers-re = [
-    # *sigh* this just isn't worth the cost of fixing
-    "fo","yoru","[N-n]oice"
-]
