@@ -1,3 +1,0 @@
-{
-  plugins.mini.modules.ai = { };
-}
