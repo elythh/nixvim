@@ -20,8 +20,8 @@
 
 ## Configuring
 
-To start configuring, just add or modify the nix files in `./modules/nixvim`.
-Every folder in the `plug` directory will be imported automatically.
+To start configuring, just add or modify the nix files in `./config`.
+Every folder in the `plugins` directory will be imported automatically.
 
 ### Current plugins
 
