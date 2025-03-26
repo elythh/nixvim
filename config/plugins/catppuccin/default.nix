@@ -7,7 +7,7 @@
         percentage = 0.25;
       };
 
-      flavour = "macchiato";
+      flavour = "mocha";
 
       integrations = {
         aerial = true;
@@ -50,7 +50,7 @@
         treesitter = true;
       };
 
-      show_end_of_buffer = true;
+      show_end_of_buffer = false;
       term_colors = true;
       transparent_background = true;
     };
