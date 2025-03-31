@@ -1,9 +1,7 @@
-{ self, system, ... }:
 {
 
   plugins.avante = {
     enable = false;
-    package = self.packages.${system}.avante-nvim;
 
     lazyLoad.settings.event = [ "BufEnter" ];
     settings = {

@@ -28,5 +28,10 @@ vimUtils.buildVimPlugin {
     "snacks.scratch"
     "snacks.scroll"
     "snacks.words"
+    "snacks.image.image"
+    "snacks.image.init"
+    "snacks.image.config"
+    "snacks.image.placement"
+    "snacks.image.convert"
   ];
 }
