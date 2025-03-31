@@ -16,19 +16,19 @@ in
         theme = {
           normal = {
             a = {
-              bg = "#nil";
+              bg = colors.base00;
             };
             b = {
-              bg = "nil";
+              bg = colors.base00;
             };
             c = {
-              bg = "nil";
+              bg = colors.base00;
             };
             z = {
-              bg = "nil";
+              bg = colors.base00;
             };
             y = {
-              bg = "nil";
+              bg = colors.base00;
             };
           };
         };
@@ -54,7 +54,7 @@ in
             fmt = "string.lower";
             color = {
               fg = colors.base04;
-              bg = "nil";
+              bg = colors.base00;
             };
             separator.left = "";
             separator.right = "";
