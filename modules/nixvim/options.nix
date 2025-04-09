@@ -11,6 +11,7 @@
         "everforest"
         "far"
         "gruvbox"
+        "houseki"
         "jellybeans"
         "material"
         "material-darker"
